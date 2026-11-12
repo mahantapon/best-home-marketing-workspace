@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#233f35">
+  <meta name="description" content="พื้นที่จัดลำดับงานและวางแผนทีม Marketing ของ best home">
+  <title>Marketing Workspace — best home</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปที่เนื้อหา</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="เมนูหลัก">
+      <a class="brand" href="#overview" aria-label="best home ภาพรวม"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 16 16 5l11 11v11H5Z"/><path d="M12 27V15h8v12M8 11V6h5"/></svg></span><span>best home<span class="brand-sub">MARKETING WORKSPACE</span></span></a>
+      <div class="workspace-label">พื้นที่ทำงาน <span>01</span></div>
+      <nav class="nav-main" id="nav-main"></nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-note"><span class="live-dot"></span><span>เติบโตไปด้วยกัน<small>ชัดเจนทั้งเป้าหมายและงานของทีม</small></span></div>
+        <button class="profile" data-view="team"><span class="avatar avatar-kao">ก</span><span>เก้า<small>Marketing Lead</small></span><span class="profile-arrow" aria-hidden="true">↗</span></button>
+      </div>
+    </aside>
+    <button class="sidebar-overlay" id="sidebar-overlay" aria-label="ปิดเมนู" hidden></button>
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="breadcrumbs"><button class="icon-button mobile-menu" id="mobile-menu" aria-label="เปิดเมนู" aria-controls="sidebar" aria-expanded="false"></button><span class="workspace-crumb">Marketing</span><span class="crumb-divider">/</span><span id="page-crumb">ภาพรวม</span></div>
+        <div class="top-actions"><span class="save-state" id="save-state"><span class="tiny-dot"></span>บันทึกในเบราว์เซอร์นี้</span><button class="icon-button" id="print-button" aria-label="พิมพ์หน้านี้"></button><button class="button button-outline button-small" id="export-button"></button></div>
+      </header>
+      <main id="main" tabindex="-1"></main>
+      <footer class="page-footer"><span>best home <span class="footer-dot">·</span> Build the best home for the best living.</span><span>แผนตั้งต้น 12 พ.ย. 2569</span></footer>
+    </div>
+  </div>
+  <dialog id="task-dialog" class="task-dialog" aria-labelledby="dialog-title"></dialog>
+  <dialog id="export-dialog" class="small-dialog" aria-labelledby="export-title"></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="no-js">เปิดใช้งาน JavaScript เพื่อดูรายการและจัดลำดับงาน</div></noscript>
+</body>
+</html>

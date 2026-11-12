@@ -1,0 +1,12 @@
+{
+  "name": "best-home-marketing-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Marketing priorities and team workspace for best home",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}
