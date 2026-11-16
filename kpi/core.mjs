@@ -1,3 +1,4 @@
+import {validateRecord} from './roadmap-core.mjs';
 export const STORAGE_KEY = 'best-home.kpi.v1';
 export const METRICS = [
   {id:'delivery',name:'ส่งงานครบตามแผน',weight:30,target:90,kind:'ratio',unit:'งาน',help:'งานที่ส่งครบตามบรีฟภายในรอบ ÷ งานที่ตกลงให้ส่งในรอบ'},
@@ -58,7 +59,7 @@ export function validateBackup(raw){
     const r=newReview();r.id=safeString(src.id,100);if(!r.id||seen.has(r.id))throw new Error('รหัสรอบประเมินว่างหรือซ้ำ');seen.add(r.id);
     r.name=safeString(src.name,120);r.reviewer=safeString(src.reviewer,120);r.start=safeString(src.start,10);r.end=safeString(src.end,10);
     if((r.start&&!dateValid(r.start))||(r.end&&!dateValid(r.end)))throw new Error('รูปแบบวันที่ในไฟล์ไม่ถูกต้อง');
-    if(!['baseline','assessment'].includes(src.phase))throw new Error('โหมดประเมินไม่ถูกต้อง');r.phase=src.phase;r.sample=src.sample===true;
+    if(!['baseline','assessment'].includes(src.phase))throw new Error('โหมดประเมินไม่ถูกต้อง');r.phase=src.phase;r.sample=src.sample===true;if(src.sourceMode!==undefined){if(!['manual','roadmap'].includes(src.sourceMode))throw Error('แหล่ง KPI ไม่ถูกต้อง');r.sourceMode=src.sourceMode;}
     for(const def of METRICS){const s=src.metrics?.[def.id];if(!s||typeof s.na!=='boolean')throw new Error('ข้อมูล KPI ไม่ครบ');
       const m=r.metrics[def.id];for(const key of ['numerator','denominator','target','weight']){m[key]=safeString(s[key],30);if(m[key]!==''&&(!Number.isFinite(Number(m[key]))||Number(m[key])<0||Number(m[key])>10000))throw new Error('ตัวเลข KPI ในไฟล์ไม่ถูกต้อง');}
       m.na=s.na;m.evidence=safeString(s.evidence);}
@@ -70,7 +71,9 @@ export function validateBackup(raw){
       if(task.hours!==''&&(numberValue(task.hours)===null||Number(task.hours)<0||Number(task.hours)>1000))throw new Error('เวลางานไม่ถูกต้อง');return task;});
     return r;
   });
-  return {version:1,currentId:reviews.some(r=>r.id===raw.currentId)?raw.currentId:reviews[0].id,reviews};
+  const out={version:1,currentId:reviews.some(r=>r.id===raw.currentId)?raw.currentId:reviews[0].id,reviews};
+  if(raw.roadmapRecords!==undefined){if(!raw.roadmapRecords||typeof raw.roadmapRecords!=='object'||Array.isArray(raw.roadmapRecords)||Object.keys(raw.roadmapRecords).length>500)throw Error('ข้อมูล Roadmap ไม่ถูกต้อง');out.roadmapRecords={};for(const [id,record] of Object.entries(raw.roadmapRecords)){if(!/^PLAN[0-9]{5}$/.test(id))throw Error('รหัส Roadmap ไม่ถูกต้อง');out.roadmapRecords[id]=validateRecord(record);}}
+  return out;
 }
 export function escapeHtml(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 export function csvCell(v){let s=String(v??'');if(/^[\s]*[=+@\-]/.test(s))s="'"+s;return '"'+s.replaceAll('"','""')+'"';}

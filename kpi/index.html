@@ -2,28 +2,30 @@
 <html lang="th">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f5f3ef"><meta name="description" content="วางเป้าหมายและประเมิน KPI งานวิดีโอและกราฟิกของทีม best home พร้อมคำนวณคะแนนและแผนงานรายสัปดาห์">
+  <meta name="theme-color" content="#f5f7fb"><meta name="description" content="วางเป้าหมายและประเมิน KPI งานวิดีโอและกราฟิกของทีม best home พร้อมคำนวณคะแนนและแผนงานรายสัปดาห์">
   <meta name="robots" content="noindex,nofollow">
-  <title>ประเมิน KPI ทีมคอนเทนต์ — best home</title>
+  <title>Roadmap & KPI — best home</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preload" href="../assets/fonts/LINESeedSansTH_Rg.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css"><script type="module" src="app.mjs"></script>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="dashboard.css"><script type="module" src="app.mjs"></script>
 </head>
 <body>
   <a class="skip" href="#main">ข้ามไปเนื้อหา</a>
   <aside class="sidebar">
     <a class="brand" href="../">best home<span>MARKETING WORKSPACE</span></a>
     <div class="nav-label">พื้นที่ของทีม</div>
-    <nav aria-label="เมนู KPI">
+    <nav aria-label="เมนูทีมคอนเทนต์">
+      <a href="#overview" data-view="overview"><span data-icon="chart"></span>ภาพรวม</a>
+      <a href="#roadmap" data-view="roadmap"><span data-icon="calendar"></span>Roadmap 2 เดือน<span class="nav-tag">96</span></a>
       <a href="#assessment" data-view="assessment"><span data-icon="chart"></span>ประเมิน KPI<span class="nav-tag">5</span></a>
-      <a href="#workplan" data-view="workplan"><span data-icon="calendar"></span>แผนงานรายสัปดาห์</a>
+      <a href="#workplan" data-view="workplan"><span data-icon="calendar"></span>งานเพิ่มเติม</a>
       <a href="#guide" data-view="guide"><span data-icon="book"></span>เกณฑ์และวิธีใช้</a>
     </nav>
     <a class="back-link" href="../"><span data-icon="arrow"></span>กลับหน้าจัดลำดับงาน</a>
-    <div class="sidebar-bottom"><div class="grow-icon" data-icon="leaf"></div><strong>เห็นความคืบหน้า<br>แล้วเติบโตไปด้วยกัน</strong><p>คุยจากงานจริง ให้ข้อเสนอแนะ<br>และช่วยกันแก้สิ่งที่ติดขัด</p><span class="version">เกณฑ์ตั้งต้น · 16 พ.ย. 2569</span></div>
+    <div class="sidebar-bottom"><div class="grow-icon" data-icon="leaf"></div><strong>เห็นความคืบหน้า<br>แล้วเติบโตไปด้วยกัน</strong><p>คุยจากงานจริง ให้ข้อเสนอแนะ<br>และช่วยกันแก้สิ่งที่ติดขัด</p><span class="version">ROADMAP + KPI · 16 พ.ย. 2569</span></div>
   </aside>
   <div class="shell">
-    <header class="topbar"><div class="breadcrumb">ทีมคอนเทนต์ <span>/</span> <strong id="crumb">ประเมิน KPI</strong></div><div class="top-actions"><span id="save-state" role="status">บันทึกในเบราว์เซอร์นี้</span><button class="btn compact" id="export-menu"><span data-icon="download"></span>ส่งออกข้อมูล</button></div></header>
+    <header class="topbar"><div class="breadcrumb">ทีมคอนเทนต์ <span>/</span> <strong id="crumb">ประเมิน KPI</strong></div><div class="top-actions"><span id="save-state" role="status">บันทึกในเบราว์เซอร์นี้</span><button class="btn compact" id="export-menu"><span data-icon="download"></span>สำรอง / ส่งออก</button></div></header>
     <div id="storage-warning" class="alert error" role="alert" hidden></div>
     <div id="external-change" class="alert" hidden>มีการแก้ข้อมูลจากแท็บอื่น <button id="reload" class="text-btn">โหลดข้อมูลล่าสุด</button></div>
     <main id="main" tabindex="-1"></main>

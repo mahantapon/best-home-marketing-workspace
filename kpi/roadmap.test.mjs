@@ -1,0 +1,23 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {ROADMAP,WEEKS} from './roadmap-data.mjs';
+import {newRecord,validateRecord,deriveReview} from './roadmap-core.mjs';
+import {newReview,newState,validateBackup,summarize} from './core.mjs';
+const review=()=>newReview('2026-11-16');
+const record=extra=>({...newRecord(),included:true,due:'2026-11-17',finalDue:'2026-11-18',...extra});
+const run=(records,asOf='2026-11-22',r=review())=>deriveReview(r,ROADMAP,records,asOf);
+const id=ROADMAP[0].id;
+test('แผนจริงครบ 96 ชิ้น 272 ครั้ง 9 สัปดาห์',()=>{assert.equal(ROADMAP.length,96);assert.equal(new Set(ROADMAP.map(p=>p.id)).size,96);assert.equal(ROADMAP.reduce((s,p)=>s+p.platforms.length,0),272);assert.equal(WEEKS.length,9);assert.equal(ROADMAP.filter(p=>p.kind==='L').length,2);});
+test('ไม่มีงานที่ตกลงต้องรอข้อมูล ไม่ให้ศูนย์',()=>{const d=run({});assert.equal(summarize(d.review).score,null);assert.equal(d.eligible,0);});
+test('งานเดียวหลายช่องนับครั้งเดียว และวันลงโพสต์ไม่กำหนดคะแนน',()=>{const d=run({[id]:record({actual:'2026-11-17',completed:'2026-11-18',status:'done',quality:Array(6).fill('pass'),filesPassed:'3',filesTotal:'3'})});assert.equal(d.review.metrics.delivery.denominator,'1');assert.equal(d.review.metrics.quality.denominator,'6');assert.equal(d.review.metrics.system.numerator,'3');assert.equal(d.review.metrics.ontime.numerator,'1');assert.equal(summarize(d.review).score,100);});
+test('ส่งช้าแต่ครบ ได้ความครบแต่ไม่ตรงเวลา',()=>{const d=run({[id]:record({actual:'2026-11-19',completed:'2026-11-20'})});assert.equal(d.review.metrics.delivery.numerator,'1');assert.equal(d.review.metrics.ontime.numerator,'0');});
+test('งานอนาคตไม่ถูกให้ศูนย์',()=>{const d=run({[id]:record({due:'2026-11-26',finalDue:'2026-11-27'})});assert.equal(summarize(d.review).score,null);});
+test('งานพักมีข้อตกลงถูกตัด งานติดขัดเฉยๆยังอยู่',()=>{assert.equal(run({[id]:record({status:'deferred',exclusion:'เก้าตกลงเลื่อนไปรอบหน้า'})}).deliveryCount,0);assert.equal(run({[id]:record({status:'blocked'})}).deliveryCount,1);});
+test('รอตรวจไม่เท่ากับคุณภาพศูนย์ และไม่นับ N/A',()=>{let d=run({[id]:record({actual:'2026-11-17'})});assert.equal(d.pendingReview,1);assert.equal(d.review.metrics.quality.numerator,'');d=run({[id]:record({actual:'2026-11-17',quality:['pass','fail','na','na','na','na']})});assert.equal(d.review.metrics.quality.denominator,'2');assert.equal(d.review.metrics.quality.numerator,'1');});
+test('คะแนนรอบสิ้นสุดไม่เอางานส่งหลังรอบมานับ',()=>{const r=review();r.end='2026-11-18';const d=run({[id]:record({actual:'2026-11-20',completed:'2026-11-20'})},'2026-11-25',r);assert.equal(d.review.metrics.delivery.numerator,'0');assert.equal(d.review.metrics.quality.denominator,'');});
+test('งานข้ามรอบนับตาม due ของแต่ละ KPI ไม่ซ้ำรอบใหม่',()=>{const r=review();r.start='2026-11-19';r.end='2026-12-16';assert.equal(run({[id]:record({actual:'2026-11-20',completed:'2026-11-20'})},'2026-11-25',r).deliveryCount,0);});
+test('ข้อมูลกรอกเองไม่ถูกทับเมื่อ derive',()=>{const r=review();r.metrics.delivery.numerator='8';const before=JSON.stringify(r);run({},'2026-11-22',r);assert.equal(JSON.stringify(r),before);});
+test('backup ใหม่เก็บ Roadmap และโหมดครบ; เก่าอ่านได้',()=>{const s=newState();s.reviews[0].sourceMode='roadmap';s.roadmapRecords={[id]:record({actual:'2026-11-17'})};assert.deepEqual(validateBackup(s),s);const old=newState();assert.deepEqual(validateBackup(old),old);});
+test('ข้อมูลผิดปฏิเสธก่อนบันทึก',()=>{assert.throws(()=>validateRecord(record({due:''})));assert.throws(()=>validateRecord(record({status:'done'})));assert.throws(()=>validateRecord(record({status:'deferred'})));assert.throws(()=>validateRecord(record({quality:['pass']})));assert.throws(()=>validateRecord(record({filesPassed:'3',filesTotal:'2'})));assert.throws(()=>validateRecord(record({finalDue:'2026-11-16'})));assert.throws(()=>validateRecord(record({completed:'2026-11-18'})));});
+
+test('N/A ทุกข้อและไม่มีไฟล์ที่ต้องใช้ ไม่กลายเป็นคะแนนศูนย์',()=>{const d=run({[id]:record({actual:'2026-11-17',quality:Array(6).fill('na'),filesPassed:'0',filesTotal:'0'})});assert.equal(d.review.metrics.quality.na,true);assert.equal(d.review.metrics.system.na,true);assert.equal(d.pendingFiles,0);});

@@ -4,6 +4,7 @@ import vm from 'node:vm';
 const root=path.resolve(import.meta.dirname,'..');
 const dist=path.join(root,'dist');await fs.mkdir(dist,{recursive:true});
 for(const name of ['index.html','styles.css','app.js','core.js','data.js','favicon.svg'])await fs.copyFile(path.join(root,name),path.join(dist,name));
+await fs.cp(path.join(root,'kpi'),path.join(dist,'kpi'),{recursive:true});
 await fs.cp(path.join(root,'assets'),path.join(dist,'assets'),{recursive:true});
 await fs.writeFile(path.join(dist,'.nojekyll'),'');
 
