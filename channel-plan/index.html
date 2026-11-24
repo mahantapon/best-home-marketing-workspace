@@ -3,236 +3,241 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#fff4dc">
+<meta name="theme-color" content="#f4efe6">
 <meta name="description" content="แผนคอนเทนต์ 4 ช่องทาง แนวทางทำคลิป และ CEO branding ของ best home">
 <title>แผนคอนเทนต์ 4 ช่องทาง — best home</title>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/LINESeedSansTH_Bd.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="preload" href="fonts/LINESeedSansTH_He.ttf" as="font" type="font/ttf" crossorigin>
 <style>
 @font-face{font-family:"LINE Seed Sans TH";src:url("fonts/LINESeedSansTH_Rg.ttf") format("truetype");font-weight:400;font-display:swap}
 @font-face{font-family:"LINE Seed Sans TH";src:url("fonts/LINESeedSansTH_Bd.ttf") format("truetype");font-weight:700;font-display:swap}
-@font-face{font-family:"LINE Seed Sans TH";src:url("fonts/LINESeedSansTH_XBd.ttf") format("truetype");font-weight:800;font-display:swap}
-@font-face{font-family:"LINE Seed Sans TH";src:url("fonts/LINESeedSansTH_He.ttf") format("truetype");font-weight:900;font-display:swap}
 :root{
-  --ink:#1b1b1f;--paper:#fff4dc;--card:#fff;--muted:#6b6560;
-  --sun:#ffd23d;--pink:#ff9ec1;--sky:#8fd0ff;--mint:#8ee6bf;--grape:#c3b1ff;--orange:#ffab6b;--red:#ff6b6b;
+  --paper:#f4efe6;--paper-2:#ebe4d7;--card:#fffdf8;--ink:#15171c;--ink-2:#3b3e46;--muted:#77736b;--line:#ddd5c6;
+  --sun:#ffc72c;--sun-soft:#fff1c4;
   --fb:#1877f2;--ig:#e1306c;--yt:#ff0033;--tt:#111;
-  --b:3px solid var(--ink);--sh:5px 5px 0 var(--ink);--r:22px;
+  --r:20px;
 }
 *,*::before,*::after{box-sizing:border-box}
-html,body,button,input,select,textarea,table,video{font-family:"LINE Seed Sans TH",sans-serif}
-body{margin:0;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.65;
-  background-image:radial-gradient(#e9d9b6 1.4px,transparent 1.4px);background-size:22px 22px}
-h1,h2,h3,h4,p{margin:0}
+html,body,button,input,select,textarea,table,video{font-family:"LINE Seed Sans TH",Tahoma,sans-serif}
+body{margin:0;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p{margin:0;font-weight:700}
+p{font-weight:400}
+b,strong{font-weight:700}
 a{color:inherit}
 img,video{display:block;max-width:100%}
-button{cursor:pointer;color:inherit}
-.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+button{cursor:pointer;color:inherit;font:inherit}
+::selection{background:var(--sun)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
 
 /* ---------- top + tabs ---------- */
-.top{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:var(--b);padding:12px 0 12px}
+.top{position:sticky;top:0;z-index:50;background:#f4efe6eb;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:12px 0 10px}
 .top .wrap{display:flex;flex-direction:column;gap:10px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;letter-spacing:-.3px}
-.brand .logo{width:34px;height:34px;border-radius:10px;background:var(--sun);border:var(--b);display:grid;place-items:center;font-size:17px;box-shadow:2px 2px 0 var(--ink)}
-.brand small{font-weight:400;font-size:13px;color:var(--muted);margin-left:4px}
-.brand .sp{margin-left:auto;font-size:12.5px;font-weight:700;background:#fff;border:2px solid var(--ink);border-radius:99px;padding:2px 10px}
-.tabs{display:flex;gap:7px;flex-wrap:wrap;padding:2px 6px 6px 2px}
-@media (max-width:900px){.tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;padding-bottom:8px}}
-.tab{flex:none;display:inline-flex;align-items:center;gap:7px;border:var(--b);background:#fff;border-radius:14px;padding:5px 11px 5px 6px;font-size:14px;font-weight:800;box-shadow:3px 3px 0 var(--ink);transition:transform .12s,box-shadow .12s,background .12s}
-.tab:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
-.tab .ic{width:26px;height:26px;border-radius:9px;display:grid;place-items:center;border:2px solid var(--ink);font-size:15px;color:#fff;background:var(--c,#eee)}
-.tab .ic svg{width:15px;height:15px}
-.tab[aria-selected="true"]{background:var(--c2,var(--sun));transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:18px;letter-spacing:-.3px}
+.brand .logo{width:26px;height:26px;border-radius:8px;background:var(--sun);display:grid;place-items:center}
+.brand .logo svg{width:15px;height:15px}
+.brand small{font-weight:400;font-size:13px;color:var(--muted);margin-left:2px}
+.brand .sp{margin-left:auto;font-size:12.5px;color:var(--muted);font-weight:400}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+@media (max-width:900px){.tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}.tabs::-webkit-scrollbar{display:none}}
+.tab{flex:none;display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px;font-size:14px;font-weight:700;color:var(--ink-2);transition:background .15s,color .15s,border-color .15s}
+.tab:hover{border-color:var(--ink)}
+.tab .ic{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;color:#fff;background:var(--c,#eee);margin-left:-6px}
+.tab .ic svg{width:12px;height:12px}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
 
 /* ---------- views ---------- */
-.view{display:none;padding:34px 0 60px;animation:pop .35s ease}
+.view{display:none;padding:44px 0 70px;animation:fade .35s ease}
 .view.on{display:block}
-@keyframes pop{from{transform:translateY(10px)}to{transform:none}}
+@keyframes fade{from{transform:translateY(8px)}to{transform:none}}
 @media (prefers-reduced-motion:reduce){.view{animation:none}}
 
-.card{background:var(--card);border:var(--b);border-radius:var(--r);box-shadow:var(--sh);padding:22px}
-.sticker{display:inline-flex;align-items:center;gap:6px;border:2px solid var(--ink);border-radius:99px;padding:3px 12px;font-weight:800;font-size:13.5px;background:var(--c,var(--sun));transform:rotate(-2deg)}
-.h-big{font-weight:900;font-size:clamp(34px,5.4vw,62px);line-height:1.12;letter-spacing:-.02em}
-.h2{font-weight:900;font-size:clamp(24px,3vw,34px);line-height:1.25;letter-spacing:-.01em}
-.h3{font-weight:800;font-size:20px;line-height:1.35}
-.sub{color:var(--muted);font-size:16.5px;margin-top:8px;max-width:680px}
-.hl{background:var(--sun);border:var(--b);border-radius:12px;padding:0 .2em;box-shadow:3px 3px 0 var(--ink);display:inline-block;transform:rotate(-1.5deg)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.sticker{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.h-big{font-weight:700;font-size:clamp(34px,5vw,58px);line-height:1.15;letter-spacing:-.025em}
+.h2{font-weight:700;font-size:clamp(22px,2.6vw,30px);line-height:1.3;letter-spacing:-.01em}
+.h3{font-weight:700;font-size:19px;line-height:1.4}
+.sub{color:var(--ink-2);font-size:18px;margin-top:12px;max-width:680px}
+.hl{background:linear-gradient(transparent 58%,var(--sun) 58%);padding:0 .06em}
 .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-.grid{display:grid;gap:18px}
+.grid{display:grid;gap:16px}
 .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .g3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .g4{grid-template-columns:repeat(4,minmax(0,1fr))}
-.mt{margin-top:34px}.mt-s{margin-top:16px}
+.mt{margin-top:44px}.mt-s{margin-top:16px}
 .muted{color:var(--muted)}.small{font-size:14px}.tiny{font-size:12.5px}
 .src{font-size:12.5px;color:var(--muted);margin-top:18px}
+.pill{display:inline-block;font-size:12.5px;font-weight:700;border-radius:99px;padding:2px 11px;background:#0000000d}
 
 /* ---------- home ---------- */
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
-.hero-art{position:relative;height:330px}
-.polar{position:absolute;background:#fff;border:var(--b);border-radius:16px;box-shadow:var(--sh);padding:8px 8px 10px;width:180px}
-.polar img{border-radius:9px;border:2px solid var(--ink);aspect-ratio:1;object-fit:cover;width:100%}
-.polar span{display:block;font-weight:800;font-size:13px;text-align:center;margin-top:6px}
-.polar.p1{left:0;top:30px;transform:rotate(-7deg)}
-.polar.p2{left:130px;top:0;transform:rotate(4deg);z-index:2}
-.polar.p3{left:250px;top:110px;transform:rotate(-3deg)}
-.chan-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-.cc{border:var(--b);border-radius:var(--r);box-shadow:var(--sh);background:#fff;overflow:hidden;text-align:left;padding:0;font-size:15px;display:flex;flex-direction:column;transition:transform .12s,box-shadow .12s}
-.cc:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--ink)}
-.cc .top-band{background:var(--c);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:10px;border-bottom:var(--b)}
-.cc .top-band b{font-size:21px;font-weight:900}
-.cc .top-band svg{width:26px;height:26px}
-.cc .body{padding:14px 18px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
-.cc .role{font-weight:800;font-size:16.5px;line-height:1.4}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+.hero-art{position:relative;height:340px}
+.polar{position:absolute;background:var(--card);border-radius:18px;padding:8px;width:190px;box-shadow:0 24px 50px -18px #0004}
+.polar img{border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%}
+.polar span{display:block;font-size:12.5px;text-align:center;margin-top:6px;color:var(--muted)}
+.polar.p1{left:0;top:40px;transform:rotate(-6deg)}
+.polar.p2{left:140px;top:0;transform:rotate(3deg);z-index:2}
+.polar.p3{left:260px;top:120px;transform:rotate(-2deg)}
+.chan-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.cc{border:1px solid var(--line);border-radius:var(--r);background:var(--card);overflow:hidden;text-align:left;padding:0;font-size:15px;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.cc:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px #0003}
+.cc .top-band{padding:18px 18px 0;display:flex;align-items:center;gap:10px}
+.cc .top-band b{font-size:20px}
+.cc .top-band svg{width:34px;height:34px;padding:8px;border-radius:10px;background:var(--c);color:#fff}
+.cc .body{padding:10px 18px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.cc .role{font-size:15.5px;line-height:1.5;color:var(--ink-2);font-weight:400}
 .cc .pills{display:flex;flex-wrap:wrap;gap:5px}
-.cc .pills span{font-size:12px;border:2px solid var(--ink);border-radius:99px;padding:0 8px;background:var(--pc,#fff);font-weight:700}
-.cc .go{margin-top:auto;font-weight:900;display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:2px dashed #ddd}
-.cc .go em{font-style:normal;font-size:24px}
-.two{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center}
-.two .card{padding:18px 20px}
-.two .vs{font-weight:900;font-size:22px;background:var(--sun);border:var(--b);border-radius:50%;width:56px;height:56px;display:grid;place-items:center;box-shadow:3px 3px 0 var(--ink)}
-.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.pl{background:#fff;border:var(--b);border-radius:18px;box-shadow:4px 4px 0 var(--ink);overflow:hidden;display:flex;flex-direction:column}
-.pl .ph{aspect-ratio:4/3;background:var(--c);border-bottom:var(--b);position:relative;overflow:hidden;display:grid;place-items:center;font-size:54px}
+.cc .pills span{font-size:12px;border-radius:99px;padding:1px 9px;background:var(--pc,#eee)}
+.cc .go{margin-top:auto;font-weight:700;display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--line);font-size:14.5px}
+.cc .go em{font-style:normal;color:var(--muted)}
+.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.pl{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.pl .ph{aspect-ratio:4/3;background:var(--c);position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;padding:0}
 .pl .ph img,.pl .ph video{width:100%;height:100%;object-fit:cover}
-.pl .ph .real{position:absolute;left:8px;top:8px;font-size:11px;font-weight:800;background:#fff;border:2px solid var(--ink);border-radius:99px;padding:0 8px}
-.pl .tx{padding:12px 14px 14px}
-.pl .tx b{font-size:17px;font-weight:900;display:block}
-.pl .tx p{font-size:13.5px;color:var(--muted);line-height:1.5;margin-top:3px}
-.mx{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:var(--b);border-radius:18px;box-shadow:var(--sh);overflow:hidden;font-size:15px}
-.mx th,.mx td{padding:11px 12px;text-align:center;border-bottom:2px solid #eee}
+.pl .ph .real{position:absolute;left:10px;top:10px;font-size:11px;background:#fffd;border-radius:99px;padding:0 9px;color:var(--ink-2)}
+.pl .ph .ph-txt{font-size:15px;font-weight:700;line-height:1.4;padding:16px;color:var(--ink-2)}
+.pl .tx{padding:12px 15px 15px}
+.pl .tx b{font-size:16.5px;display:block}
+.pl .tx p{font-size:13.5px;color:var(--muted);line-height:1.5;margin-top:2px}
+.mx{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;font-size:15px}
+.mx th,.mx td{padding:13px 14px;text-align:center;border-bottom:1px solid var(--line)}
 .mx tr:last-child td,.mx tr:last-child th{border-bottom:none}
-.mx thead th{background:var(--ink);color:#fff;font-weight:800}
-.mx th.r{text-align:left;font-weight:800;white-space:nowrap}
-.yes{font-size:20px}.some{font-size:13px;font-weight:800;background:#fff3c2;border:2px solid var(--ink);border-radius:99px;padding:1px 8px;white-space:nowrap}.no{color:#ccc;font-weight:800}
+.mx thead th{background:var(--paper-2);font-size:14px}
+.mx th.r{text-align:left;white-space:nowrap}
+.mk{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--sun);font-size:12px}
+.some{font-size:12.5px;background:var(--sun-soft);color:#7a5c00;border-radius:99px;padding:2px 10px;white-space:nowrap}
+.no{color:#c9c1b2}
 
 /* ---------- channel view ---------- */
-.ch-head{border:var(--b);border-radius:26px;box-shadow:var(--sh);background:var(--c);color:var(--fg,#fff);padding:26px 28px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;position:relative;overflow:hidden}
-.ch-head .big-ic{width:86px;height:86px;border-radius:24px;background:#fff;color:var(--c);border:var(--b);display:grid;place-items:center;box-shadow:4px 4px 0 var(--ink)}
-.ch-head .big-ic svg{width:48px;height:48px}
-.ch-head h1{font-weight:900;font-size:clamp(34px,4.6vw,54px);line-height:1}
-.ch-head p{font-size:18px;font-weight:700;margin-top:8px;max-width:560px;opacity:.95}
+.ch-head{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.ch-head .big-ic{width:64px;height:64px;border-radius:18px;background:var(--c);color:#fff;display:grid;place-items:center;font-weight:700;font-size:18px}
+.ch-head .big-ic svg{width:34px;height:34px}
+.ch-head h1{font-size:clamp(34px,4.4vw,52px);line-height:1.05;letter-spacing:-.02em}
+.ch-head p{font-size:18px;margin-top:8px;max-width:600px;color:var(--ink-2)}
 .stats{display:flex;gap:10px;flex-wrap:wrap}
-.stat{background:#fff;color:var(--ink);border:var(--b);border-radius:18px;padding:10px 16px;text-align:center;box-shadow:3px 3px 0 var(--ink);min-width:110px}
-.stat b{display:block;font-size:28px;font-weight:900;line-height:1.1}
-.stat span{font-size:12.5px;font-weight:700;color:var(--muted)}
-.mixbar{display:flex;border:var(--b);border-radius:16px;overflow:hidden;height:48px;box-shadow:4px 4px 0 var(--ink);background:#fff}
-.mixbar span{flex:var(--f);background:var(--c);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13.5px;border-right:2px solid var(--ink);white-space:nowrap;overflow:hidden;min-width:0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 16px;min-width:104px}
+.stat b{display:block;font-size:24px;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.mixbar{display:flex;border-radius:14px;overflow:hidden;height:42px;border:1px solid var(--line)}
+.mixbar span{flex:var(--f);background:var(--c);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;min-width:0;border-right:2px solid var(--card)}
 .mixbar span:last-child{border-right:none}
-.ex-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.ex{background:#fff;border:var(--b);border-radius:20px;box-shadow:4px 4px 0 var(--ink);overflow:hidden;display:flex;flex-direction:column}
-.ex .media{position:relative;background:var(--c,#222);border-bottom:var(--b);aspect-ratio:1;overflow:hidden;display:grid;place-items:center}
+.ex-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ex{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.ex .media{position:relative;background:var(--c,#222);aspect-ratio:1;overflow:hidden;display:grid;place-items:center}
 .ex .media.tall{aspect-ratio:9/13}
 .ex .media > img,.ex .media > video{width:100%;height:100%;object-fit:cover}
-.ex .badge{position:absolute;top:10px;left:10px;z-index:3;font-size:11.5px;font-weight:800;background:#fff;border:2px solid var(--ink);border-radius:99px;padding:1px 9px}
-.ex .freq{position:absolute;top:10px;right:10px;z-index:3;font-size:13px;font-weight:900;background:var(--sun);border:2px solid var(--ink);border-radius:12px;padding:2px 9px;transform:rotate(3deg)}
-.ex .tx{padding:13px 15px 15px;display:flex;flex-direction:column;gap:4px;flex:1}
-.ex .tx b{font-size:17px;font-weight:900;line-height:1.35}
-.ex .tx p{font-size:14px;color:var(--muted);line-height:1.5}
-.ex .idea{font-size:14px;line-height:1.45;margin-top:4px;padding:8px 10px;border-radius:12px;background:#fff7d6;border:2px dashed #e4c45a}
+.ex .badge{position:absolute;top:10px;left:10px;z-index:3;font-size:11.5px;font-weight:700;background:#fffe;border-radius:99px;padding:1px 10px}
+.ex .freq{position:absolute;top:10px;right:10px;z-index:3;font-size:12.5px;font-weight:700;background:var(--ink);color:var(--sun);border-radius:99px;padding:1px 10px}
+.ex .tx{padding:13px 15px 16px;display:flex;flex-direction:column;gap:3px;flex:1}
+.ex .tx b{font-size:16px;line-height:1.4}
+.ex .tx p{font-size:14px;color:var(--muted);line-height:1.55}
+.ex .idea{font-size:13.5px;line-height:1.5;margin-top:6px;padding:8px 11px;border-radius:12px;background:var(--sun-soft)}
 .play{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;background:none;display:block}
 .play img{width:100%;height:100%;object-fit:cover}
-.play .btn,.tt-ref .btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:70px;height:70px;border-radius:50%;background:var(--sun);color:var(--ink);border:var(--b);box-shadow:3px 3px 0 var(--ink);display:grid;place-items:center;font-size:26px;transition:transform .15s;pointer-events:none}
-.play:hover .btn{transform:translate(-50%,-50%) scale(1.08)}
-.play .lbl{position:absolute;bottom:10px;left:10px;right:10px;background:#fff;border:2px solid var(--ink);border-radius:10px;font-size:12.5px;font-weight:800;padding:3px 8px;text-align:center}
+.play .btn,.tt-ref .btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:60px;height:60px;border-radius:50%;background:#fffffff0;color:var(--ink);display:grid;place-items:center;font-size:20px;box-shadow:0 10px 30px -8px #0006;transition:transform .15s;pointer-events:none;padding-left:4px}
+.play:hover .btn{transform:translate(-50%,-50%) scale(1.07)}
+.play .lbl{position:absolute;bottom:10px;left:10px;right:10px;background:#fffe;border-radius:10px;font-size:12.5px;font-weight:700;padding:3px 8px;text-align:center}
 .kpis{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.kpis b{font-weight:900;margin-right:4px}
-.kpis span{background:#fff;border:2px solid var(--ink);border-radius:99px;padding:3px 12px;font-size:14px;font-weight:700}
-.next-row{display:flex;justify-content:space-between;gap:12px;margin-top:40px;flex-wrap:wrap}
-.nbtn{border:var(--b);background:#fff;border-radius:16px;padding:12px 20px;font-weight:900;font-size:16px;box-shadow:4px 4px 0 var(--ink);transition:.12s}
-.nbtn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
-.nbtn.pri{background:var(--sun)}
+.kpis b{font-size:13px;color:var(--muted);font-weight:400;margin-right:4px}
+.kpis span{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:3px 13px;font-size:13.5px}
+.next-row{display:flex;justify-content:space-between;gap:12px;margin-top:48px;flex-wrap:wrap}
+.nbtn{border:1.5px solid var(--ink);background:transparent;border-radius:99px;padding:9px 20px;font-weight:700;font-size:15px;transition:.15s}
+.nbtn:hover{background:var(--ink);color:#fff}
+.nbtn.pri{background:var(--ink);color:#fff}
+.nbtn.pri:hover{background:#000}
 
 /* phone */
-.phone{width:270px;max-width:100%;aspect-ratio:9/18.5;border-radius:40px;background:var(--ink);padding:10px;box-shadow:8px 8px 0 #0002;border:var(--b);margin:0 auto;position:relative}
-.phone .scr{width:100%;height:100%;border-radius:30px;overflow:hidden;position:relative;background:#fff}
+.phone{width:270px;max-width:100%;aspect-ratio:9/18.5;border-radius:42px;background:#0e0f12;padding:10px;box-shadow:0 40px 80px -24px #0005;margin:0 auto;position:relative}
+.phone .scr{width:100%;height:100%;border-radius:32px;overflow:hidden;position:relative;background:#fff}
 .phone .scr > video,.phone .scr > img{width:100%;height:100%;object-fit:cover}
-.phone .hook{position:absolute;top:58px;left:12px;right:12px;text-align:center;font-weight:900;font-size:19px;line-height:1.5;z-index:2}
-.phone .hook span{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:2px 8px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.phone .capt{position:absolute;bottom:18px;left:12px;right:52px;color:#fff;font-size:12px;font-weight:700;text-shadow:0 1px 3px #000a;z-index:2}
-.phone .subt{position:absolute;bottom:92px;left:12px;right:12px;text-align:center;font-weight:900;font-size:16px;color:var(--sun);text-shadow:2px 2px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000;z-index:2}
+.phone .hook{position:absolute;top:60px;left:12px;right:12px;text-align:center;font-weight:700;font-size:18px;line-height:1.55;z-index:2}
+.phone .hook span{background:#fff;color:#111;border-radius:6px;padding:2px 8px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.phone .capt{position:absolute;bottom:18px;left:12px;right:52px;color:#fff;font-size:12px;text-shadow:0 1px 3px #000a;z-index:2}
+.phone .subt{position:absolute;bottom:90px;left:12px;right:12px;text-align:center;font-weight:700;font-size:15px;color:var(--sun);text-shadow:0 2px 0 #000,0 0 8px #000;z-index:2}
 .phone .side{position:absolute;right:10px;bottom:150px;display:flex;flex-direction:column;gap:14px;z-index:2}
-.phone .side i{width:30px;height:30px;border-radius:50%;background:#ffffff55;border:2px solid #fff;display:block}
-.phone-cap{text-align:center;font-size:13px;color:var(--muted);margin-top:12px;font-weight:700}
+.phone .side i{width:30px;height:30px;border-radius:50%;background:#ffffff40;display:block;backdrop-filter:blur(4px)}
+.phone-cap{text-align:center;font-size:12.5px;color:var(--muted);margin-top:14px}
 .ig-feed{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .ig-feed img{aspect-ratio:4/5;object-fit:cover;width:100%}
-.ig-head{padding:38px 12px 10px;display:flex;gap:10px;align-items:center;font-size:12px}
-.ig-head .av{width:50px;height:50px;border-radius:50%;border:2px solid var(--ink);background:var(--sun);display:grid;place-items:center;font-weight:900;box-shadow:0 0 0 3px #fff,0 0 0 5px var(--ig);flex:none}
-.ig-hl{display:flex;gap:8px;padding:0 10px 10px;font-size:9.5px;text-align:center;font-weight:700}
+.ig-head{padding:40px 12px 10px;display:flex;gap:10px;align-items:center;font-size:12px}
+.ig-head .av{width:50px;height:50px;border-radius:50%;background:var(--sun);display:grid;place-items:center;font-weight:700;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--ig);flex:none}
+.ig-hl{display:flex;gap:8px;padding:0 10px 10px;font-size:9.5px;text-align:center}
 .ig-hl div{display:flex;flex-direction:column;align-items:center;gap:3px}
-.ig-hl i{width:38px;height:38px;border-radius:50%;border:2px solid var(--ink);display:grid;place-items:center;font-style:normal;font-size:15px;background:#fff8e6}
-.fb-feed{background:#f0f2f5;height:100%;padding:38px 8px 8px;display:flex;flex-direction:column;gap:8px;overflow:hidden}
+.ig-hl i{width:38px;height:38px;border-radius:50%;border:1.5px solid #ddd;display:block;background:#f6f6f6}
+.fb-feed{background:#f0f2f5;height:100%;padding:40px 8px 8px;display:flex;flex-direction:column;gap:8px;overflow:hidden}
 .fb-post{background:#fff;border-radius:10px;padding:8px;font-size:10.5px;line-height:1.45}
-.fb-post .h{display:flex;gap:6px;align-items:center;font-weight:800;font-size:11px;margin-bottom:4px}
-.fb-post .h i{width:22px;height:22px;border-radius:50%;background:var(--sun);border:1.5px solid var(--ink);display:block}
+.fb-post .h{display:flex;gap:6px;align-items:center;font-weight:700;font-size:11px;margin-bottom:4px}
+.fb-post .h i{width:22px;height:22px;border-radius:50%;background:var(--sun);display:block}
 .fb-post .pics{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:6px;border-radius:6px;overflow:hidden}
 .fb-post .pics img{aspect-ratio:1;object-fit:cover;width:100%}
-.ch-layout{display:grid;grid-template-columns:1fr 290px;gap:28px;align-items:start}
-.ch-layout .side-phone{position:sticky;top:150px}
+.ch-layout{display:grid;grid-template-columns:1fr 290px;gap:32px;align-items:start}
+.ch-layout .side-phone{position:sticky;top:140px}
 
-/* ---------- ceo / lifestyle / video ---------- */
-.series{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
-.se{background:#fff;border:var(--b);border-radius:18px;box-shadow:4px 4px 0 var(--ink);padding:16px;display:flex;flex-direction:column;gap:6px}
-.se .em{font-size:38px;line-height:1}
-.se b{font-size:17px;font-weight:900;line-height:1.3}
-.se p{font-size:13.5px;color:var(--muted);line-height:1.5}
-.se .q{font-size:13.5px;font-weight:800;background:var(--c,#fff3c2);border:2px solid var(--ink);border-radius:12px;padding:6px 9px;margin-top:auto}
+/* ---------- ceo / tiktok / video ---------- */
+.series{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.se{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.se b{font-size:16.5px;line-height:1.35}
+.se p{font-size:13.5px;color:var(--muted);line-height:1.55}
+.se .q{font-size:13.5px;background:var(--c,var(--sun-soft));border-radius:12px;padding:8px 10px;margin-top:auto;line-height:1.5}
 .se .where{display:flex;gap:4px;margin-top:6px}
-.chip-ic{width:24px;height:24px;border-radius:7px;border:2px solid var(--ink);display:grid;place-items:center;color:#fff}
+.chip-ic{width:22px;height:22px;border-radius:7px;display:grid;place-items:center;color:#fff}
 .chip-ic svg{width:12px;height:12px}
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.stp{background:#fff;border:var(--b);border-radius:18px;box-shadow:4px 4px 0 var(--ink);padding:18px;position:relative;margin-top:16px}
-.stp .no{position:absolute;top:-18px;left:14px;width:40px;height:40px;border-radius:50%;background:var(--c);border:var(--b);display:grid;place-items:center;font-weight:900;font-size:18px}
-.stp b{display:block;font-size:19px;font-weight:900;margin-top:12px}
-.stp .t{font-size:12.5px;font-weight:800;color:var(--muted)}
-.stp p{font-size:14px;margin-top:4px;line-height:1.5}
-.ab{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.ab .pct{font-weight:900;font-size:50px;line-height:1}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.stp{background:var(--card);padding:22px 20px;border-right:1px solid var(--line)}
+.stp:last-child{border-right:none}
+.stp:first-child{background:var(--sun)}
+.stp .no{font-size:13px;color:var(--muted);display:none}
+.stp b{display:block;font-size:21px;margin-top:2px}
+.stp .t{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+.stp:first-child .t{color:#6b5500}
+.stp p{font-size:14px;margin-top:4px;line-height:1.55;color:var(--ink-2)}
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ab .pct{font-weight:700;font-size:48px;line-height:1;letter-spacing:-.03em}
 .ideas-list{display:flex;flex-direction:column;gap:8px;margin-top:12px}
-.ideas-list div{border:2px solid var(--ink);border-radius:12px;padding:8px 12px;background:#fffaf0;font-size:15px;font-weight:700}
-.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:var(--b);border-radius:18px;overflow:hidden;box-shadow:var(--sh)}
+.ideas-list div{border-radius:12px;padding:9px 13px;background:var(--paper);font-size:14.5px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:4px;border-radius:var(--r);overflow:hidden}
 .compare figure{margin:0;position:relative}
 .compare img{width:100%;aspect-ratio:1;object-fit:cover}
-.compare figcaption{position:absolute;top:10px;left:10px;font-weight:900;background:#fff;border:2px solid var(--ink);border-radius:99px;padding:1px 10px;font-size:13px}
-.compare figure + figure{border-left:var(--b)}
-.tt-refs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
-.tt-ref{background:#111;border:var(--b);border-radius:18px;box-shadow:4px 4px 0 var(--ink);overflow:hidden;position:relative;aspect-ratio:9/16.5;color:#fff}
-.tt-ref .ph-tt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:14px;text-align:left;background:radial-gradient(circle at 30% 20%,#25f4ee55,transparent 50%),radial-gradient(circle at 70% 80%,#fe2c5555,transparent 50%),#111}
-.tt-ref .ph-tt b{font-size:14.5px;font-weight:800;line-height:1.4}
-.tt-ref .ph-tt small{font-size:11.5px;opacity:.8}
+.compare figcaption{position:absolute;top:10px;left:10px;background:#fffe;border-radius:99px;padding:0 10px;font-size:12.5px;font-weight:700}
+.tt-refs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.tt-ref{background:#16181d;border-radius:18px;overflow:hidden;position:relative;aspect-ratio:9/16.5;color:#fff}
+.tt-ref .ph-tt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:14px;background:linear-gradient(160deg,#2a2e38,#121317)}
+.tt-ref .ph-tt b{font-size:14px;line-height:1.45}
+.tt-ref .ph-tt small{font-size:11.5px;opacity:.7}
 .tt-ref .play{z-index:4}
 .tt-ref .btn{z-index:3;top:42%}
 .refcats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
-.refcats .card{padding:14px 16px;box-shadow:3px 3px 0 var(--ink)}
-.refcats b{font-size:30px;font-weight:900;line-height:1}
-.refcats span{display:block;font-weight:800;font-size:14.5px;margin-top:4px}
-.refcats p{font-size:12.5px;color:var(--muted);line-height:1.45;margin-top:4px}
+.refcats .card{padding:16px}
+.refcats b{font-size:30px;line-height:1}
+.refcats span{display:block;font-weight:700;font-size:14.5px;margin-top:4px}
+.refcats p{font-size:12.5px;color:var(--muted);line-height:1.5;margin-top:4px}
+.hooks{display:flex;flex-wrap:wrap;gap:8px}
+.hooks span{background:var(--paper);border-radius:99px;padding:4px 14px;font-size:14px}
 
 /* ---------- week / ask ---------- */
 .week{width:100%;border-collapse:separate;border-spacing:6px;table-layout:fixed;font-size:13px}
-.week th{font-weight:900;font-size:14px}
-.week th.c{width:100px;text-align:left;white-space:nowrap}
-.week td{background:#fff;border:2px solid var(--ink);border-radius:12px;padding:6px;vertical-align:top;height:74px}
-.week td.off{background:transparent;border-style:dashed;border-color:#cbbd9c}
-.pc{display:block;border:2px solid var(--ink);border-radius:9px;padding:3px 6px;font-weight:800;font-size:12px;line-height:1.3;margin-bottom:4px;background:var(--c)}
+.week th{font-size:13.5px;color:var(--muted)}
+.week th.c{width:100px;text-align:left;white-space:nowrap;color:var(--ink)}
+.week td{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px;vertical-align:top;height:74px}
+.week td.off{background:transparent;border-style:dashed}
+.pc{display:block;border-radius:8px;padding:4px 7px;font-weight:700;font-size:12px;line-height:1.3;margin-bottom:4px;background:var(--c)}
 .pc small{display:block;font-weight:400;font-size:10.5px}
-.asks{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
-.ask{background:#fff;border:var(--b);border-radius:18px;box-shadow:4px 4px 0 var(--ink);padding:16px;display:flex;flex-direction:column;gap:6px;position:relative}
-.ask .no{font-weight:900;font-size:15px;width:34px;height:34px;border-radius:50%;background:var(--sun);border:var(--b);display:grid;place-items:center}
-.ask b{font-size:17px;font-weight:900;line-height:1.3}
-.ask p{font-size:13.5px;color:var(--muted);line-height:1.5}
-.ask .tick{margin-top:auto;display:flex;gap:6px}
-.ask .tick span{font-size:12px;font-weight:800;border:2px solid var(--ink);border-radius:99px;padding:0 8px}
-.north{background:var(--sun);border:var(--b);border-radius:22px;box-shadow:var(--sh);padding:22px 26px;display:flex;gap:18px;align-items:center}
-.north .em{font-size:48px}
-.phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.phase{background:#fff;border:var(--b);border-radius:18px;box-shadow:4px 4px 0 var(--ink);padding:16px}
-.phase .m{display:inline-block;font-weight:900;background:var(--c);border:2px solid var(--ink);border-radius:99px;padding:0 10px;font-size:13px}
-.phase b{display:block;font-size:20px;font-weight:900;margin:6px 0 4px}
-.phase ul{margin:0;padding-left:18px;font-size:14px}
+.asks{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.ask{background:var(--card);border:1.5px solid var(--ink);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.ask .no{font-weight:700;font-size:30px;line-height:1}
+.ask b{font-size:16.5px;line-height:1.35}
+.ask p{font-size:13.5px;color:var(--ink-2);line-height:1.55}
+.ask .tick{margin-top:auto;padding-top:8px;font-size:12px;color:var(--muted)}
+.north{background:var(--sun);border-radius:var(--r);padding:24px 28px}
+.north p{margin-top:4px}
+.phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.phase{padding:22px 22px 6px 0;border-top:4px solid var(--line)}
+.phase:first-child{border-top-color:var(--ink)}
+.phase .m{font-size:13px;color:var(--muted)}
+.phase b{display:block;font-size:21px;margin:2px 0 6px}
+.phase ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink-2)}
 .rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.rules div{background:#fff;border:2px solid var(--ink);border-radius:14px;padding:10px 12px;font-size:14px;font-weight:700;display:flex;gap:8px}
-footer{border-top:var(--b);padding:20px 0 34px;font-size:12.5px;color:var(--muted);background:var(--paper)}
+.rules div{background:var(--paper-2);border-radius:14px;padding:12px 14px;font-size:14px}
+footer{border-top:1px solid var(--line);padding:22px 0 36px;font-size:12.5px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 /* ---------- responsive ---------- */
@@ -245,23 +250,22 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .hero-art{display:none}.hero{grid-template-columns:1fr}
   .ch-head{grid-template-columns:auto 1fr}
   .ch-head .stats{grid-column:1/-1}
+  .steps{grid-template-columns:1fr 1fr}
+  .stp:nth-child(2){border-right:none}
+  .stp:nth-child(-n+2){border-bottom:1px solid var(--line)}
 }
 @media (max-width:720px){
-  .wrap{padding:0 14px}
-  .g2,.g3,.g4,.ab,.phases,.rules,.steps,.two{grid-template-columns:1fr}
-  .two .vs{margin:0 auto}
+  .wrap{padding:0 16px}
+  .g2,.g3,.g4,.ab,.phases,.rules{grid-template-columns:1fr}
   .chan-cards,.pillars,.series,.asks,.tt-refs,.refcats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .ch-head{grid-template-columns:1fr;padding:20px}
-  .ch-head .big-ic{width:64px;height:64px}
-  .ch-head .big-ic svg{width:36px;height:36px}
+  .ch-head{grid-template-columns:1fr}
   .mx-wrap,.week-wrap{overflow-x:auto;padding-bottom:8px}
   .mx,.week{min-width:640px}
   .brand small,.brand .sp{display:none}
   .mixbar span{font-size:11px}
-  .tab{font-size:14px}
-  .north{flex-direction:column;align-items:flex-start}
+  .phase{padding-right:0}
 }
-@media (max-width:460px){.chan-cards,.ex-grid,.pillars{grid-template-columns:1fr!important}}
+@media (max-width:460px){.chan-cards,.ex-grid,.pillars{grid-template-columns:1fr!important}.steps{grid-template-columns:1fr}.stp{border-right:none!important;border-bottom:1px solid var(--line)}}
 @media print{.top{position:static}.view{display:block!important;break-before:page}.tabs,.next-row{display:none}}
 </style>
 </head>
@@ -275,17 +279,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <header class="top">
   <div class="wrap">
-    <div class="brand"><span class="logo">🏠</span>best home <small>แผนคอนเทนต์ 4 ช่องทาง</small><span class="sp">ร่างเพื่อหารือ · พ.ย. 2569</span></div>
+    <div class="brand"><span class="logo"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 3l9 8.5V21H3v-9.5Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M9.5 21v-6h5v6" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></span>best home <small>แผนคอนเทนต์ 4 ช่องทาง</small><span class="sp">ร่างเพื่อหารือ · พ.ย. 2569</span></div>
     <nav class="tabs" role="tablist" aria-label="เลือกหน้า">
-      <button class="tab" role="tab" data-go="home" style="--c:var(--sun);--c2:var(--sun)"><span class="ic" style="color:var(--ink)">⭐</span>ภาพรวม</button>
+      <button class="tab" role="tab" data-go="home" style="--c:var(--sun);--c2:var(--sun)">ภาพรวม</button>
       <button class="tab" role="tab" data-go="facebook" style="--c:var(--fb);--c2:#cfe2ff"><span class="ic"><svg><use href="#i-fb"/></svg></span>Facebook</button>
       <button class="tab" role="tab" data-go="instagram" style="--c:var(--ig);--c2:#ffd3e4"><span class="ic"><svg><use href="#i-ig"/></svg></span>Instagram</button>
       <button class="tab" role="tab" data-go="youtube" style="--c:var(--yt);--c2:#ffd0d6"><span class="ic"><svg><use href="#i-yt"/></svg></span>YouTube</button>
       <button class="tab" role="tab" data-go="tiktok" style="--c:var(--tt);--c2:#c8fbf9"><span class="ic"><svg><use href="#i-tt"/></svg></span>TikTok</button>
-      <button class="tab" role="tab" data-go="ceo" style="--c:var(--grape);--c2:var(--grape)"><span class="ic" style="color:var(--ink)">👔</span>CEO</button>
-      <button class="tab" role="tab" data-go="video" style="--c:var(--mint);--c2:var(--mint)"><span class="ic" style="color:var(--ink)">🎬</span>วิธีทำคลิป</button>
-      <button class="tab" role="tab" data-go="week" style="--c:var(--orange);--c2:var(--orange)"><span class="ic" style="color:var(--ink)">📅</span>1 สัปดาห์</button>
-      <button class="tab" role="tab" data-go="ask" style="--c:var(--pink);--c2:var(--pink)"><span class="ic" style="color:var(--ink)">✅</span>ขออนุมัติ</button>
+      <button class="tab" role="tab" data-go="ceo" style="--c:var(--grape);--c2:var(--grape)">CEO</button>
+      <button class="tab" role="tab" data-go="video" style="--c:var(--mint);--c2:var(--mint)">วิธีทำคลิป</button>
+      <button class="tab" role="tab" data-go="week" style="--c:var(--orange);--c2:var(--orange)">1 สัปดาห์</button>
+      <button class="tab" role="tab" data-go="ask" style="--c:var(--pink);--c2:var(--pink)">ขออนุมัติ</button>
     </nav>
   </div>
 </header>
@@ -296,10 +300,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="hero">
       <div>
-        <span class="sticker">📣 แผนคอนเทนต์ best home</span>
+        <span class="sticker">แผนคอนเทนต์ best home</span>
         <h1 class="h-big mt-s">4 ช่องทาง<br>ลงของ <span class="hl">ไม่ซ้ำกัน</span></h1>
         <p class="sub">FB กับ IG ให้คนเชื่อใจ · YouTube กับ TikTok ให้คนรู้จัก · มี CEO เป็นหน้าแบรนด์ทุกช่อง</p>
-        <p class="tiny muted mt-s">👉 กดปุ่มด้านบน หรือการ์ดช่องทางด้านล่าง เพื่อดูแผนทีละช่อง (ใช้ลูกศร ← → บนคีย์บอร์ดเปลี่ยนหน้าได้)</p>
+        <p class="tiny muted mt-s">กดปุ่มด้านบน หรือการ์ดช่องทางด้านล่าง เพื่อดูแผนทีละช่อง (ใช้ลูกศร ← → บนคีย์บอร์ดเปลี่ยนหน้าได้)</p>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="polar p1"><img src="media/fb-update-on.jpg" alt=""><span>อัปเดตหน้างาน</span></div>
@@ -315,23 +319,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <button class="cc" data-go="tiktok" style="--c:var(--tt)"><div class="top-band"><svg><use href="#i-tt"/></svg><b>TikTok</b></div><div class="body"><span class="role">เวทีหาคนใหม่ ให้คนจำหน้าและมุก</span><div class="pills"><span style="--pc:#d5f7e8">ความรู้</span><span style="--pc:#ffd9e8">เฮฮา</span><span style="--pc:#ece6ff">CEO</span></div><div class="go">5 คลิป/สัปดาห์<em>→</em></div></div></button>
     </div>
 
-    <h2 class="h2 mt">แบ่งเป็น 2 ฝั่ง</h2>
-    <div class="two mt-s">
-      <div class="card" style="background:#dcefff"><span class="sticker" style="--c:#fff">FB + IG</span><p class="h3 mt-s">🤝 ให้คนเชื่อใจ</p><p class="small">คนที่กำลังหาผู้รับเหมา เข้ามาดูงานจริงก่อนทัก LINE</p></div>
-      <div class="vs">+</div>
-      <div class="card" style="background:#ffe1ec"><span class="sticker" style="--c:#fff">YouTube + TikTok</span><p class="h3 mt-s">👋 ให้คนรู้จัก</p><p class="small">คนที่ยังไม่รีโนเวทวันนี้ ดูเพราะได้ความรู้หรือดูแล้วสนุก แล้วจำเราได้</p></div>
-    </div>
 
     <h2 class="h2 mt">7 แบบคอนเทนต์ <span class="tiny muted" style="font-weight:700">รูปที่มีป้าย "ของจริง" มาจากเพจและไซต์ของเรา</span></h2>
     <div class="pillars mt-s">
-      <div class="pl" style="--c:#ffe7b8"><div class="ph"><img src="media/fb-update-on.jpg" alt="โพสต์อัปเดตหน้างาน ลาดพร้าว 80" loading="lazy"><span class="real">ของจริง</span></div><div class="tx"><b>🚧 อัปเดตหน้างาน</b><p>ไซต์จริงเดินหน้าทุกสัปดาห์</p></div></div>
-      <div class="pl" style="--c:#e6ddff"><div class="ph"><img src="media/fb-4styles.jpg" alt="อินโฟ 4 สไตล์บ้านท้าแดด" loading="lazy"><span class="real">ของจริง</span></div><div class="tx"><b>🤖 AI Info</b><p>ความรู้ย่อยง่าย ทั้งภาพและคลิป</p></div></div>
-      <div class="pl" style="--c:#d5f7e8"><div class="ph"><video src="media/site-rebar.mp4" poster="media/site-rebar.jpg" autoplay muted loop playsinline preload="none"></video><span class="real">ฟุตเทจไซต์จริง</span></div><div class="tx"><b>🔧 ความรู้หน้างาน</b><p>ช่างอธิบายหน้างานจริงให้ดู</p></div></div>
-      <div class="pl" style="--c:#dcefff"><div class="ph"><img src="media/fb-b4a.jpg" alt="โพสต์ Before and After" loading="lazy"><span class="real">ของจริง</span></div><div class="tx"><b>✨ Before → After</b><p>บ้านหลังเดิม ถ่ายมุมเดิม ก่อนกับหลังทำ</p></div></div>
-      <div class="pl" style="--c:var(--grape)"><div class="ph">👔</div><div class="tx"><b>👔 CEO branding</b><p>หน้าแบรนด์ คนที่รับผิดชอบงาน</p></div></div>
-      <div class="pl" style="--c:#ffd9e8"><div class="ph"><video src="media/site-team.mp4" poster="media/site-team.jpg" autoplay muted loop playsinline preload="none"></video><span class="real">ทีมช่างของเรา</span></div><div class="tx"><b>😂 Lifestyle เฮฮา</b><p>A ผูกกับงาน · B ชีวิตทีมล้วน</p></div></div>
-      <div class="pl" style="--c:#ffd6c2"><div class="ph"><img src="media/reel-talk.jpg" alt="Reel คนในทีมพูดกับกล้อง" loading="lazy" style="object-position:top"><span class="real">ของจริง</span></div><div class="tx"><b>📢 กึ่งโฆษณา</b><p>เล่าปัญหาลูกค้า แล้วบอกว่าเราแก้ยังไง</p></div></div>
-      <div class="pl" style="--c:#fff;border-style:dashed"><div class="ph" style="background:#fff8e6">♻️</div><div class="tx"><b>ทำครั้งเดียว ลงได้ 4 ที่</b><p>คลิปแนวตั้ง 1 ไฟล์ = Reels + Shorts + TikTok</p></div></div>
+      <div class="pl" style="--c:#ffe7b8"><div class="ph"><img src="media/fb-update-on.jpg" alt="โพสต์อัปเดตหน้างาน ลาดพร้าว 80" loading="lazy"><span class="real">ของจริง</span></div><div class="tx"><b>อัปเดตหน้างาน</b><p>ไซต์จริงเดินหน้าทุกสัปดาห์</p></div></div>
+      <div class="pl" style="--c:#e6ddff"><div class="ph"><img src="media/fb-4styles.jpg" alt="อินโฟ 4 สไตล์บ้านท้าแดด" loading="lazy"><span class="real">ของจริง</span></div><div class="tx"><b>AI Info</b><p>ความรู้ย่อยง่าย ทั้งภาพและคลิป</p></div></div>
+      <div class="pl" style="--c:#d5f7e8"><div class="ph"><video src="media/site-rebar.mp4" poster="media/site-rebar.jpg" autoplay muted loop playsinline preload="none"></video><span class="real">ฟุตเทจไซต์จริง</span></div><div class="tx"><b>ความรู้หน้างาน</b><p>ช่างอธิบายหน้างานจริงให้ดู</p></div></div>
+      <div class="pl" style="--c:#dcefff"><div class="ph"><img src="media/fb-b4a.jpg" alt="โพสต์ Before and After" loading="lazy"><span class="real">ของจริง</span></div><div class="tx"><b>Before → After</b><p>บ้านหลังเดิม ถ่ายมุมเดิม ก่อนกับหลังทำ</p></div></div>
+      <div class="pl" style="--c:var(--grape)"><div class="ph" style="background:var(--ink)"><span class="ph-txt" style="color:var(--sun)">CEO<br><small style="font-weight:400;color:#cfc9be;font-size:12.5px">ยังไม่มีฟุตเทจ · เริ่มถ่าย ธ.ค.</small></span></div><div class="tx"><b>CEO branding</b><p>หน้าแบรนด์ คนที่รับผิดชอบงาน</p></div></div>
+      <div class="pl" style="--c:#ffd9e8"><div class="ph"><video src="media/site-team.mp4" poster="media/site-team.jpg" autoplay muted loop playsinline preload="none"></video><span class="real">ทีมช่างของเรา</span></div><div class="tx"><b>Lifestyle เฮฮา</b><p>A ผูกกับงาน · B ชีวิตทีมล้วน</p></div></div>
+      <div class="pl" style="--c:#ffd6c2"><div class="ph"><img src="media/reel-talk.jpg" alt="Reel คนในทีมพูดกับกล้อง" loading="lazy" style="object-position:top"><span class="real">ของจริง</span></div><div class="tx"><b>กึ่งโฆษณา</b><p>เล่าปัญหาลูกค้า แล้วบอกว่าเราแก้ยังไง</p></div></div>
+      <div class="pl" style="border-style:dashed"><div class="ph" style="background:var(--paper-2)"><span class="ph-txt">1 คลิป<br>→ 4 ช่องทาง</span></div><div class="tx"><b>ทำครั้งเดียว ลงได้ 4 ที่</b><p>คลิปแนวตั้ง 1 ไฟล์ = Reels + Shorts + TikTok</p></div></div>
     </div>
 
     <h2 class="h2 mt">ช่องไหนลงอะไร</h2>
@@ -339,14 +337,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <table class="mx">
         <thead><tr><th style="text-align:left">แบบคอนเทนต์</th><th>Facebook</th><th>Instagram</th><th>YouTube</th><th>TikTok</th></tr></thead>
         <tbody>
-          <tr><th class="r">🚧 อัปเดตหน้างาน</th><td class="yes">✅</td><td class="yes">✅</td><td class="no">—</td><td class="no">—</td></tr>
-          <tr><th class="r">🤖 AI Info (ภาพ + คลิป)</th><td class="yes">✅</td><td class="yes">✅</td><td><span class="some">ตัวเด็ด</span></td><td><span class="some">ตัวเด็ด</span></td></tr>
-          <tr><th class="r">🔧 ความรู้หน้างาน</th><td class="yes">✅</td><td class="yes">✅</td><td class="yes">✅</td><td class="yes">✅</td></tr>
-          <tr><th class="r">✨ Before → After</th><td class="yes">✅</td><td class="yes">✅</td><td><span class="some">15 วิ</span></td><td><span class="some">15 วิ</span></td></tr>
-          <tr><th class="r">👔 CEO branding</th><td class="yes">✅</td><td class="yes">✅</td><td class="yes">✅</td><td class="yes">✅</td></tr>
-          <tr><th class="r">😂 เฮฮา A · ผูกกับงาน</th><td><span class="some">บางตัว</span></td><td><span class="some">Reels</span></td><td class="yes">✅</td><td class="yes">✅</td></tr>
-          <tr><th class="r">🎉 เฮฮา B · ชีวิตทีมล้วน</th><td class="no">—</td><td class="no">—</td><td class="yes">✅</td><td class="yes">✅</td></tr>
-          <tr><th class="r">📢 กึ่งโฆษณา</th><td class="yes">✅</td><td class="yes">✅</td><td><span class="some">บางตัว</span></td><td><span class="some">บางตัว</span></td></tr>
+          <tr><th class="r">อัปเดตหน้างาน</th><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td class="no">—</td><td class="no">—</td></tr>
+          <tr><th class="r">AI Info (ภาพ + คลิป)</th><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="some">ตัวเด็ด</span></td><td><span class="some">ตัวเด็ด</span></td></tr>
+          <tr><th class="r">ความรู้หน้างาน</th><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="mk">●</span></td></tr>
+          <tr><th class="r">Before → After</th><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="some">15 วิ</span></td><td><span class="some">15 วิ</span></td></tr>
+          <tr><th class="r">CEO branding</th><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="mk">●</span></td></tr>
+          <tr><th class="r">เฮฮา A · ผูกกับงาน</th><td><span class="some">บางตัว</span></td><td><span class="some">Reels</span></td><td><span class="mk">●</span></td><td><span class="mk">●</span></td></tr>
+          <tr><th class="r">เฮฮา B · ชีวิตทีมล้วน</th><td class="no">—</td><td class="no">—</td><td><span class="mk">●</span></td><td><span class="mk">●</span></td></tr>
+          <tr><th class="r">กึ่งโฆษณา</th><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="some">บางตัว</span></td><td><span class="some">บางตัว</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -371,20 +369,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div>
         <h2 class="h2">ลงอะไรบ้าง <span class="tiny muted" style="font-weight:700">ตัวอย่างจากโพสต์จริงของเรา</span></h2>
         <div class="ex-grid mt-s">
-          <div class="ex" style="--c:#ffd27a"><div class="media"><img src="media/fb-site-structure.jpg" alt="อัปเดตไซต์ลาดพร้าว 80" loading="lazy"><span class="badge">🚧 หน้างาน</span><span class="freq">×3</span></div><div class="tx"><b>Update Site ลาดพร้าว 80</b><p>อัลบั้ม 4–6 รูป เล่าว่างานถึงขั้นไหน ทำทีละขั้นยังไง</p></div></div>
-          <div class="ex" style="--c:#c9b8ff"><div class="media"><img src="media/fb-tropical.jpg" alt="อินโฟ Modern Tropical" loading="lazy"><span class="badge">🤖 AI Info ภาพ</span><span class="freq">×1</span></div><div class="tx"><b>4 สไตล์บ้านท้าแดดเมืองไทย</b><p>คารูเซลความรู้ที่คนเซฟเก็บไว้</p></div></div>
-          <div class="ex" style="--c:#c9b8ff"><div class="media"><button class="play" data-embed="fb" data-id="29330985569877202"><img src="media/reel-ai.jpg" alt="ปก Reel AI ตึกแถวหลายคูหา" loading="lazy"><span class="btn">▶</span><span class="lbl">กดดูคลิปจริงบน FB</span></button><span class="badge">🤖 AI Info คลิป</span><span class="freq">×1</span></div><div class="tx"><b>ตึกแถวหลายคูหา รีโนเวทรวมเป็นบ้านเดียวได้ไหม</b><p>คลิปที่ AI ทำในเว็บ MARKETING ภาพขยับ + ซับ</p></div></div>
-          <div class="ex" style="--c:#8ee6bf"><div class="media"><video src="media/site-rebar.mp4" poster="media/site-rebar.jpg" autoplay muted loop playsinline preload="none"></video><span class="badge">🔧 ความรู้หน้างาน</span><span class="freq">×1</span></div><div class="tx"><b>ฟุตเทจจริงจากไซต์ (ยังไม่ตัดต่อ)</b><div class="idea">💡 ให้ช่างพูดสัก 30 วิ ว่า "ผูกเหล็กตรงนี้ ทำไมต้องเว้นระยะ" แค่นี้ก็เป็นคลิปความรู้ได้แล้ว</div></div></div>
-          <div class="ex" style="--c:#8fd0ff"><div class="media"><img src="media/fb-b4a.jpg" alt="Before and After" loading="lazy"><span class="badge">✨ Before → After</span><span class="freq">×1</span></div><div class="tx"><b>ต่อเติม ลาดพร้าว 80</b><p>รูปจริงช่วงก่อนกับระหว่างทำ พองานเสร็จค่อยถ่ายมุมเดิมมาเทียบ</p></div></div>
-          <div class="ex" style="--c:#ffab6b"><div class="media"><button class="play" data-embed="fb" data-id="1814835373179089"><img src="media/reel-talk.jpg" alt="ปก Reel งบบานปลาย" loading="lazy" style="object-position:top"><span class="btn">▶</span><span class="lbl">กดดูคลิปจริงบน FB</span></button><span class="badge">📢 กึ่งโฆษณา / CEO</span><span class="freq">×½</span></div><div class="tx"><b>"ไม่อยากรีโนเวทแล้วงบบานปลาย"</b><p>คนพูดกับกล้อง + ภาพแบบ + ฉากประชุมจริง เป็นต้นแบบให้ CEO ทำต่อ</p></div></div>
+          <div class="ex" style="--c:#ffd27a"><div class="media"><img src="media/fb-site-structure.jpg" alt="อัปเดตไซต์ลาดพร้าว 80" loading="lazy"><span class="badge">หน้างาน</span><span class="freq">×3</span></div><div class="tx"><b>Update Site ลาดพร้าว 80</b><p>อัลบั้ม 4–6 รูป เล่าว่างานถึงขั้นไหน ทำทีละขั้นยังไง</p></div></div>
+          <div class="ex" style="--c:#c9b8ff"><div class="media"><img src="media/fb-tropical.jpg" alt="อินโฟ Modern Tropical" loading="lazy"><span class="badge">AI Info ภาพ</span><span class="freq">×1</span></div><div class="tx"><b>4 สไตล์บ้านท้าแดดเมืองไทย</b><p>คารูเซลความรู้ที่คนเซฟเก็บไว้</p></div></div>
+          <div class="ex" style="--c:#c9b8ff"><div class="media"><button class="play" data-embed="fb" data-id="29330985569877202"><img src="media/reel-ai.jpg" alt="ปก Reel AI ตึกแถวหลายคูหา" loading="lazy"><span class="btn">▶</span><span class="lbl">กดดูคลิปจริงบน FB</span></button><span class="badge">AI Info คลิป</span><span class="freq">×1</span></div><div class="tx"><b>ตึกแถวหลายคูหา รีโนเวทรวมเป็นบ้านเดียวได้ไหม</b><p>คลิปที่ AI ทำในเว็บ MARKETING ภาพขยับ + ซับ</p></div></div>
+          <div class="ex" style="--c:#8ee6bf"><div class="media"><video src="media/site-rebar.mp4" poster="media/site-rebar.jpg" autoplay muted loop playsinline preload="none"></video><span class="badge">ความรู้หน้างาน</span><span class="freq">×1</span></div><div class="tx"><b>ฟุตเทจจริงจากไซต์ (ยังไม่ตัดต่อ)</b><div class="idea">ให้ช่างพูดสัก 30 วิ ว่า "ผูกเหล็กตรงนี้ ทำไมต้องเว้นระยะ" แค่นี้ก็เป็นคลิปความรู้ได้แล้ว</div></div></div>
+          <div class="ex" style="--c:#8fd0ff"><div class="media"><img src="media/fb-b4a.jpg" alt="Before and After" loading="lazy"><span class="badge">Before → After</span><span class="freq">×1</span></div><div class="tx"><b>ต่อเติม ลาดพร้าว 80</b><p>รูปจริงช่วงก่อนกับระหว่างทำ พองานเสร็จค่อยถ่ายมุมเดิมมาเทียบ</p></div></div>
+          <div class="ex" style="--c:#ffab6b"><div class="media"><button class="play" data-embed="fb" data-id="1814835373179089"><img src="media/reel-talk.jpg" alt="ปก Reel งบบานปลาย" loading="lazy" style="object-position:top"><span class="btn">▶</span><span class="lbl">กดดูคลิปจริงบน FB</span></button><span class="badge">กึ่งโฆษณา / CEO</span><span class="freq">×½</span></div><div class="tx"><b>"ไม่อยากรีโนเวทแล้วงบบานปลาย"</b><p>คนพูดกับกล้อง + ภาพแบบ + ฉากประชุมจริง เป็นต้นแบบให้ CEO ทำต่อ</p></div></div>
         </div>
-        <div class="kpis mt"><b>📊 วัดผลด้วย</b><span>ทักแชท / LINE</span><span>แชร์ · เซฟ</span><span>ดู Reels ถึงครึ่งคลิป</span></div>
+        <div class="kpis mt"><b>วัดผลด้วย</b><span>ทักแชท / LINE</span><span>แชร์ · เซฟ</span><span>ดู Reels ถึงครึ่งคลิป</span></div>
       </div>
       <div class="side-phone">
         <div class="phone"><div class="scr">
           <div class="fb-feed">
-            <div class="fb-post"><div class="h"><i></i>best home</div>🚧 Update Site | ลาดพร้าว 80 ขึ้นโครงสร้างคานชั้นสอง…<div class="pics"><img src="media/fb-update-on.jpg" alt=""><img src="media/fb-site-wall.jpg" alt=""></div></div>
-            <div class="fb-post"><div class="h"><i></i>best home</div>☀️ 4 สไตล์บ้านท้าแดดเมืองไทย…<div class="pics"><img src="media/fb-4styles.jpg" alt=""><img src="media/fb-tropical.jpg" alt=""></div></div>
+            <div class="fb-post"><div class="h"><i></i>best home</div>Update Site | ลาดพร้าว 80 ขึ้นโครงสร้างคานชั้นสอง…<div class="pics"><img src="media/fb-update-on.jpg" alt=""><img src="media/fb-site-wall.jpg" alt=""></div></div>
+            <div class="fb-post"><div class="h"><i></i>best home</div>4 สไตล์บ้านท้าแดดเมืองไทย…<div class="pics"><img src="media/fb-4styles.jpg" alt=""><img src="media/fb-tropical.jpg" alt=""></div></div>
           </div>
         </div></div>
         <p class="phone-cap">ฟีดจริงที่ลงไปแล้ว: รูปไซต์ + อินโฟ</p>
@@ -397,8 +395,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <!-- ================= INSTAGRAM ================= -->
 <section class="view" id="v-instagram" role="tabpanel">
   <div class="wrap">
-    <div class="ch-head" style="--c:var(--ig);background:linear-gradient(120deg,#f58529,#dd2a7b 55%,#8134af)">
-      <span class="big-ic" style="color:var(--ig)"><svg><use href="#i-ig"/></svg></span>
+    <div class="ch-head" style="--c:var(--ig)">
+      <span class="big-ic" style="background:linear-gradient(45deg,#f58529,#dd2a7b 55%,#8134af)"><svg><use href="#i-ig"/></svg></span>
       <div><h1>Instagram</h1><p>หน้าร้านสวยๆ เลื่อนดูโปรไฟล์แล้วรู้เลยว่าเราทำงานแบบไหน ความรู้ก็เซฟเก็บไว้ได้</p></div>
       <div class="stats"><div class="stat"><b>8</b><span>โพสต์/สัปดาห์</span></div><div class="stat"><b>ทุกวัน</b><span>Stories</span></div></div>
     </div>
@@ -408,20 +406,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div>
         <h2 class="h2">ทำ 3 อย่างนี้ให้ดี</h2>
         <div class="ex-grid mt-s">
-          <div class="ex" style="--c:#c9b8ff"><div class="media"><img src="media/fb-4styles.jpg" alt="คารูเซลความรู้" loading="lazy"><span class="badge">📚 คารูเซล</span><span class="freq">×4</span></div><div class="tx"><b>ความรู้ + หน้างาน แบบปัด</b><p>ภาพ 4:5 ปัด 5–8 ภาพ ภาพแรกต้องอ่านแล้วอยากปัดต่อ</p></div></div>
-          <div class="ex" style="--c:#ffd27a"><div class="media tall"><video src="media/site-structure.mp4" poster="media/site-structure.jpg" autoplay muted loop playsinline preload="none"></video><span class="badge">📱 Stories</span><span class="freq">ทุกวัน</span></div><div class="tx"><b>ไซต์วันนี้ (ฟุตเทจจริง)</b><p>ถ่ายมือถือสั้นๆ 1–3 เฟรม ใส่โพล "ห้องนี้ปูลายไหนดี" ชวนคนตอบ</p></div></div>
-          <div class="ex" style="--c:#ff9ec1"><div class="media tall"><img src="media/reel-talk.jpg" alt="Reels คนพูด" loading="lazy" style="object-position:top"><span class="badge">🎬 Reels</span><span class="freq">×3</span></div><div class="tx"><b>ไฟล์เดียวกับ TikTok</b><p>CEO · ความรู้ · เฮฮา A เปลี่ยนแค่แคปชั่นกับปก</p></div></div>
+          <div class="ex" style="--c:#c9b8ff"><div class="media"><img src="media/fb-4styles.jpg" alt="คารูเซลความรู้" loading="lazy"><span class="badge">คารูเซล</span><span class="freq">×4</span></div><div class="tx"><b>ความรู้ + หน้างาน แบบปัด</b><p>ภาพ 4:5 ปัด 5–8 ภาพ ภาพแรกต้องอ่านแล้วอยากปัดต่อ</p></div></div>
+          <div class="ex" style="--c:#ffd27a"><div class="media tall"><video src="media/site-structure.mp4" poster="media/site-structure.jpg" autoplay muted loop playsinline preload="none"></video><span class="badge">Stories</span><span class="freq">ทุกวัน</span></div><div class="tx"><b>ไซต์วันนี้ (ฟุตเทจจริง)</b><p>ถ่ายมือถือสั้นๆ 1–3 เฟรม ใส่โพล "ห้องนี้ปูลายไหนดี" ชวนคนตอบ</p></div></div>
+          <div class="ex" style="--c:#ff9ec1"><div class="media tall"><img src="media/reel-talk.jpg" alt="Reels คนพูด" loading="lazy" style="object-position:top"><span class="badge">Reels</span><span class="freq">×3</span></div><div class="tx"><b>ไฟล์เดียวกับ TikTok</b><p>CEO · ความรู้ · เฮฮา A เปลี่ยนแค่แคปชั่นกับปก</p></div></div>
         </div>
         <div class="card mt" style="background:#fff8e6">
-          <b class="h3">📌 ไฮไลต์บนโปรไฟล์ (ตั้งครั้งเดียวใช้ได้ตลอด)</b>
-          <div class="row mt-s" style="gap:10px"><span class="sticker" style="--c:#fff;transform:none">🏠 ผลงาน</span><span class="sticker" style="--c:#fff;transform:none">🚧 ไซต์ตอนนี้</span><span class="sticker" style="--c:#fff;transform:none">📐 ขั้นตอนทำงาน</span><span class="sticker" style="--c:#fff;transform:none">💬 ถามตอบ</span><span class="sticker" style="--c:#fff;transform:none">👷 ทีมเรา</span></div>
+          <b class="h3">ไฮไลต์บนโปรไฟล์ (ตั้งครั้งเดียวใช้ได้ตลอด)</b>
+          <div class="row mt-s" style="gap:10px"><span class="pill">ผลงาน</span><span class="pill">ไซต์ตอนนี้</span><span class="pill">ขั้นตอนทำงาน</span><span class="pill">ถามตอบ</span><span class="pill">ทีมเรา</span></div>
         </div>
-        <div class="kpis mt"><b>📊 วัดผลด้วย</b><span>เซฟ · แชร์</span><span>คนกดเข้าโปรไฟล์</span><span>DM</span></div>
+        <div class="kpis mt"><b>วัดผลด้วย</b><span>เซฟ · แชร์</span><span>คนกดเข้าโปรไฟล์</span><span>DM</span></div>
       </div>
       <div class="side-phone">
         <div class="phone"><div class="scr">
           <div class="ig-head"><span class="av">bh</span><div><b style="font-size:13px">best home</b><br>รีโนเวทบ้านเดี่ยว กทม.</div></div>
-          <div class="ig-hl"><div><i>🏠</i>ผลงาน</div><div><i>🚧</i>ไซต์</div><div><i>📐</i>ขั้นตอน</div><div><i>💬</i>ถามตอบ</div><div><i>👷</i>ทีม</div></div>
+          <div class="ig-hl"><div><i></i>ผลงาน</div><div><i></i>ไซต์</div><div><i></i>ขั้นตอน</div><div><i></i>ถามตอบ</div><div><i></i>ทีม</div></div>
           <div class="ig-feed"><img src="media/fb-update-on.jpg" alt=""><img src="media/fb-4styles.jpg" alt=""><img src="media/reel-talk.jpg" alt="" style="object-position:top"><img src="media/fb-b4a.jpg" alt=""><img src="media/fb-tropical.jpg" alt=""><img src="media/fb-site-structure.jpg" alt=""><img src="media/fb-process-behind.jpg" alt=""><img src="media/reel-ai.jpg" alt=""><img src="media/fb-site-wall.jpg" alt=""></div>
         </div></div>
         <p class="phone-cap">ถ้าเอารูปจริงที่มีอยู่มาจัดเรียงบน IG จะได้หน้าตาแบบนี้</p>
@@ -452,12 +450,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
     <h2 class="h2 mt">ต่อไปจะเพิ่ม 4 แบบนี้ สลับกันลง</h2>
     <div class="grid g4 mt-s">
-      <div class="se" style="--c:#d5f7e8"><span class="em">🔧</span><b>ถามช่าง</b><p>โฟร์แมนพาเดินไซต์ ตอบทีละจุด</p><span class="q">"บ้าน 30 ปี เริ่มรีโนเวทตรงไหนก่อน"</span></div>
-      <div class="se" style="--c:#ece6ff"><span class="em">👔</span><b>CEO ตอบ 10 ข้อ</b><p>รวมคำถามที่ลูกค้าถามบ่อย</p><span class="q">"ก่อนจ้างรีโนเวท ถาม 10 ข้อนี้"</span></div>
-      <div class="se" style="--c:#ffd9e8"><span class="em">😂</span><b>เฮฮา A</b><p>ทีมออฟฟิศลองเป็นช่าง 1 วัน</p><span class="q">"ใครทำพังเป็นคนแรก"</span></div>
-      <div class="se" style="--c:#ffe7f0"><span class="em">🎉</span><b>เฮฮา B · Vlog</b><p>ทริปบริษัท กีฬาสี ปีใหม่</p><span class="q">"ไม่ขายอะไรเลย แค่สนุก"</span></div>
+      <div class="se" style="--c:#d5f7e8"><b>ถามช่าง</b><p>โฟร์แมนพาเดินไซต์ ตอบทีละจุด</p><span class="q">"บ้าน 30 ปี เริ่มรีโนเวทตรงไหนก่อน"</span></div>
+      <div class="se" style="--c:#ece6ff"><b>CEO ตอบ 10 ข้อ</b><p>รวมคำถามที่ลูกค้าถามบ่อย</p><span class="q">"ก่อนจ้างรีโนเวท ถาม 10 ข้อนี้"</span></div>
+      <div class="se" style="--c:#ffd9e8"><b>เฮฮา A</b><p>ทีมออฟฟิศลองเป็นช่าง 1 วัน</p><span class="q">"ใครทำพังเป็นคนแรก"</span></div>
+      <div class="se" style="--c:#ffe7f0"><b>เฮฮา B · Vlog</b><p>ทริปบริษัท กีฬาสี ปีใหม่</p><span class="q">"ไม่ขายอะไรเลย แค่สนุก"</span></div>
     </div>
-    <div class="kpis mt"><b>📊 วัดผลด้วย</b><span>เวลาดูรวม</span><span>ผู้ติดตามใหม่</span><span>คนค้นเจอ</span></div>
+    <div class="kpis mt"><b>วัดผลด้วย</b><span>เวลาดูรวม</span><span>ผู้ติดตามใหม่</span><span>คนค้นเจอ</span></div>
     <div class="next-row"><button class="nbtn" data-go="instagram">← Instagram</button><button class="nbtn pri" data-go="tiktok">ดู TikTok →</button></div>
   </div>
 </section>
@@ -465,8 +463,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <!-- ================= TIKTOK ================= -->
 <section class="view" id="v-tiktok" role="tabpanel">
   <div class="wrap">
-    <div class="ch-head" style="--c:#111;background:#111">
-      <span class="big-ic" style="color:#111;box-shadow:-3px -3px 0 #25f4ee,3px 3px 0 #fe2c55"><svg><use href="#i-tt"/></svg></span>
+    <div class="ch-head" style="--c:#111">
+      <span class="big-ic" style="box-shadow:-2px -2px 0 #25f4ee inset,2px 2px 0 #fe2c55 inset"><svg><use href="#i-tt"/></svg></span>
       <div><h1>TikTok</h1><p>เวทีหาคนใหม่ คนจะจำหน้าและมุกได้ก่อนชื่อบริษัท ทำแบบดิบๆ เร็วๆ และมีตัวละครประจำ</p></div>
       <div class="stats"><div class="stat"><b>5</b><span>คลิป/สัปดาห์</span></div><div class="stat"><b>15–90</b><span>วินาที</span></div></div>
     </div>
@@ -477,9 +475,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <h2 class="h2">เฮฮา มี 2 แบบ</h2>
         <div class="ab mt-s">
           <div class="card" style="background:#ffe1ec"><span class="pct">70%</span><p class="h3">A · ผูกกับงานบริษัท</p><p class="small muted">หัวเราะก่อน แล้วค่อยรู้ว่าเราทำงานยังไง</p>
-            <div class="ideas-list"><div>🧑‍🎓 POV: วันแรกของน้องฝึกงานที่ไซต์</div><div>🗣️ แปลภาษาช่าง "เดี๋ยวพี่จัดให้" แปลว่าอะไร</div><div>🎨 ทีมออฟฟิศทายว่าผนังจะทาสีอะไร</div></div></div>
+            <div class="ideas-list"><div>POV: วันแรกของน้องฝึกงานที่ไซต์</div><div>แปลภาษาช่าง "เดี๋ยวพี่จัดให้" แปลว่าอะไร</div><div>ทีมออฟฟิศทายว่าผนังจะทาสีอะไร</div></div></div>
           <div class="card" style="background:#fff0f6"><span class="pct">30%</span><p class="h3">B · ชีวิตทีมล้วน</p><p class="small muted">ไม่ขายอะไรเลย ให้คนติดตาม "คน"</p>
-            <div class="ideas-list"><div>🍛 ข้าวเที่ยงไซต์วันนี้</div><div>🏃 ทีมวิ่งเย็นวันศุกร์</div><div>🎁 บอสจับฉลากปีใหม่</div></div></div>
+            <div class="ideas-list"><div>ข้าวเที่ยงไซต์วันนี้</div><div>ทีมวิ่งเย็นวันศุกร์</div><div>บอสจับฉลากปีใหม่</div></div></div>
         </div>
 
         <h2 class="h2 mt">ช่องตัวอย่างที่ทีมเลือก</h2>
@@ -488,17 +486,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
             <div style="flex:1;min-width:220px"><b class="h3">@gracezy.siblingth</b><p class="small muted">พนักงานแบรนด์สกินแคร์ เล่าชีวิตประจำวันกับเพื่อนร่วมงานและเจ้านาย แล้วแทรกสินค้าบริษัทบางคลิป</p></div>
             <div class="row" style="gap:10px"><div class="stat"><b>230.3K</b><span>ผู้ติดตาม</span></div><div class="stat"><b>15.9M</b><span>ไลก์รวม</span></div></div>
           </div>
-          <div class="ideas-list" style="flex-direction:row;flex-wrap:wrap"><div>👤 มีตัวละครหลัก 1 คนให้คนจำ</div><div>✍️ hook บนจอบรรทัดเดียว</div><div>📱 ถ่ายมือถือดิบๆ ก็พอ</div><div>🧑‍💼 เจ้านายเป็นตัวประกอบ</div></div>
+          <div class="ideas-list" style="flex-direction:row;flex-wrap:wrap"><div>มีตัวละครหลัก 1 คนให้คนจำ</div><div>hook บนจอบรรทัดเดียว</div><div>ถ่ายมือถือดิบๆ ก็พอ</div><div>เจ้านายเป็นตัวประกอบ</div></div>
           <div class="row mt-s"><button class="nbtn" id="tt-profile-btn" style="font-size:14px;padding:8px 14px">▶ เปิดดูคลิปของช่องนี้</button><a class="small" href="https://www.tiktok.com/@gracezy.siblingth" target="_blank" rel="noopener" style="font-weight:800">เปิดใน TikTok ↗</a></div>
           <div id="tt-profile" class="mt-s"></div>
           <p class="src">ตัวเลขดูจากหน้าโปรไฟล์วันที่ 24 พ.ย. 2569</p>
         </div>
-        <div class="kpis mt"><b>📊 วัดผลด้วย</b><span>ดูจบกี่ %</span><span>แชร์</span><span>ผู้ติดตามใหม่</span><span>คอมเมนต์ถามเรื่องบ้าน</span></div>
+        <div class="kpis mt"><b>วัดผลด้วย</b><span>ดูจบกี่ %</span><span>แชร์</span><span>ผู้ติดตามใหม่</span><span>คอมเมนต์ถามเรื่องบ้าน</span></div>
       </div>
       <div class="side-phone">
         <div class="phone"><div class="scr" style="background:#111">
           <video src="media/site-team.mp4" poster="media/site-team.jpg" autoplay muted loop playsinline preload="none"></video>
-          <div class="hook"><span>POV: วันย้ายรั้ว</span><br><span>ที่ไซต์ลาดพร้าว 😂</span></div>
+          <div class="hook"><span>POV: วันย้ายรั้ว</span><br><span>ที่ไซต์ลาดพร้าว </span></div>
           <div class="subt">"ซ้าย! ซ้ายของพี่หรือของผม"</div>
           <div class="side"><i></i><i></i><i></i></div>
           <div class="capt">best home · #ชีวิตช่าง #รีโนเวท</div>
@@ -513,24 +511,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <!-- ================= CEO ================= -->
 <section class="view" id="v-ceo" role="tabpanel">
   <div class="wrap">
-    <div class="ch-head" style="--c:var(--grape);--fg:var(--ink)">
-      <span class="big-ic" style="font-size:46px">👔</span>
+    <div class="ch-head" style="--c:var(--ink)">
+      <span class="big-ic" style="color:var(--sun)">CEO</span>
       <div><h1>CEO branding</h1><p>คนจ้างงานหลักล้านอยากรู้ว่าใครรับผิดชอบบ้านของเขา เราจะให้ CEO เป็นหน้าที่คนเห็นบ่อยที่สุด</p></div>
       <div class="stats"><div class="stat"><b>½ วัน</b><span>ถ่ายรวด/เดือน</span></div><div class="stat"><b>6–8</b><span>คลิป/เดือน</span></div></div>
     </div>
 
     <div class="card mt" style="background:#fff8e6;text-align:center;padding:26px">
       <p class="h2">"เจ้าของบริษัทรับเหมาที่<span class="hl">ลงไซต์เอง</span><br>และเล่าเรื่องจริงที่ลูกค้าควรรู้"</p>
-      <div class="row mt-s" style="justify-content:center;gap:8px"><span class="sticker" style="--c:#fff">😌 ใจเย็น</span><span class="sticker" style="--c:#fff">🎯 พูดตรง</span><span class="sticker" style="--c:#fff">😄 มีมุกนิดๆ</span><span class="sticker" style="--c:#fff">🏗️ รู้จริง</span><span class="sticker" style="--c:#fff">🙅 ไม่ขายของ</span></div>
+      <div class="row mt-s" style="justify-content:center;gap:8px"><span class="pill">ใจเย็น</span><span class="pill">พูดตรง</span><span class="pill">มีมุกนิดๆ</span><span class="pill">รู้จริง</span><span class="pill">ไม่ขายของ</span></div>
     </div>
 
     <h2 class="h2 mt">5 ซีรีส์</h2>
     <div class="series mt-s">
-      <div class="se" style="--c:#fff3c2"><span class="em">🎤</span><b>CEO ตอบเอง</b><p>เอาคำถามจริงจากแชทมาตอบ 30–60 วิ</p><span class="q">"ไม่อยากงบบานปลาย ห้ามข้ามขั้นนี้"</span><div class="where"><span class="chip-ic" style="background:var(--fb)"><svg><use href="#i-fb"/></svg></span><span class="chip-ic" style="background:var(--ig)"><svg><use href="#i-ig"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span><span class="chip-ic" style="background:#111"><svg><use href="#i-tt"/></svg></span></div></div>
-      <div class="se" style="--c:#d5f7e8"><span class="em">🦺</span><b>เดินไซต์กับ CEO</b><p>ตรวจงานจริง เจอจุดไหนต้องแก้ก็ชี้ให้ดู ไม่ต้องตัดออก</p><span class="q">"จุดนี้ผมให้รื้อทำใหม่ เพราะ…"</span><div class="where"><span class="chip-ic" style="background:var(--fb)"><svg><use href="#i-fb"/></svg></span><span class="chip-ic" style="background:var(--ig)"><svg><use href="#i-ig"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span></div></div>
-      <div class="se" style="--c:#dcefff"><span class="em">📐</span><b>ห้องประชุมจริง</b><p>เบื้องหลังคุยแบบกับลูกค้า (ต้องขอความยินยอมก่อน)</p><span class="q">"ลูกค้ามากับงบ 2 ล้าน เราเริ่มแบบนี้"</span><div class="where"><span class="chip-ic" style="background:var(--fb)"><svg><use href="#i-fb"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span></div></div>
-      <div class="se" style="--c:#ece6ff"><span class="em">📓</span><b>บันทึก CEO</b><p>บทเรียนการทำธุรกิจ ระบบคุมงาน ทำไมถึงตั้ง best home</p><span class="q">"ผมเคยเสียลูกค้าเพราะเรื่องนี้"</span><div class="where"><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span><span class="chip-ic" style="background:#111"><svg><use href="#i-tt"/></svg></span></div></div>
-      <div class="se" style="--c:#ffd9e8"><span class="em">😆</span><b>บอสกับทีม</b><p>ทีมเป็นคนเล่นมุก บอสเป็นคนรับมุก</p><span class="q">"ให้บอสทายราคาของในไซต์ ทายผิดเลี้ยงข้าว"</span><div class="where"><span class="chip-ic" style="background:#111"><svg><use href="#i-tt"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span></div></div>
+      <div class="se" style="--c:#fff3c2"><b>CEO ตอบเอง</b><p>เอาคำถามจริงจากแชทมาตอบ 30–60 วิ</p><span class="q">"ไม่อยากงบบานปลาย ห้ามข้ามขั้นนี้"</span><div class="where"><span class="chip-ic" style="background:var(--fb)"><svg><use href="#i-fb"/></svg></span><span class="chip-ic" style="background:var(--ig)"><svg><use href="#i-ig"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span><span class="chip-ic" style="background:#111"><svg><use href="#i-tt"/></svg></span></div></div>
+      <div class="se" style="--c:#d5f7e8"><b>เดินไซต์กับ CEO</b><p>ตรวจงานจริง เจอจุดไหนต้องแก้ก็ชี้ให้ดู ไม่ต้องตัดออก</p><span class="q">"จุดนี้ผมให้รื้อทำใหม่ เพราะ…"</span><div class="where"><span class="chip-ic" style="background:var(--fb)"><svg><use href="#i-fb"/></svg></span><span class="chip-ic" style="background:var(--ig)"><svg><use href="#i-ig"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span></div></div>
+      <div class="se" style="--c:#dcefff"><b>ห้องประชุมจริง</b><p>เบื้องหลังคุยแบบกับลูกค้า (ต้องขอความยินยอมก่อน)</p><span class="q">"ลูกค้ามากับงบ 2 ล้าน เราเริ่มแบบนี้"</span><div class="where"><span class="chip-ic" style="background:var(--fb)"><svg><use href="#i-fb"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span></div></div>
+      <div class="se" style="--c:#ece6ff"><b>บันทึก CEO</b><p>บทเรียนการทำธุรกิจ ระบบคุมงาน ทำไมถึงตั้ง best home</p><span class="q">"ผมเคยเสียลูกค้าเพราะเรื่องนี้"</span><div class="where"><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span><span class="chip-ic" style="background:#111"><svg><use href="#i-tt"/></svg></span></div></div>
+      <div class="se" style="--c:#ffd9e8"><b>บอสกับทีม</b><p>ทีมเป็นคนเล่นมุก บอสเป็นคนรับมุก</p><span class="q">"ให้บอสทายราคาของในไซต์ ทายผิดเลี้ยงข้าว"</span><div class="where"><span class="chip-ic" style="background:#111"><svg><use href="#i-tt"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span></div></div>
     </div>
 
     <h2 class="h2 mt">คลิปตัวอย่างจากโฟลเดอร์ ref <span class="tiny muted" style="font-weight:700">กดเพื่อเล่นจาก TikTok</span></h2>
@@ -544,7 +542,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <p class="src">คลิปเหล่านี้เป็นของแบรนด์อื่น เอามาให้ดูโครงคลิปเท่านั้น ห้ามลอก · ต้นแบบที่เรามีแล้ว: Reel "งบบานปลาย" ในแท็บ Facebook</p>
 
     <h2 class="h2 mt">กติกาสั้นๆ</h2>
-    <div class="rules mt-s"><div>🗣️ พูดแต่เรื่องที่รู้จริง ไม่บอกราคาของแต่ละโครงการ</div><div>😐 ไม่ถนัดเล่นมุกก็ไม่ต้องเล่น ให้ทีมเป็นคนเล่นแทน</div><div>🤝 ไม่พูดถึงคู่แข่ง พูดว่า "ลูกค้าควรระวังอะไร" แทน</div></div>
+    <div class="rules mt-s"><div>พูดแต่เรื่องที่รู้จริง ไม่บอกราคาของแต่ละโครงการ</div><div>ไม่ถนัดเล่นมุกก็ไม่ต้องเล่น ให้ทีมเป็นคนเล่นแทน</div><div>ไม่พูดถึงคู่แข่ง พูดว่า "ลูกค้าควรระวังอะไร" แทน</div></div>
     <div class="next-row"><button class="nbtn" data-go="tiktok">← TikTok</button><button class="nbtn pri" data-go="video">ดูวิธีทำคลิป →</button></div>
   </div>
 </section>
@@ -552,7 +550,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <!-- ================= VIDEO HOW-TO ================= -->
 <section class="view" id="v-video" role="tabpanel">
   <div class="wrap">
-    <span class="sticker" style="--c:var(--mint)">🎬 วิธีทำคลิป</span>
+    <span class="sticker" style="--c:var(--mint)">วิธีทำคลิป</span>
     <h1 class="h-big mt-s">ทุกคลิปใช้ <span class="hl">4 จังหวะ</span> เหมือนกัน</h1>
     <div class="steps mt">
       <div class="stp" style="--c:var(--sun)"><span class="no">1</span><span class="t">0–3 วินาที</span><b>Hook</b><p>เปิดด้วยภาพที่แรงที่สุด + ตัวหนังสือบรรทัดเดียว</p></div>
@@ -562,10 +560,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
 
     <div class="grid g4 mt">
-      <div class="card"><span class="sticker" style="--c:#fff">📐 ขนาด</span><p class="h2 mt-s">9:16</p><p class="small muted">ไฟล์เดียวลงได้ 4 ช่อง</p></div>
-      <div class="card"><span class="sticker" style="--c:#fff">⏱️ ยาว</span><p class="h2 mt-s">15–90 วิ</p><p class="small muted">เฮฮา 15–30 วิ · ความรู้และ CEO 45–90 วิ</p></div>
-      <div class="card"><span class="sticker" style="--c:#fff">💬 ซับ</span><p class="h2 mt-s">ทุกคลิป</p><p class="small muted">คนส่วนใหญ่ดูแบบปิดเสียง</p></div>
-      <div class="card"><span class="sticker" style="--c:#fff">🎙️ อุปกรณ์</span><p class="h2 mt-s">ไมค์ + ขาตั้ง</p><p class="small muted">ไมค์หนีบปก 2 ตัว ขาตั้งมือถือ ไฟเล็ก (ราคาต้องยืนยัน)</p></div>
+      <div class="card"><span class="pill">ขนาด</span><p class="h2 mt-s">9:16</p><p class="small muted">ไฟล์เดียวลงได้ 4 ช่อง</p></div>
+      <div class="card"><span class="pill">ยาว</span><p class="h2 mt-s">15–90 วิ</p><p class="small muted">เฮฮา 15–30 วิ · ความรู้และ CEO 45–90 วิ</p></div>
+      <div class="card"><span class="pill">ซับ</span><p class="h2 mt-s">ทุกคลิป</p><p class="small muted">คนส่วนใหญ่ดูแบบปิดเสียง</p></div>
+      <div class="card"><span class="pill">อุปกรณ์</span><p class="h2 mt-s">ไมค์ + ขาตั้ง</p><p class="small muted">ไมค์หนีบปก 2 ตัว ขาตั้งมือถือ ไฟเล็ก (ราคาต้องยืนยัน)</p></div>
     </div>
 
     <h2 class="h2 mt">สิ่งที่ต้องเริ่มทำตั้งแต่วันแรกที่เข้าไซต์</h2>
@@ -575,18 +573,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <figure><img src="media/fb-site-structure.jpg" alt="ไซต์ลาดพร้าว 80 อีกมุม" loading="lazy"><figcaption>มุมที่ 2</figcaption></figure>
       </div>
       <div class="card">
-        <p class="h3">📍 ถ่ายมุมเดิมทุกครั้ง</p>
+        <p class="h3">ถ่ายมุมเดิมทุกครั้ง</p>
         <p class="small muted">ไซต์เดียวกันแต่ถ่ายคนละมุม พองานเสร็จจะเอามาวางเทียบก่อน–หลังไม่ได้</p>
-        <div class="ideas-list"><div>1️⃣ หน้าบ้าน: ทำเครื่องหมายจุดวางขาตั้ง จดความสูงไว้</div><div>2️⃣ ทุกห้อง: ถ่ายจากมุมประตู ทั้งรูปนิ่งและคลิป 5–10 วิ</div><div>3️⃣ ถ่ายจุดที่มีปัญหาใกล้ๆ เช่น รอยร้าว คราบน้ำ สายไฟเก่า</div><div>4️⃣ งานเสร็จแล้วกลับไปถ่ายซ้ำทุกมุมที่จดไว้</div></div>
+        <div class="ideas-list"><div>หน้าบ้าน: ทำเครื่องหมายจุดวางขาตั้ง จดความสูงไว้</div><div>ทุกห้อง: ถ่ายจากมุมประตู ทั้งรูปนิ่งและคลิป 5–10 วิ</div><div>ถ่ายจุดที่มีปัญหาใกล้ๆ เช่น รอยร้าว คราบน้ำ สายไฟเก่า</div><div>งานเสร็จแล้วกลับไปถ่ายซ้ำทุกมุมที่จดไว้</div></div>
       </div>
     </div>
 
-    <h2 class="h2 mt">ใครทำส่วนไหน</h2>
-    <div class="grid g3 mt-s">
-      <div class="card" style="background:#ece6ff"><p class="h3">🤖 ทำในเว็บด้วย AI</p><p class="small">AI Info ภาพและคลิป ทำได้ทุกสัปดาห์ หัวหน้าทีมตรวจก่อนลง</p></div>
-      <div class="card" style="background:#fff3c2"><p class="h3">🚧 ถ่ายที่ไซต์</p><p class="small">โฟร์แมนส่งรูปมา ทีมออกไซต์สัปดาห์ละครั้ง ได้หน้างาน ความรู้ และภาพก่อน–หลัง</p></div>
-      <div class="card" style="background:#ffe1ec"><p class="h3">🎥 วันถ่ายคน</p><p class="small">เดือนละ 1–2 วัน ถ่าย CEO ตัวละครเฮฮา และคลิปกึ่งโฆษณาให้พอใช้ทั้งเดือน</p></div>
-    </div>
 
     <h2 class="h2 mt">ดูคลิป ref มาแล้ว <span class="hl">97 คลิป</span></h2>
     <div class="refcats mt-s">
@@ -597,8 +589,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="card" style="background:#ffd9e8"><b>11</b><span>ก่อน–หลัง</span><p>มือชี้แล้วตัดสลับจากมุมเดิม</p></div>
     </div>
     <div class="card mt-s">
-      <p class="h3">🪝 5 สูตร hook ที่เจอบ่อยที่สุด</p>
-      <div class="row mt-s" style="gap:8px"><span class="sticker" style="--c:#fff3c2">❓ "บ้าน 30 ปี รีโนเวทได้ไหม"</span><span class="sticker" style="--c:#dcefff">🆚 "ทุบสร้างใหม่ VS รีโนเวท"</span><span class="sticker" style="--c:#d5f7e8">🔢 "3 เรื่องต้องรู้ก่อนสร้าง"</span><span class="sticker" style="--c:#ffd9e8">⏳ "70 วัน บ้านเปลี่ยนไป"</span><span class="sticker" style="--c:#ece6ff">📺 "รีโนเวทบ้าน EP1"</span></div>
+      <p class="h3">5 สูตร hook ที่เจอบ่อยที่สุด</p>
+      <div class="row mt-s" style="gap:8px"><span class="pill" style="--c:#fff3c2">"บ้าน 30 ปี รีโนเวทได้ไหม"</span><span class="pill" style="--c:#dcefff">"ทุบสร้างใหม่ VS รีโนเวท"</span><span class="pill" style="--c:#d5f7e8">"3 เรื่องต้องรู้ก่อนสร้าง"</span><span class="pill" style="--c:#ffd9e8">"70 วัน บ้านเปลี่ยนไป"</span><span class="pill" style="--c:#ece6ff">"รีโนเวทบ้าน EP1"</span></div>
       <p class="src">มาจากโฟลเดอร์ Drive "Best Home Video Content" มี 107 ไฟล์ ตัดตัวซ้ำแล้วเหลือ 97 คลิป · ดูจากภาพ ไม่ได้ฟังเสียง · ทุกคลิปเป็นของแบรนด์อื่น ใช้ดูโครงคลิปเท่านั้น</p>
     </div>
     <div class="next-row"><button class="nbtn" data-go="ceo">← CEO</button><button class="nbtn pri" data-go="week">ดู 1 สัปดาห์ →</button></div>
@@ -608,43 +600,43 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <!-- ================= WEEK ================= -->
 <section class="view" id="v-week" role="tabpanel">
   <div class="wrap">
-    <span class="sticker" style="--c:var(--orange)">📅 1 สัปดาห์</span>
+    <span class="sticker" style="--c:var(--orange)">1 สัปดาห์</span>
     <h1 class="h-big mt-s">ผลิต <span class="hl">~12 ชิ้น</span> ลงครบ 4 ช่อง</h1>
     <p class="sub">จำนวนชิ้นเท่าแผนเดิม แค่จัดใหม่ให้แต่ละช่องได้คอนเทนต์ที่ทำมาเพื่อช่องนั้น ส่วนเวลาลงตั้งไว้ก่อน แล้วปรับตามตัวเลขจริง</p>
     <div class="week-wrap mt">
       <table class="week">
         <thead><tr><th class="c"></th><th>จ.</th><th>อ.</th><th>พ.</th><th>พฤ.</th><th>ศ.</th><th>ส.</th><th>อา.</th></tr></thead>
         <tbody>
-          <tr><th class="c">📘 FB</th>
-            <td><span class="pc" style="--c:#ffd27a">🚧 หน้างาน<small>12:00</small></span><span class="pc" style="--c:#8ee6bf">🔧 ความรู้<small>19:00</small></span></td>
-            <td><span class="pc" style="--c:#c9b8ff">🤖 AI ภาพ<small>12:00</small></span></td>
-            <td><span class="pc" style="--c:#ffd27a">🚧 หน้างาน</span><span class="pc" style="--c:var(--grape)">👔 CEO<small>19:00</small></span></td>
-            <td><span class="pc" style="--c:#c9b8ff">🤖 AI คลิป<small>19:00</small></span></td>
-            <td><span class="pc" style="--c:#ffd27a">🚧 หน้างาน</span></td>
-            <td><span class="pc" style="--c:#8fd0ff">✨ B/A<small>10:00</small></span></td>
-            <td><span class="pc" style="--c:#ffab6b">📢 Ad<small>2 สัปดาห์ครั้ง</small></span></td></tr>
-          <tr><th class="c">📸 IG</th>
-            <td><span class="pc" style="--c:#ffd27a">🚧 คารูเซล</span><span class="pc" style="--c:#8ee6bf">🔧 Reels</span></td>
-            <td><span class="pc" style="--c:#c9b8ff">🤖 AI ภาพ</span><span class="pc" style="--c:#ff9ec1">😂 Reels</span></td>
-            <td><span class="pc" style="--c:var(--grape)">👔 Reels</span></td>
-            <td><span class="pc" style="--c:#c9b8ff">🤖 AI คลิป</span></td>
-            <td><span class="pc" style="--c:#ffd27a">🚧 คารูเซล</span></td>
-            <td><span class="pc" style="--c:#8fd0ff">✨ B/A</span></td>
+          <tr><th class="c">FB</th>
+            <td><span class="pc" style="--c:#ffd27a">หน้างาน<small>12:00</small></span><span class="pc" style="--c:#8ee6bf">ความรู้<small>19:00</small></span></td>
+            <td><span class="pc" style="--c:#c9b8ff">AI ภาพ<small>12:00</small></span></td>
+            <td><span class="pc" style="--c:#ffd27a">หน้างาน</span><span class="pc" style="--c:var(--grape)">CEO<small>19:00</small></span></td>
+            <td><span class="pc" style="--c:#c9b8ff">AI คลิป<small>19:00</small></span></td>
+            <td><span class="pc" style="--c:#ffd27a">หน้างาน</span></td>
+            <td><span class="pc" style="--c:#8fd0ff">B/A<small>10:00</small></span></td>
+            <td><span class="pc" style="--c:#ffab6b">Ad<small>2 สัปดาห์ครั้ง</small></span></td></tr>
+          <tr><th class="c">IG</th>
+            <td><span class="pc" style="--c:#ffd27a">คารูเซล</span><span class="pc" style="--c:#8ee6bf">Reels</span></td>
+            <td><span class="pc" style="--c:#c9b8ff">AI ภาพ</span><span class="pc" style="--c:#ff9ec1">Reels</span></td>
+            <td><span class="pc" style="--c:var(--grape)">Reels</span></td>
+            <td><span class="pc" style="--c:#c9b8ff">AI คลิป</span></td>
+            <td><span class="pc" style="--c:#ffd27a">คารูเซล</span></td>
+            <td><span class="pc" style="--c:#8fd0ff">B/A</span></td>
             <td class="off"><span class="tiny muted">Stories</span></td></tr>
-          <tr><th class="c">▶️ YouTube</th>
-            <td><span class="pc" style="--c:#8ee6bf">🔧 Shorts</span></td>
-            <td><span class="pc" style="--c:#ff9ec1">😂 Shorts A</span></td>
-            <td><span class="pc" style="--c:var(--grape)">👔 Shorts</span></td>
-            <td><span class="pc" style="--c:#8ee6bf">🔧 Shorts</span></td>
-            <td><span class="pc" style="--c:#ffd0e2">🎉 Shorts B</span></td>
-            <td><span class="pc" style="--c:#ff8a8a">📺 คลิปยาว<small>2 สัปดาห์ครั้ง</small></span></td>
+          <tr><th class="c">▶ YouTube</th>
+            <td><span class="pc" style="--c:#8ee6bf">Shorts</span></td>
+            <td><span class="pc" style="--c:#ff9ec1">Shorts A</span></td>
+            <td><span class="pc" style="--c:var(--grape)">Shorts</span></td>
+            <td><span class="pc" style="--c:#8ee6bf">Shorts</span></td>
+            <td><span class="pc" style="--c:#ffd0e2">Shorts B</span></td>
+            <td><span class="pc" style="--c:#ff8a8a">คลิปยาว<small>2 สัปดาห์ครั้ง</small></span></td>
             <td class="off"></td></tr>
-          <tr><th class="c">🎵 TikTok</th>
-            <td><span class="pc" style="--c:#8ee6bf">🔧 ความรู้</span></td>
-            <td><span class="pc" style="--c:#ff9ec1">😂 เฮฮา A</span></td>
-            <td><span class="pc" style="--c:var(--grape)">👔 CEO</span></td>
-            <td><span class="pc" style="--c:#8ee6bf">🔧 ความรู้</span></td>
-            <td><span class="pc" style="--c:#ffd0e2">🎉 เฮฮา B</span></td>
+          <tr><th class="c">TikTok</th>
+            <td><span class="pc" style="--c:#8ee6bf">ความรู้</span></td>
+            <td><span class="pc" style="--c:#ff9ec1">เฮฮา A</span></td>
+            <td><span class="pc" style="--c:var(--grape)">CEO</span></td>
+            <td><span class="pc" style="--c:#8ee6bf">ความรู้</span></td>
+            <td><span class="pc" style="--c:#ffd0e2">เฮฮา B</span></td>
             <td class="off"></td><td class="off"></td></tr>
         </tbody>
       </table>
@@ -663,35 +655,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <!-- ================= ASK ================= -->
 <section class="view" id="v-ask" role="tabpanel">
   <div class="wrap">
-    <span class="sticker" style="--c:var(--pink)">✅ ขอผู้บริหารเคาะ</span>
+    <span class="sticker" style="--c:var(--pink)">ขอผู้บริหารเคาะ</span>
     <h1 class="h-big mt-s">5 เรื่อง เพื่อ <span class="hl">เริ่มได้ ธ.ค.</span></h1>
     <div class="asks mt">
-      <div class="ask"><span class="no">1</span><b>👔 เวลาของ CEO</b><p>ถ่ายรวดเดือนละครึ่งวัน และให้ทีมตามถ่ายตอนเดินไซต์เดือนละ 2 ครั้ง</p><div class="tick"><span>ลอง 2 เดือนก่อน</span></div></div>
-      <div class="ask"><span class="no">2</span><b>🙋 คนในทีมออกกล้อง</b><p>ใช้เวลางานถ่ายคลิปได้ และหาคนสมัครใจมาเป็นตัวละครประจำ</p><div class="tick"><span>ไม่บังคับใคร</span></div></div>
-      <div class="ask"><span class="no">3</span><b>🎉 คลิปที่ไม่ขายอะไรเลย</b><p>ให้ TikTok กับ YouTube มีคลิปชีวิตทีมล้วนได้ราว 30%</p><div class="tick"><span>ให้ช่องมีคนติดตามจริง</span></div></div>
-      <div class="ask"><span class="no">4</span><b>🎙️ อุปกรณ์</b><p>ไมค์ไร้สาย 2 ตัว ขาตั้งหรือไม้กันสั่น ไฟ LED เล็ก</p><div class="tick"><span>ราคาต้องยืนยัน</span></div></div>
-      <div class="ask"><span class="no">5</span><b>💸 งบบูสต์</b><p>บูสต์เฉพาะคลิปกึ่งโฆษณาที่ผลดีจริง เริ่ม ก.พ. 2570</p><div class="tick"><span>ตัวเลขต้องยืนยัน</span></div></div>
+      <div class="ask"><span class="no">1</span><b>เวลาของ CEO</b><p>ถ่ายรวดเดือนละครึ่งวัน และให้ทีมตามถ่ายตอนเดินไซต์เดือนละ 2 ครั้ง</p><div class="tick"><span>ลอง 2 เดือนก่อน</span></div></div>
+      <div class="ask"><span class="no">2</span><b>คนในทีมออกกล้อง</b><p>ใช้เวลางานถ่ายคลิปได้ และหาคนสมัครใจมาเป็นตัวละครประจำ</p><div class="tick"><span>ไม่บังคับใคร</span></div></div>
+      <div class="ask"><span class="no">3</span><b>คลิปที่ไม่ขายอะไรเลย</b><p>ให้ TikTok กับ YouTube มีคลิปชีวิตทีมล้วนได้ราว 30%</p><div class="tick"><span>ให้ช่องมีคนติดตามจริง</span></div></div>
+      <div class="ask"><span class="no">4</span><b>อุปกรณ์</b><p>ไมค์ไร้สาย 2 ตัว ขาตั้งหรือไม้กันสั่น ไฟ LED เล็ก</p><div class="tick"><span>ราคาต้องยืนยัน</span></div></div>
+      <div class="ask"><span class="no">5</span><b>งบบูสต์</b><p>บูสต์เฉพาะคลิปกึ่งโฆษณาที่ผลดีจริง เริ่ม ก.พ. 2570</p><div class="tick"><span>ตัวเลขต้องยืนยัน</span></div></div>
     </div>
 
-    <div class="north mt"><span class="em">🎯</span><div><b class="h3">วัดผลจากอะไร</b><p>จำนวนลูกค้าตรงกลุ่มที่ทักเข้ามา (บ้านเดี่ยว กทม.–นนทบุรี กลุ่มหลักงบ 2 ล้านบาทขึ้นไป) นับจากระบบ Presale ทุกสัปดาห์ · ยอดวิวเป็นแค่ตัวเลขประกอบ · ยังไม่ตั้งเป้าตัวเลข จะเก็บข้อมูล 4 สัปดาห์แรกเป็นฐานก่อน</p></div></div>
+    <div class="north mt"><div><b class="h3">วัดผลจากอะไร</b><p>จำนวนลูกค้าตรงกลุ่มที่ทักเข้ามา (บ้านเดี่ยว กทม.–นนทบุรี กลุ่มหลักงบ 2 ล้านบาทขึ้นไป) นับจากระบบ Presale ทุกสัปดาห์ · ยอดวิวเป็นแค่ตัวเลขประกอบ · ยังไม่ตั้งเป้าตัวเลข จะเก็บข้อมูล 4 สัปดาห์แรกเป็นฐานก่อน</p></div></div>
 
     <h2 class="h2 mt">แผน 3 เดือน</h2>
     <div class="phases mt-s">
-      <div class="phase"><span class="m" style="--c:var(--sun)">ธ.ค. 2569</span><b>🚀 เริ่ม</b><ul><li>หาตัวละครประจำ 2–3 คน</li><li>ถ่าย CEO รอบแรก</li><li>เปิดซีรีส์ CEO ตอบเอง และเริ่มคลิปเฮฮา</li></ul></div>
-      <div class="phase"><span class="m" style="--c:var(--sky)">ม.ค. 2570</span><b>🎯 จับจังหวะ</b><ul><li>ลง YouTube คลิปยาวตอนแรก</li><li>ดูตัวเลข 4 สัปดาห์ แบบไหนไม่เวิร์กก็ตัดออก</li><li>ตั้งเป้าแต่ละช่อง</li></ul></div>
-      <div class="phase"><span class="m" style="--c:var(--mint)">ก.พ. 2570</span><b>📈 ขยาย</b><ul><li>เพิ่มซีรีส์ที่คนชอบที่สุด</li><li>บูสต์คลิปที่ผลดีที่สุด ถ้าได้อนุมัติงบ</li><li>สรุปผล 3 เดือนให้ผู้บริหาร</li></ul></div>
+      <div class="phase"><span class="m" style="--c:var(--sun)">ธ.ค. 2569</span><b>เริ่ม</b><ul><li>หาตัวละครประจำ 2–3 คน</li><li>ถ่าย CEO รอบแรก</li><li>เปิดซีรีส์ CEO ตอบเอง และเริ่มคลิปเฮฮา</li></ul></div>
+      <div class="phase"><span class="m" style="--c:var(--sky)">ม.ค. 2570</span><b>จับจังหวะ</b><ul><li>ลง YouTube คลิปยาวตอนแรก</li><li>ดูตัวเลข 4 สัปดาห์ แบบไหนไม่เวิร์กก็ตัดออก</li><li>ตั้งเป้าแต่ละช่อง</li></ul></div>
+      <div class="phase"><span class="m" style="--c:var(--mint)">ก.พ. 2570</span><b>ขยาย</b><ul><li>เพิ่มซีรีส์ที่คนชอบที่สุด</li><li>บูสต์คลิปที่ผลดีที่สุด ถ้าได้อนุมัติงบ</li><li>สรุปผล 3 เดือนให้ผู้บริหาร</li></ul></div>
     </div>
 
     <h2 class="h2 mt">กติกาที่ทุกชิ้นต้องผ่าน</h2>
     <div class="rules mt-s">
-      <div>📸 ผลงานและภาพก่อน–หลังใช้รูปไซต์จริงเท่านั้น</div>
-      <div>🤖 ภาพจาก AI ใช้ประกอบความรู้ได้ แต่ต้องบอกว่าเป็นภาพประกอบ</div>
-      <div>💬 ไม่บอกราคาของแต่ละโครงการ ไม่บอกว่าสำรวจหน้างานฟรี</div>
-      <div>🤝 จะถ่ายลูกค้าหรือบ้านลูกค้า ต้องขอความยินยอมก่อน</div>
-      <div>🚫 ไม่ขายแรง ไม่ใช้คำว่า "ด่วน" "โปรแรง" ไม่พูดถึงคู่แข่ง</div>
-      <div>✅ ทุกชิ้นตรวจและอนุมัติก่อนลง คนเป็นคนกดโพสต์เอง</div>
+      <div>ผลงานและภาพก่อน–หลังใช้รูปไซต์จริงเท่านั้น</div>
+      <div>ภาพจาก AI ใช้ประกอบความรู้ได้ แต่ต้องบอกว่าเป็นภาพประกอบ</div>
+      <div>ไม่บอกราคาของแต่ละโครงการ ไม่บอกว่าสำรวจหน้างานฟรี</div>
+      <div>จะถ่ายลูกค้าหรือบ้านลูกค้า ต้องขอความยินยอมก่อน</div>
+      <div>ไม่ขายแรง ไม่ใช้คำว่า "ด่วน" "โปรแรง" ไม่พูดถึงคู่แข่ง</div>
+      <div>ทุกชิ้นตรวจและอนุมัติก่อนลง คนเป็นคนกดโพสต์เอง</div>
     </div>
-    <div class="next-row"><button class="nbtn" data-go="week">← 1 สัปดาห์</button><button class="nbtn pri" data-go="home">กลับภาพรวม ⭐</button></div>
+    <div class="next-row"><button class="nbtn" data-go="week">← 1 สัปดาห์</button><button class="nbtn pri" data-go="home">กลับภาพรวม </button></div>
   </div>
 </section>
 </main>
