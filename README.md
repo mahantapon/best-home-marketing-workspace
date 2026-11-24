@@ -18,7 +18,7 @@
 
 ## แผนคอนเทนต์ 4 ช่องทาง (24 พ.ย. 2569)
 
-หน้า [`channel-plan/`](https://mahantapon.github.io/best-home-marketing-workspace/channel-plan/) — แต่ละช่อง (Facebook · Instagram · YouTube · TikTok) ลงอะไร แนวทางทำคลิป CEO branding และสรุปคลิปต้นแบบ ไฟล์เดียว ไม่ต้อง build มีโหมดพรีเซนต์ (กด P หรือปุ่มมุมขวาบน ใช้ลูกศรเปลี่ยนหน้า)
+หน้า [`channel-plan/`](https://mahantapon.github.io/best-home-marketing-workspace/channel-plan/) — แต่ละช่อง (Facebook · Instagram · YouTube · TikTok) ลงอะไร แนวทางทำคลิป CEO branding และสรุปคลิปต้นแบบ แบ่งเป็นแท็บรายช่อง มีรูป/คลิปจริงจากเพจและไซต์ของ best home เป็นตัวอย่าง ไม่ต้อง build (ลูกศร ← → เปลี่ยนแท็บ) · รูปอยู่ใน `channel-plan/media/` ฟอนต์ LINE Seed Sans TH อยู่ใน `channel-plan/fonts/`
 
 ## ใช้งานในเครื่อง
 
