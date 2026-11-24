@@ -285,6 +285,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:1050px){.roles{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:720px){.roles,.risks,.asks.six{grid-template-columns:1fr}.cycle{grid-template-columns:repeat(2,minmax(0,1fr))}.cycle .wk{grid-column:1/-1;margin-top:6px}.run > div{grid-template-columns:48px 1fr}.run em{grid-column:2;justify-self:start}.cap span{font-size:10px}}
 
+/* ---------- round 6 ---------- */
+.summary ol{margin:10px 0 16px;padding-left:22px;font-size:15.5px;line-height:1.75}
+.summary ol b{font-weight:700}
+.base{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}
+.base > div{background:var(--paper);border-radius:14px;padding:12px}
+.base b{display:block;font-size:24px;line-height:1.3;margin-top:6px}
+.base span.l{font-size:12.5px;color:var(--muted)}
+.duo{display:flex;gap:-6px}
+.duo .big-ic + .big-ic{margin-left:-14px;box-shadow:0 0 0 3px var(--paper)}
+.later{opacity:.75;border-style:dashed}
+.goal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.goal .card b{font-size:26px;display:block;line-height:1.2}
+.goal .card span{font-size:13.5px;color:var(--ink-2)}
+@media (max-width:720px){.base{grid-template-columns:1fr 1fr}.goal{grid-template-columns:1fr}}
+
 /* ---------- responsive ---------- */
 @media (max-width:1050px){
   .chan-cards,.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -327,16 +342,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="brand"><span class="logo"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 3l9 8.5V21H3v-9.5Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M9.5 21v-6h5v6" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></span>best home <small>แผนคอนเทนต์ 4 ช่องทาง</small><span class="sp">ร่างเพื่อหารือ · พ.ย. 2569</span></div>
     <nav class="tabs" role="tablist" aria-label="เลือกหน้า">
       <button class="tab" role="tab" data-go="home">ภาพรวม</button>
-      <button class="tab" role="tab" data-go="facebook" style="--c:var(--fb);--c2:#cfe2ff"><span class="ic"><svg><use href="#i-fb"/></svg></span>Facebook</button>
-      <button class="tab" role="tab" data-go="instagram" style="--c:var(--ig);--c2:#ffd3e4"><span class="ic"><svg><use href="#i-ig"/></svg></span>Instagram</button>
-      <button class="tab" role="tab" data-go="youtube" style="--c:var(--yt);--c2:#ffd0d6"><span class="ic"><svg><use href="#i-yt"/></svg></span>YouTube</button>
-      <button class="tab" role="tab" data-go="tiktok" style="--c:var(--tt);--c2:#c8fbf9"><span class="ic"><svg><use href="#i-tt"/></svg></span>TikTok</button>
+      <button class="tab" role="tab" data-go="facebook" style="--c:var(--fb)"><span class="ic"><svg><use href="#i-fb"/></svg></span>Facebook</button>
+      <button class="tab" role="tab" data-go="instagram" style="--c:var(--ig)"><span class="ic"><svg><use href="#i-ig"/></svg></span>Instagram</button>
+      <button class="tab" role="tab" data-go="tiktok" style="--c:var(--tt)"><span class="ic"><svg><use href="#i-tt"/></svg></span>TikTok + YouTube Shorts</button>
       <button class="tab" role="tab" data-go="ceo">CEO</button>
-      <button class="tab" role="tab" data-go="video">วิธีทำคลิป</button>
       <button class="tab" role="tab" data-go="week">1 สัปดาห์</button>
       <button class="tab" role="tab" data-go="team">ทีม 2 คน</button>
       <button class="tab" role="tab" data-go="risk">ปัญหาที่จะเจอ</button>
       <button class="tab" role="tab" data-go="ask">ขออนุมัติ</button>
+      <button class="tab" role="tab" data-go="video">คู่มือทำคลิป (สำหรับทีม)</button>
     </nav>
   </div>
 </header>
@@ -349,7 +363,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div>
         <span class="sticker">แผนคอนเทนต์ best home</span>
         <h1 class="h-big mt-s">4 ช่องทาง<br>ลงของ <span class="hl">ไม่ซ้ำกัน</span></h1>
-        <p class="sub">FB กับ IG ให้คนเชื่อใจ · YouTube กับ TikTok ให้คนรู้จัก · มี CEO เป็นหน้าแบรนด์ทุกช่อง</p>
+        <p class="sub">FB กับ IG ให้คนเชื่อใจ · TikTok กับ YouTube Shorts ให้คนรู้จัก · มี CEO เป็นหน้าแบรนด์ทุกช่อง</p>
         <p class="tiny muted mt-s">กดปุ่มด้านบน หรือการ์ดช่องทางด้านล่าง เพื่อดูแผนทีละช่อง (ใช้ลูกศร ← → บนคีย์บอร์ดเปลี่ยนหน้าได้)</p>
       </div>
       <div class="hero-art" aria-hidden="true">
@@ -359,10 +373,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </div>
     </div>
 
+    <div class="grid g2 mt" style="align-items:stretch">
+      <div class="card summary">
+        <p class="h3">สรุปสำหรับผู้บริหาร</p>
+        <ol>
+          <li><b>ทีมมี 2 คน</b> หัวหน้าทีมวางระบบและตรวจงาน น้อง 1 คนผลิตทุกชิ้น</li>
+          <li><b>เริ่ม ธ.ค. ที่ 10 ชิ้นต่อสัปดาห์</b> ทุกชิ้นเป็นรูปหรือคลิปสั้น ไม่มีคลิปยาว</li>
+          <li><b>CEO เป็นแกนหลัก</b> ไปไซต์ถ่ายคลิป 1 วันทุก 2 สัปดาห์ ลงสัปดาห์ละ 2 คลิป</li>
+          <li><b>วัดผลจากลูกค้าตรงกลุ่มที่ทักเข้ามา</b> เก็บตัวเลข 4 สัปดาห์แรกเป็นฐานก่อนตั้งเป้า</li>
+          <li><b>ขอผู้บริหารเคาะ 6 เรื่อง</b> เพื่อเริ่มได้ใน ธ.ค.</li>
+        </ol>
+        <button class="nbtn pri" data-go="ask">ดู 6 เรื่องที่ขออนุมัติ →</button>
+      </div>
+      <div class="card">
+        <p class="h3">ตอนนี้เราอยู่ตรงไหน</p>
+        <p class="small muted">จำนวนผู้ติดตามของแต่ละช่อง ดูวันที่ 24 พ.ย. 2569</p>
+        <div class="base">
+          <div><span class="chip-ic" style="background:var(--fb)"><svg><use href="#i-fb"/></svg></span><b>6.8 พัน</b><span class="l">Facebook</span></div>
+          <div><span class="chip-ic" style="background:var(--ig)"><svg><use href="#i-ig"/></svg></span><b>197</b><span class="l">Instagram</span></div>
+          <div><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span><b>610</b><span class="l">YouTube</span></div>
+          <div><span class="chip-ic" style="background:#111"><svg><use href="#i-tt"/></svg></span><b>2,755</b><span class="l">TikTok</span></div>
+        </div>
+        <p class="small muted">Facebook มีฐานผู้ติดตามมากที่สุด อีก 3 ช่องยังเล็ก แผนนี้จึงใช้ TikTok กับ Shorts หาคนใหม่ แล้วใช้ Facebook กับ Instagram สร้างความเชื่อใจ</p>
+      </div>
+    </div>
+
     <div class="chan-cards mt">
-      <button class="cc" data-go="facebook" style="--c:var(--fb)"><div class="top-band"><svg><use href="#i-fb"/></svg><b>Facebook</b></div><div class="body"><span class="role">บ้านหลัก ให้ลูกค้าเช็กว่าเราทำงานจริง</span><div class="pills"><span style="--pc:#ffe7b8">หน้างาน</span><span style="--pc:#e6ddff">AI Info</span><span style="--pc:#d5f7e8">ความรู้</span><span style="--pc:#dcefff">B/A</span><span style="--pc:#ece6ff">CEO</span></div><div class="go">8–9 โพสต์/สัปดาห์<em>→</em></div></div></button>
-      <button class="cc" data-go="instagram" style="--c:var(--ig)"><div class="top-band"><svg><use href="#i-ig"/></svg><b>Instagram</b></div><div class="body"><span class="role">หน้าร้านสวยๆ ให้คนเซฟเก็บ</span><div class="pills"><span style="--pc:#ffe7b8">หน้างาน</span><span style="--pc:#e6ddff">AI Info</span><span style="--pc:#d5f7e8">ความรู้</span><span style="--pc:#dcefff">B/A</span><span style="--pc:#ece6ff">CEO</span></div><div class="go">8 โพสต์ + Stories<em>→</em></div></div></button>
-      <button class="cc" data-go="youtube" style="--c:var(--yt)"><div class="top-band"><svg><use href="#i-yt"/></svg><b>YouTube</b></div><div class="body"><span class="role">Shorts อย่างเดียว ให้คนค้นเจอคำตอบสั้นๆ</span><div class="pills"><span style="--pc:#d5f7e8">ความรู้</span><span style="--pc:#ffd9e8">เฮฮา</span><span style="--pc:#ece6ff">CEO</span></div><div class="go">Shorts 5 คลิป/สัปดาห์<em>→</em></div></div></button>
+      <button class="cc" data-go="facebook" style="--c:var(--fb)"><div class="top-band"><svg><use href="#i-fb"/></svg><b>Facebook</b></div><div class="body"><span class="role">บ้านหลัก ให้ลูกค้าเช็กว่าเราทำงานจริง</span><div class="pills"><span style="--pc:#ffe7b8">หน้างาน</span><span style="--pc:#e6ddff">AI Info</span><span style="--pc:#d5f7e8">ความรู้</span><span style="--pc:#dcefff">B/A</span><span style="--pc:#ece6ff">CEO</span></div><div class="go">9 โพสต์/สัปดาห์<em>→</em></div></div></button>
+      <button class="cc" data-go="instagram" style="--c:var(--ig)"><div class="top-band"><svg><use href="#i-ig"/></svg><b>Instagram</b></div><div class="body"><span class="role">หน้าร้านสวยๆ ให้คนเซฟเก็บ</span><div class="pills"><span style="--pc:#ffe7b8">หน้างาน</span><span style="--pc:#e6ddff">AI Info</span><span style="--pc:#d5f7e8">ความรู้</span><span style="--pc:#dcefff">B/A</span><span style="--pc:#ece6ff">CEO</span></div><div class="go">9 โพสต์ + Stories<em>→</em></div></div></button>
+      <button class="cc" data-go="tiktok" style="--c:var(--yt)"><div class="top-band"><svg><use href="#i-yt"/></svg><b>YouTube</b></div><div class="body"><span class="role">Shorts อย่างเดียว ใช้ไฟล์เดียวกับ TikTok</span><div class="pills"><span style="--pc:#d5f7e8">ความรู้</span><span style="--pc:#ffd9e8">เฮฮา</span><span style="--pc:#ece6ff">CEO</span></div><div class="go">Shorts 5 คลิป/สัปดาห์<em>→</em></div></div></button>
       <button class="cc" data-go="tiktok" style="--c:var(--tt)"><div class="top-band"><svg><use href="#i-tt"/></svg><b>TikTok</b></div><div class="body"><span class="role">เวทีหาคนใหม่ ให้คนจำหน้าและมุก</span><div class="pills"><span style="--pc:#d5f7e8">ความรู้</span><span style="--pc:#ffd9e8">เฮฮา</span><span style="--pc:#ece6ff">CEO</span></div><div class="go">5 คลิป/สัปดาห์<em>→</em></div></div></button>
     </div>
 
@@ -385,13 +424,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <thead><tr><th style="text-align:left">แบบคอนเทนต์</th><th>Facebook</th><th>Instagram</th><th>YouTube</th><th>TikTok</th></tr></thead>
         <tbody>
           <tr><th class="r">อัปเดตหน้างาน</th><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td class="no">—</td><td class="no">—</td></tr>
-          <tr><th class="r">AI Info (ภาพ + คลิป)</th><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="some">ตัวเด็ด</span></td><td><span class="some">ตัวเด็ด</span></td></tr>
+          <tr><th class="r">AI Info (ภาพ + คลิป)</th><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="some">เฉพาะคลิป</span></td><td><span class="some">เฉพาะคลิป</span></td></tr>
           <tr><th class="r">ความรู้หน้างาน</th><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="mk">●</span></td></tr>
           <tr><th class="r">Before → After</th><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="some">15 วิ</span></td><td><span class="some">15 วิ</span></td></tr>
           <tr><th class="r">CEO branding</th><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="mk">●</span></td></tr>
           <tr><th class="r">เฮฮา A · ผูกกับงาน</th><td><span class="some">บางตัว</span></td><td><span class="some">Reels</span></td><td><span class="mk">●</span></td><td><span class="mk">●</span></td></tr>
-          <tr><th class="r">เฮฮา B · ชีวิตทีมล้วน</th><td class="no">—</td><td class="no">—</td><td><span class="mk">●</span></td><td><span class="mk">●</span></td></tr>
-          <tr><th class="r">กึ่งโฆษณา</th><td><span class="mk">●</span></td><td><span class="mk">●</span></td><td><span class="some">บางตัว</span></td><td><span class="some">บางตัว</span></td></tr>
+          <tr><th class="r">เฮฮา B · ชีวิตทีมล้วน</th><td class="no">—</td><td class="no">—</td><td><span class="some">เมื่อมีคนสมัครใจ</span></td><td><span class="some">เมื่อมีคนสมัครใจ</span></td></tr>
+          <tr><th class="r">กึ่งโฆษณา</th><td><span class="some">เริ่ม ม.ค.</span></td><td><span class="some">เริ่ม ม.ค.</span></td><td class="no">—</td><td class="no">—</td></tr>
         </tbody>
       </table>
     </div>
@@ -405,12 +444,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="ch-head" style="--c:var(--fb)">
       <span class="big-ic"><svg><use href="#i-fb"/></svg></span>
       <div><h1>Facebook</h1><p>บ้านหลักของแบรนด์ ลูกค้าเข้ามาดูว่าเราทำงานจริงไหมก่อนจะทัก</p></div>
-      <div class="stats"><div class="stat"><b>8–9</b><span>โพสต์/สัปดาห์</span></div><div class="stat"><b>12:00</b><span>ลงรูป</span></div><div class="stat"><b>19:00</b><span>ลงคลิป</span></div></div>
+      <div class="stats"><div class="stat"><b>9</b><span>โพสต์/สัปดาห์</span></div><div class="stat"><b>12:00</b><span>ลงรูป (ค่าตั้งต้น)</span></div><div class="stat"><b>19:00</b><span>ลงคลิป (ค่าตั้งต้น)</span></div></div>
     </div>
-    <div class="mixbar mt" aria-label="สัดส่วนต่อสัปดาห์">
-      <span style="--f:3;--c:#ffd27a">หน้างาน 3</span><span style="--f:2;--c:#c9b8ff">AI Info 2</span><span style="--f:1;--c:#8ee6bf">ความรู้ 1</span><span style="--f:1;--c:#8fd0ff">B/A 1</span><span style="--f:1;--c:var(--grape)">CEO 1</span><span style="--f:.6;--c:#ffab6b">Ad</span>
-    </div>
-    <p class="tiny muted mt-s">ตัวเลข = จำนวนโพสต์ต่อสัปดาห์ · คลิปกึ่งโฆษณาลง 2 สัปดาห์ครั้ง</p>
+    <div class="mixbar mt" aria-label="สัดส่วนต่อสัปดาห์"><span style="--f:3;--c:#ffd27a">หน้างาน 3</span><span style="--f:2;--c:#c9b8ff">AI Info 2</span><span style="--f:2;--c:#d9cdfa">CEO 2</span><span style="--f:1;--c:#8ee6bf">ความรู้ 1</span><span style="--f:1;--c:#8fd0ff">B/A 1</span></div>
+    <p class="tiny muted mt-s">ตัวเลข = จำนวนโพสต์ต่อสัปดาห์ในเดือน ธ.ค. · เวลาลงยังไม่มีข้อมูลว่าเวลาไหนดีที่สุด จะปรับตามตัวเลขจริง</p>
 
     <div class="ch-layout mt">
       <div>
@@ -420,8 +457,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div class="ex" style="--c:#c9b8ff"><div class="media"><img src="media/fb-tropical.jpg" alt="อินโฟ Modern Tropical" loading="lazy"><span class="badge">AI Info ภาพ</span><span class="freq">×1</span></div><div class="tx"><b>4 สไตล์บ้านท้าแดดเมืองไทย</b><p>คารูเซลความรู้ที่คนเซฟเก็บไว้</p></div></div>
           <div class="ex" style="--c:#c9b8ff"><div class="media"><button class="play" data-embed="fb" data-id="29330985569877202"><img src="media/reel-ai.jpg" alt="ปก Reel AI ตึกแถวหลายคูหา" loading="lazy"><span class="btn">▶</span><span class="lbl">กดดูคลิปจริงบน FB</span></button><span class="badge">AI Info คลิป</span><span class="freq">×1</span></div><div class="tx"><b>ตึกแถวหลายคูหา รีโนเวทรวมเป็นบ้านเดียวได้ไหม</b><p>คลิปที่ AI ทำในเว็บ MARKETING ภาพขยับ + ซับ</p></div></div>
           <div class="ex" style="--c:#8ee6bf"><div class="media"><video src="media/site-rebar.mp4" poster="media/site-rebar.jpg" autoplay muted loop playsinline preload="none"></video><span class="badge">ความรู้หน้างาน</span><span class="freq">×1</span></div><div class="tx"><b>ฟุตเทจจริงจากไซต์ (ยังไม่ตัดต่อ)</b><div class="idea">ให้ช่างพูดสัก 30 วิ ว่า "ผูกเหล็กตรงนี้ ทำไมต้องเว้นระยะ" แค่นี้ก็เป็นคลิปความรู้ได้แล้ว</div></div></div>
-          <div class="ex" style="--c:#8fd0ff"><div class="media"><img src="media/fb-b4a.jpg" alt="Before and After" loading="lazy"><span class="badge">Before → After</span><span class="freq">×1</span></div><div class="tx"><b>ต่อเติม ลาดพร้าว 80</b><p>รูปจริงช่วงก่อนกับระหว่างทำ พองานเสร็จค่อยถ่ายมุมเดิมมาเทียบ</p></div></div>
-          <div class="ex" style="--c:#ffab6b"><div class="media"><button class="play" data-embed="fb" data-id="1814835373179089"><img src="media/reel-talk.jpg" alt="ปก Reel งบบานปลาย" loading="lazy" style="object-position:top"><span class="btn">▶</span><span class="lbl">กดดูคลิปจริงบน FB</span></button><span class="badge">กึ่งโฆษณา / CEO</span><span class="freq">×½</span></div><div class="tx"><b>"ไม่อยากรีโนเวทแล้วงบบานปลาย"</b><p>คนพูดกับกล้อง + ภาพแบบ + ฉากประชุมจริง เป็นต้นแบบให้ CEO ทำต่อ</p></div></div>
+          <div class="ex" style="--c:#8fd0ff"><div class="media"><img src="media/fb-b4a.jpg" alt="Before and After" loading="lazy"><span class="badge">Before → After</span><span class="freq">×1</span></div><div class="tx"><b>ต่อเติม ลาดพร้าว 80 (ระหว่างทำ)</b><p>ไซต์นี้ยังไม่เสร็จ จึงยังไม่ใช่ก่อน–หลังจริง ช่วงแรกจะใช้ผลงานที่เสร็จแล้วและมีรูปก่อนทำมุมเดียวกัน</p></div></div>
+          <div class="ex" style="--c:#ffab6b"><div class="media"><button class="play" data-embed="fb" data-id="1814835373179089"><img src="media/reel-talk.jpg" alt="ปก Reel งบบานปลาย" loading="lazy" style="object-position:top"><span class="btn">▶</span><span class="lbl">กดดูคลิปจริงบน FB</span></button><span class="badge">CEO (คลิปต้นแบบ)</span><span class="freq">×2</span></div><div class="tx"><b>"ไม่อยากรีโนเวทแล้วงบบานปลาย"</b><p>คลิปคนในทีมพูดกับกล้องที่ลงไปแล้ว ใช้เป็นต้นแบบให้คลิป CEO ตอบเอง และต่อยอดเป็นคลิปกึ่งโฆษณาได้ใน ม.ค.</p></div></div>
         </div>
         <div class="kpis mt"><b>วัดผลด้วย</b><span>ทักแชท / LINE</span><span>แชร์ · เซฟ</span><span>ดู Reels ถึงครึ่งคลิป</span></div>
       </div>
@@ -445,13 +482,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="ch-head" style="--c:var(--ig)">
       <span class="big-ic" style="background:linear-gradient(45deg,#f58529,#dd2a7b 55%,#8134af)"><svg><use href="#i-ig"/></svg></span>
       <div><h1>Instagram</h1><p>หน้าร้านสวยๆ เลื่อนดูโปรไฟล์แล้วรู้เลยว่าเราทำงานแบบไหน ความรู้ก็เซฟเก็บไว้ได้</p></div>
-      <div class="stats"><div class="stat"><b>8</b><span>โพสต์/สัปดาห์</span></div><div class="stat"><b>ทุกวัน</b><span>Stories</span></div></div>
+      <div class="stats"><div class="stat"><b>9</b><span>โพสต์/สัปดาห์</span></div><div class="stat"><b>ทุกวัน</b><span>Stories</span></div></div>
     </div>
-    <div class="mixbar mt"><span style="--f:2;--c:#ffd27a">หน้างาน 2</span><span style="--f:2;--c:#c9b8ff">AI Info 2</span><span style="--f:1;--c:#8ee6bf">ความรู้ 1</span><span style="--f:1;--c:#8fd0ff">B/A 1</span><span style="--f:1;--c:var(--grape)">CEO 1</span><span style="--f:1;--c:#ff9ec1">เฮฮา 1</span></div>
+    <div class="mixbar mt"><span style="--f:2;--c:#ffd27a">หน้างาน 2</span><span style="--f:2;--c:#c9b8ff">AI Info 2</span><span style="--f:2;--c:#d9cdfa">CEO 2</span><span style="--f:1;--c:#8ee6bf">ความรู้ 1</span><span style="--f:1;--c:#8fd0ff">B/A 1</span><span style="--f:1;--c:#ff9ec1">เฮฮา 1</span></div>
+    <p class="tiny muted mt-s">เนื้อหาชุดเดียวกับ Facebook ไม่ต้องผลิตเพิ่ม ต่างกันที่รูปแบบ: ทำเป็นภาพปัด ลง Stories ทุกวัน และจัดหน้าโปรไฟล์ให้ดูเป็นพอร์ตผลงาน</p>
 
     <div class="ch-layout mt">
       <div>
-        <h2 class="h2">ทำ 3 อย่างนี้ให้ดี</h2>
+        <h2 class="h2">3 รูปแบบที่ใช้บน Instagram</h2>
         <div class="ex-grid mt-s">
           <div class="ex" style="--c:#c9b8ff"><div class="media"><img src="media/fb-4styles.jpg" alt="คารูเซลความรู้" loading="lazy"><span class="badge">คารูเซล</span><span class="freq">×4</span></div><div class="tx"><b>ความรู้ + หน้างาน แบบปัด</b><p>ภาพ 4:5 ปัด 5–8 ภาพ ภาพแรกต้องอ่านแล้วอยากปัดต่อ</p></div></div>
           <div class="ex" style="--c:#ffd27a"><div class="media tall"><video src="media/site-structure.mp4" poster="media/site-structure.jpg" autoplay muted loop playsinline preload="none"></video><span class="badge">Stories</span><span class="freq">ทุกวัน</span></div><div class="tx"><b>ไซต์วันนี้ (ฟุตเทจจริง)</b><p>ถ่ายมือถือสั้นๆ 1–3 เฟรม ใส่โพล "ห้องนี้ปูลายไหนดี" ชวนคนตอบ</p></div></div>
@@ -472,59 +510,38 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <p class="phone-cap">ถ้าเอารูปจริงที่มีอยู่มาจัดเรียงบน IG จะได้หน้าตาแบบนี้</p>
       </div>
     </div>
-    <div class="next-row"><button class="nbtn" data-go="facebook">← Facebook</button><button class="nbtn pri" data-go="youtube">ดู YouTube →</button></div>
+    <div class="next-row"><button class="nbtn" data-go="facebook">← Facebook</button><button class="nbtn pri" data-go="tiktok">ดู TikTok + Shorts →</button></div>
   </div>
 </section>
 
-<!-- ================= YOUTUBE ================= -->
-<section class="view" id="v-youtube" role="tabpanel">
-  <div class="wrap">
-    <div class="ch-head" style="--c:var(--yt)">
-      <span class="big-ic"><svg><use href="#i-yt"/></svg></span>
-      <div><h1>YouTube</h1><p>ทำ Shorts อย่างเดียว ไม่ทำคลิปยาว ให้คนค้นเจอคำตอบสั้นๆ และได้รู้จักทีมเรา</p></div>
-      <div class="stats"><div class="stat"><b>5</b><span>Shorts/สัปดาห์</span></div><div class="stat"><b>15–90</b><span>วินาที</span></div></div>
-    </div>
-    <div class="mixbar mt"><span style="--f:2;--c:#8ee6bf">ความรู้ 2</span><span style="--f:1;--c:var(--grape)">CEO 1</span><span style="--f:1;--c:#ff9ec1">เฮฮา A 1</span><span style="--f:1;--c:#ffd0e2">เฮฮา B 1</span></div>
-    <p class="tiny muted mt-s">ใช้ไฟล์เดียวกับ TikTok ทุกคลิป น้องไม่ต้องทำงานเพิ่มเพื่อช่องนี้</p>
-
-    <h2 class="h2 mt">คลิปเดิมบนช่อง เอามาตัดเป็น Shorts ได้ <span class="tiny muted" style="font-weight:400">ไม่ทำคลิปยาวเพิ่ม · กดดูได้เลย</span></h2>
-    <div class="ex-grid mt-s" style="grid-template-columns:repeat(4,minmax(0,1fr))">
-      <div class="ex"><div class="media" style="aspect-ratio:16/9"><button class="play" data-embed="yt" data-id="7rdZZxrwLig"><img src="https://i.ytimg.com/vi/7rdZZxrwLig/hqdefault.jpg" alt="" loading="lazy"><span class="btn">▶</span></button></div><div class="tx"><b>รีโนเวทบ้านเก่า EP.2</b><p>ตัดช่วงก่อน–หลังเป็นคลิปสั้นได้</p></div></div>
-      <div class="ex"><div class="media" style="aspect-ratio:16/9"><button class="play" data-embed="yt" data-id="NRHCFjVcP8I"><img src="https://i.ytimg.com/vi/NRHCFjVcP8I/hqdefault.jpg" alt="" loading="lazy"><span class="btn">▶</span></button></div><div class="tx"><b>Tour ep.1 บิ้วอินทั้งบ้าน</b><p>พาชมบ้าน รามคำแหง 92</p></div></div>
-      <div class="ex"><div class="media" style="aspect-ratio:16/9"><button class="play" data-embed="yt" data-id="voLo1gf5kAg"><img src="https://i.ytimg.com/vi/voLo1gf5kAg/hqdefault.jpg" alt="" loading="lazy"><span class="btn">▶</span></button></div><div class="tx"><b>MY best home EP.02</b><p>บ้านเดี่ยวสายไหม พื้นทรุด</p></div></div>
-      <div class="ex"><div class="media" style="aspect-ratio:16/9"><button class="play" data-embed="yt" data-id="wQVpseqMGLo"><img src="https://i.ytimg.com/vi/wQVpseqMGLo/hqdefault.jpg" alt="" loading="lazy"><span class="btn">▶</span></button></div><div class="tx"><b>MY best home EP.01</b><p>ส่งมอบงานต่อเติมครัว</p></div></div>
-    </div>
-
-    <h2 class="h2 mt">Shorts 4 แบบ สลับกันลง</h2>
-    <div class="grid g4 mt-s">
-      <div class="se" style="--c:#d5f7e8"><b>ถามช่าง</b><p>โฟร์แมนตอบที่ไซต์ คลิปละ 1 จุด</p><span class="q">"บ้าน 30 ปี เริ่มรีโนเวทตรงไหนก่อน"</span></div>
-      <div class="se" style="--c:#ece6ff"><b>CEO ตอบเอง</b><p>คำถามที่ลูกค้าถามบ่อย คลิปละ 1 ข้อ</p><span class="q">"ก่อนจ้างรีโนเวท ต้องถามเรื่องนี้ก่อน"</span></div>
-      <div class="se" style="--c:#ffd9e8"><b>เฮฮา A</b><p>ทีมออฟฟิศลองงานช่าง ตัดเป็นตอนสั้นๆ</p><span class="q">"ใครทำพังเป็นคนแรก"</span></div>
-      <div class="se" style="--c:#ffe7f0"><b>เฮฮา B</b><p>ทริปบริษัท กีฬาสี ปีใหม่ แบบคลิปสั้น</p><span class="q">"ไม่ขายอะไรเลย แค่สนุก"</span></div>
-    </div>
-    <div class="kpis mt"><b>วัดผลด้วย</b><span>ดูจบกี่ %</span><span>ผู้ติดตามใหม่</span><span>คนค้นเจอ</span></div>
-    <div class="next-row"><button class="nbtn" data-go="instagram">← Instagram</button><button class="nbtn pri" data-go="tiktok">ดู TikTok →</button></div>
-  </div>
-</section>
 
 <!-- ================= TIKTOK ================= -->
 <section class="view" id="v-tiktok" role="tabpanel">
   <div class="wrap">
     <div class="ch-head" style="--c:#111">
-      <span class="big-ic" style="box-shadow:-2px -2px 0 #25f4ee inset,2px 2px 0 #fe2c55 inset"><svg><use href="#i-tt"/></svg></span>
-      <div><h1>TikTok</h1><p>เวทีหาคนใหม่ คนจะจำหน้าและมุกได้ก่อนชื่อบริษัท ทำแบบดิบๆ เร็วๆ และมีตัวละครประจำ</p></div>
-      <div class="stats"><div class="stat"><b>5</b><span>คลิป/สัปดาห์</span></div><div class="stat"><b>15–90</b><span>วินาที</span></div></div>
+      <span class="duo"><span class="big-ic" style="box-shadow:-2px -2px 0 #25f4ee inset,2px 2px 0 #fe2c55 inset"><svg><use href="#i-tt"/></svg></span><span class="big-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span></span>
+      <div><h1>TikTok + YouTube Shorts</h1><p>คลิปไฟล์เดียวกัน ลง 2 ช่อง ใช้หาคนใหม่ที่ยังไม่รู้จักเรา ให้เขาจำหน้าและมุกได้ก่อนชื่อบริษัท</p></div>
+      <div class="stats"><div class="stat"><b>5</b><span>คลิป/สัปดาห์ ต่อช่อง</span></div><div class="stat"><b>15–90</b><span>วินาที</span></div></div>
     </div>
-    <div class="mixbar mt"><span style="--f:2;--c:#8ee6bf">ความรู้ 2</span><span style="--f:1;--c:#ff9ec1">เฮฮา A 1</span><span style="--f:1;--c:#ffd0e2">เฮฮา B 1</span><span style="--f:1;--c:var(--grape)">CEO 1</span></div>
+    <div class="mixbar mt"><span style="--f:2;--c:#d9cdfa">CEO 2</span><span style="--f:1;--c:#8ee6bf">ความรู้ 1</span><span style="--f:1;--c:#ff9ec1">เฮฮา 1</span><span style="--f:1;--c:#c9b8ff">AI คลิป 1</span></div>
+    <p class="tiny muted mt-s">ตัวเลข = จำนวนคลิปต่อสัปดาห์ในเดือน ธ.ค. · ไม่ทำคลิปยาว</p>
 
     <div class="ch-layout mt">
       <div>
-        <h2 class="h2">เฮฮา มี 2 แบบ</h2>
+        <h2 class="h2">ลงอะไรบ้าง</h2>
+        <div class="grid g2 mt-s">
+          <div class="se" style="--c:#ece6ff"><b>CEO · 2 คลิป</b><p>ตอบคำถามลูกค้า 1 ตัว และเดินตรวจไซต์ 1 ตัว</p><span class="q">"ก่อนจ้างรีโนเวท ต้องถามเรื่องนี้ก่อน"</span></div>
+          <div class="se" style="--c:#d5f7e8"><b>ความรู้หน้างาน · 1 คลิป</b><p>โฟร์แมนอธิบายที่ไซต์ คลิปละ 1 จุด</p><span class="q">"รอยร้าวแบบนี้ อย่าปล่อยไว้"</span></div>
+          <div class="se" style="--c:#ffd9e8"><b>เฮฮา · 1 คลิป</b><p>มุกจากงานจริง เริ่มจากบอสกับทีม</p><span class="q">"ให้บอสทายราคาของในไซต์"</span></div>
+          <div class="se" style="--c:#e6ddff"><b>AI คลิป · 1 คลิป</b><p>คลิปความรู้ที่ทำในเว็บ MARKETING</p><span class="q">"ตึกแถวหลายคูหา รวมเป็นบ้านเดียวได้ไหม"</span></div>
+        </div>
+
+        <h2 class="h2 mt">คลิปเฮฮา เริ่มจากของที่ทำได้แน่ก่อน</h2>
         <div class="ab mt-s">
-          <div class="card" style="background:#ffe1ec"><span class="pct">70%</span><p class="h3">A · ผูกกับงานบริษัท</p><p class="small muted">หัวเราะก่อน แล้วค่อยรู้ว่าเราทำงานยังไง</p>
-            <div class="ideas-list"><div>POV: วันแรกของน้องฝึกงานที่ไซต์</div><div>แปลภาษาช่าง "เดี๋ยวพี่จัดให้" แปลว่าอะไร</div><div>ทีมออฟฟิศทายว่าผนังจะทาสีอะไร</div></div></div>
-          <div class="card" style="background:#fff0f6"><span class="pct">30%</span><p class="h3">B · ชีวิตทีมล้วน</p><p class="small muted">ไม่ขายอะไรเลย ให้คนติดตาม "คน"</p>
-            <div class="ideas-list"><div>ข้าวเที่ยงไซต์วันนี้</div><div>ทีมวิ่งเย็นวันศุกร์</div><div>บอสจับฉลากปีใหม่</div></div></div>
+          <div class="card" style="background:#ffe1ec"><span class="pill" style="background:#fff">เริ่ม ธ.ค.</span><p class="h3 mt-s">A · ผูกกับงานบริษัท</p><p class="small muted">ถ่ายในวันถ่าย CEO เลย ไม่ต้องหาคนเพิ่ม</p>
+            <div class="ideas-list"><div>บอสทายราคาของในไซต์</div><div>แปลภาษาช่าง "เดี๋ยวพี่จัดให้" แปลว่าอะไร</div><div>POV: วันแรกของน้องฝึกงานที่ไซต์</div></div></div>
+          <div class="card later" style="background:#fff0f6"><span class="pill" style="background:#fff">เพิ่มเมื่อมีคนสมัครใจ</span><p class="h3 mt-s">B · ชีวิตทีมล้วน</p><p class="small muted">ไม่ขายอะไร ให้คนติดตามคนในทีม ตอนนี้ยังไม่มีคนออกกล้อง</p>
+            <div class="ideas-list"><div>ข้าวเที่ยงไซต์วันนี้</div><div>ทีมวิ่งเย็นวันศุกร์</div><div>จับฉลากปีใหม่</div></div></div>
         </div>
 
         <h2 class="h2 mt">ช่องตัวอย่างที่ทีมเลือก</h2>
@@ -548,10 +565,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div class="side"><i></i><i></i><i></i></div>
           <div class="capt">best home · #ชีวิตช่าง #รีโนเวท</div>
         </div></div>
-        <p class="phone-cap">ฟุตเทจไซต์จริงที่มีอยู่แล้ว ใส่ hook กับซับเข้าไป ก็กลายเป็นคลิปเฮฮาแบบ A ได้ (ตัวหนังสือในภาพเป็นตัวอย่าง)</p>
+        <p class="phone-cap">ฟุตเทจไซต์จริงที่มีอยู่แล้ว ใส่ hook กับซับเข้าไป ก็เป็นคลิปเฮฮาที่ผูกกับงานได้ (ตัวหนังสือในภาพเป็นตัวอย่าง)</p>
       </div>
     </div>
-    <div class="next-row"><button class="nbtn" data-go="youtube">← YouTube</button><button class="nbtn pri" data-go="ceo">ดู CEO →</button></div>
+
+    <h2 class="h2 mt">คลิปเดิมบนช่อง YouTube เอามาตัดเป็น Shorts ได้ <span class="tiny muted" style="font-weight:400">ไม่ทำคลิปยาวเพิ่ม · กดดูได้เลย</span></h2>
+    <div class="ex-grid mt-s" style="grid-template-columns:repeat(4,minmax(0,1fr))">
+      <div class="ex"><div class="media" style="aspect-ratio:16/9"><button class="play" data-embed="yt" data-id="7rdZZxrwLig"><img src="https://i.ytimg.com/vi/7rdZZxrwLig/hqdefault.jpg" alt="" loading="lazy"><span class="btn">▶</span></button></div><div class="tx"><b>รีโนเวทบ้านเก่า EP.2</b><p>ตัดช่วงก่อน–หลังเป็นคลิปสั้นได้</p></div></div>
+      <div class="ex"><div class="media" style="aspect-ratio:16/9"><button class="play" data-embed="yt" data-id="NRHCFjVcP8I"><img src="https://i.ytimg.com/vi/NRHCFjVcP8I/hqdefault.jpg" alt="" loading="lazy"><span class="btn">▶</span></button></div><div class="tx"><b>Tour ep.1 บิ้วอินทั้งบ้าน</b><p>พาชมบ้าน รามคำแหง 92</p></div></div>
+      <div class="ex"><div class="media" style="aspect-ratio:16/9"><button class="play" data-embed="yt" data-id="voLo1gf5kAg"><img src="https://i.ytimg.com/vi/voLo1gf5kAg/hqdefault.jpg" alt="" loading="lazy"><span class="btn">▶</span></button></div><div class="tx"><b>MY best home EP.02</b><p>บ้านเดี่ยวสายไหม พื้นทรุด</p></div></div>
+      <div class="ex"><div class="media" style="aspect-ratio:16/9"><button class="play" data-embed="yt" data-id="wQVpseqMGLo"><img src="https://i.ytimg.com/vi/wQVpseqMGLo/hqdefault.jpg" alt="" loading="lazy"><span class="btn">▶</span></button></div><div class="tx"><b>MY best home EP.01</b><p>ส่งมอบงานต่อเติมครัว</p></div></div>
+    </div>
+    <div class="next-row"><button class="nbtn" data-go="instagram">← Instagram</button><button class="nbtn pri" data-go="ceo">ดู CEO →</button></div>
   </div>
 </section>
 
@@ -561,7 +586,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="ch-head" style="--c:var(--ink)">
       <span class="big-ic" style="color:var(--sun)">CEO</span>
       <div><h1>CEO branding</h1><p>คนจ้างงานหลักล้านอยากรู้ว่าใครรับผิดชอบบ้านของเขา เราจะให้ CEO เป็นหน้าที่คนเห็นบ่อยที่สุด</p></div>
-      <div class="stats"><div class="stat"><b>1 วัน</b><span>ทุก 2 สัปดาห์ ที่ไซต์</span></div><div class="stat"><b>2 ครั้ง</b><span>ต่อเดือน</span></div></div>
+      <div class="stats"><div class="stat"><b>1 วัน</b><span>ทุก 2 สัปดาห์ ที่ไซต์</span></div><div class="stat"><b>2 คลิป</b><span>ต่อสัปดาห์</span></div></div>
     </div>
 
     <div class="card mt" style="background:#fff8e6;text-align:center;padding:26px">
@@ -569,13 +594,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="row mt-s" style="justify-content:center;gap:8px"><span class="pill">ใจเย็น</span><span class="pill">พูดตรง</span><span class="pill">มีมุกนิดๆ</span><span class="pill">รู้จริง</span><span class="pill">ไม่ขายของ</span></div>
     </div>
 
-    <h2 class="h2 mt">5 ซีรีส์</h2>
-    <div class="series mt-s">
-      <div class="se" style="--c:#fff3c2"><b>CEO ตอบเอง</b><p>เอาคำถามจริงจากแชทมาตอบ 30–60 วิ</p><span class="q">"ไม่อยากงบบานปลาย ห้ามข้ามขั้นนี้"</span><div class="where"><span class="chip-ic" style="background:var(--fb)"><svg><use href="#i-fb"/></svg></span><span class="chip-ic" style="background:var(--ig)"><svg><use href="#i-ig"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span><span class="chip-ic" style="background:#111"><svg><use href="#i-tt"/></svg></span></div></div>
-      <div class="se" style="--c:#d5f7e8"><b>เดินไซต์กับ CEO</b><p>ตรวจงานจริง เจอจุดไหนต้องแก้ก็ชี้ให้ดู ไม่ต้องตัดออก</p><span class="q">"จุดนี้ผมให้รื้อทำใหม่ เพราะ…"</span><div class="where"><span class="chip-ic" style="background:var(--fb)"><svg><use href="#i-fb"/></svg></span><span class="chip-ic" style="background:var(--ig)"><svg><use href="#i-ig"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span></div></div>
-      <div class="se" style="--c:#dcefff"><b>ห้องประชุมจริง</b><p>เบื้องหลังคุยแบบกับลูกค้า (ต้องขอความยินยอมก่อน)</p><span class="q">"ลูกค้ามากับงบ 2 ล้าน เราเริ่มแบบนี้"</span><div class="where"><span class="chip-ic" style="background:var(--fb)"><svg><use href="#i-fb"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span></div></div>
-      <div class="se" style="--c:#ece6ff"><b>บันทึก CEO</b><p>บทเรียนการทำธุรกิจ ระบบคุมงาน ทำไมถึงตั้ง best home</p><span class="q">"ผมเคยเสียลูกค้าเพราะเรื่องนี้"</span><div class="where"><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span><span class="chip-ic" style="background:#111"><svg><use href="#i-tt"/></svg></span></div></div>
-      <div class="se" style="--c:#ffd9e8"><b>บอสกับทีม</b><p>ทีมเป็นคนเล่นมุก บอสเป็นคนรับมุก</p><span class="q">"ให้บอสทายราคาของในไซต์ ทายผิดเลี้ยงข้าว"</span><div class="where"><span class="chip-ic" style="background:#111"><svg><use href="#i-tt"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span></div></div>
+    <h2 class="h2 mt">เริ่มด้วย 2 ซีรีส์ สัปดาห์ละ 2 คลิป</h2>
+    <div class="grid g2 mt-s">
+      <div class="se" style="--c:#fff3c2"><b>CEO ตอบเอง</b><p>เอาคำถามจริงจากแชทลูกค้ามาตอบ คลิปละ 1 ข้อ 30–60 วิ ยืนพูดที่ไซต์</p><span class="q">"ไม่อยากงบบานปลาย ห้ามข้ามขั้นนี้"</span><div class="where"><span class="chip-ic" style="background:var(--fb)"><svg><use href="#i-fb"/></svg></span><span class="chip-ic" style="background:var(--ig)"><svg><use href="#i-ig"/></svg></span><span class="chip-ic" style="background:#111"><svg><use href="#i-tt"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span></div></div>
+      <div class="se" style="--c:#d5f7e8"><b>เดินไซต์กับ CEO</b><p>ตรวจงานจริง เจอจุดไหนต้องแก้ก็ชี้ให้ดู ไม่ต้องตัดออก เพราะเป็นหลักฐานว่าเราตรวจจริง</p><span class="q">"จุดนี้ผมให้รื้อทำใหม่ เพราะ…"</span><div class="where"><span class="chip-ic" style="background:var(--fb)"><svg><use href="#i-fb"/></svg></span><span class="chip-ic" style="background:var(--ig)"><svg><use href="#i-ig"/></svg></span><span class="chip-ic" style="background:#111"><svg><use href="#i-tt"/></svg></span><span class="chip-ic" style="background:var(--yt)"><svg><use href="#i-yt"/></svg></span></div></div>
+    </div>
+    <p class="tiny muted mt-s">ลงซ้ำแค่ 2 ซีรีส์ก่อน เพื่อให้คนดูจำรูปแบบได้ · วันถ่าย 1 วันได้คลิป CEO 6 ตัว ใช้ 4 ตัวใน 2 สัปดาห์ อีก 2 ตัวเก็บสำรอง</p>
+
+    <h2 class="h2 mt">เพิ่มทีหลัง เมื่อ 2 ซีรีส์แรกเดินได้</h2>
+    <div class="grid g3 mt-s">
+      <div class="se later"><b>บอสกับทีม</b><p>ทีมเป็นคนเล่นมุก บอสเป็นคนรับมุก ถ่ายวันเดียวกับวันถ่าย CEO นับเป็นคลิปเฮฮาตั้งแต่ ธ.ค.</p></div>
+      <div class="se later"><b>ห้องประชุมจริง</b><p>เบื้องหลังคุยแบบกับลูกค้า ต้องได้ความยินยอมจากลูกค้าก่อน</p></div>
+      <div class="se later"><b>บันทึก CEO</b><p>บทเรียนการทำธุรกิจ ระบบคุมงาน ทำไมถึงตั้ง best home</p></div>
     </div>
 
     <h2 class="h2 mt">คลิปตัวอย่างจากโฟลเดอร์ ref <span class="tiny muted" style="font-weight:700">กดเพื่อเล่นจาก TikTok</span></h2>
@@ -590,14 +620,204 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
     <h2 class="h2 mt">กติกาสั้นๆ</h2>
     <div class="rules mt-s"><div>พูดแต่เรื่องที่รู้จริง ไม่บอกราคาของแต่ละโครงการ</div><div>ไม่ถนัดเล่นมุกก็ไม่ต้องเล่น ให้ทีมเป็นคนเล่นแทน</div><div>ไม่พูดถึงคู่แข่ง พูดว่า "ลูกค้าควรระวังอะไร" แทน</div></div>
-    <div class="next-row"><button class="nbtn" data-go="tiktok">← TikTok</button><button class="nbtn pri" data-go="video">ดูวิธีทำคลิป →</button></div>
+    <div class="next-row"><button class="nbtn" data-go="tiktok">← TikTok + Shorts</button><button class="nbtn pri" data-go="week">ดู 1 สัปดาห์ →</button></div>
   </div>
 </section>
 
-<!-- ================= VIDEO HOW-TO ================= -->
+
+<!-- ================= WEEK ================= -->
+<section class="view" id="v-week" role="tabpanel">
+  <div class="wrap">
+    <span class="sticker">1 สัปดาห์ · เดือน ธ.ค.</span>
+    <h1 class="h-big mt-s">ผลิต <span class="hl">10 ชิ้น</span> ลงครบ 4 ช่อง</h1>
+    <p class="sub">ทุกชิ้นเป็นรูปหรือคลิปสั้น คลิป 1 ไฟล์ลงได้ทุกช่อง เวลาลงเป็นค่าตั้งต้น จะปรับตามตัวเลขจริง</p>
+    <div class="week-wrap mt">
+      <table class="week">
+        <thead><tr><th class="c" style="width:124px"></th><th>จ.</th><th>อ.</th><th>พ.</th><th>พฤ.</th><th>ศ.</th><th>ส.</th><th>อา.</th></tr></thead>
+        <tbody>
+          <tr><th class="c">Facebook</th><td><span class="pc" style="--c:#ffd27a">หน้างาน<small>12:00</small></span><span class="pc" style="--c:#8ee6bf">ความรู้<small>19:00</small></span></td><td><span class="pc" style="--c:#c9b8ff">AI ภาพ<small>12:00</small></span><span class="pc" style="--c:#d9cdfa">CEO ตอบเอง<small>19:00</small></span></td><td><span class="pc" style="--c:#ffd27a">หน้างาน<small>12:00</small></span></td><td><span class="pc" style="--c:#c9b8ff">AI คลิป<small>19:00</small></span></td><td><span class="pc" style="--c:#ffd27a">หน้างาน<small>12:00</small></span><span class="pc" style="--c:#d9cdfa">CEO เดินไซต์<small>19:00</small></span></td><td><span class="pc" style="--c:#8fd0ff">B/A<small>10:00</small></span></td><td class="off"></td></tr>
+          <tr><th class="c">Instagram</th><td><span class="pc" style="--c:#ffd27a">หน้างาน<small>ภาพปัด</small></span><span class="pc" style="--c:#8ee6bf">ความรู้<small>Reels</small></span></td><td><span class="pc" style="--c:#c9b8ff">AI ภาพ</span><span class="pc" style="--c:#d9cdfa">CEO ตอบเอง<small>Reels</small></span></td><td><span class="pc" style="--c:#ff9ec1">เฮฮา<small>Reels</small></span></td><td><span class="pc" style="--c:#c9b8ff">AI คลิป<small>Reels</small></span></td><td><span class="pc" style="--c:#ffd27a">หน้างาน<small>ภาพปัด</small></span><span class="pc" style="--c:#d9cdfa">CEO เดินไซต์<small>Reels</small></span></td><td><span class="pc" style="--c:#8fd0ff">B/A</span></td><td class="off"></td></tr>
+          <tr><th class="c">TikTok + Shorts</th><td><span class="pc" style="--c:#8ee6bf">ความรู้</span></td><td><span class="pc" style="--c:#d9cdfa">CEO ตอบเอง</span></td><td><span class="pc" style="--c:#ff9ec1">เฮฮา<small>บอสกับทีม</small></span></td><td><span class="pc" style="--c:#c9b8ff">AI คลิป</span></td><td><span class="pc" style="--c:#d9cdfa">CEO เดินไซต์</span></td><td class="off"></td><td class="off"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tiny muted mt-s">Instagram Stories ลงทุกวันทำงาน จากรูปที่โฟร์แมนส่งมา</p>
+    <div class="grid g4 mt">
+      <div class="card" style="text-align:center"><span class="chip-ic" style="margin:0 auto;background:var(--fb)"><svg><use href="#i-fb"/></svg></span><p class="h2">9</p><p class="small muted">โพสต์/สัปดาห์</p></div>
+      <div class="card" style="text-align:center"><span class="chip-ic" style="margin:0 auto;background:var(--ig)"><svg><use href="#i-ig"/></svg></span><p class="h2">9</p><p class="small muted">โพสต์ + Stories</p></div>
+      <div class="card" style="text-align:center"><span class="chip-ic" style="margin:0 auto;background:#111"><svg><use href="#i-tt"/></svg></span><p class="h2">5</p><p class="small muted">คลิป/สัปดาห์</p></div>
+      <div class="card" style="text-align:center"><span class="chip-ic" style="margin:0 auto;background:var(--yt)"><svg><use href="#i-yt"/></svg></span><p class="h2">5</p><p class="small muted">Shorts/สัปดาห์</p></div>
+    </div>
+    <div class="grid g2 mt">
+      <div class="card"><p class="h3">10 ชิ้นมีอะไรบ้าง</p><p class="small" style="margin-top:6px">หน้างาน 3 · AI Info 2 (ภาพ 1 คลิป 1) · CEO 2 · ความรู้หน้างาน 1 · Before/After 1 · เฮฮา 1</p></div>
+      <div class="card later"><p class="h3">ตั้งแต่ ม.ค. ถ้าจับเวลาแล้วไหว เพิ่มเป็น 12 ชิ้น</p><p class="small" style="margin-top:6px">ความรู้หน้างานอีก 1 · เฮฮา B 1 (เมื่อมีคนสมัครใจ) · คลิปกึ่งโฆษณา 2 สัปดาห์ครั้ง</p></div>
+    </div>
+    <p class="src">ทุกชิ้นต้องตรวจและอนุมัติก่อนลง และคนเป็นคนกดโพสต์เอง</p>
+    <div class="next-row"><button class="nbtn" data-go="ceo">← CEO</button><button class="nbtn pri" data-go="team">ดูทีม 2 คน →</button></div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="view" id="v-team" role="tabpanel">
+  <div class="wrap">
+    <span class="sticker">ทีมและกำลังคน</span>
+    <h1 class="h-big mt-s">ทีม 2 คน <span class="hl">ทำไหว</span><br>ถ้าเริ่มที่ 10 ชิ้นต่อสัปดาห์</h1>
+    <p class="sub">คนผลิตมีคนเดียว แผนจึงออกแบบให้วันถ่าย CEO 1 วัน ได้คลิปที่มีคนออกกล้องครบทั้ง 2 สัปดาห์ แล้วค่อยเพิ่มจำนวนเมื่อจับเวลาจริงแล้วว่าไหว</p>
+
+    <h2 class="h2 mt">ใครทำอะไร</h2>
+    <div class="roles mt-s">
+      <div class="role"><span class="who">หัวหน้าทีม Marketing</span><b>วางระบบ + ตรวจงาน</b><ul><li>ดูแลระบบหลังบ้านและปฏิทินโพสต์</li><li>ตรวจและอนุมัติทุกชิ้นก่อนลง</li><li>เตรียมคำถามให้ CEO · ดูตัวเลข</li></ul><span class="note">ไม่ได้ผลิตภาพหรือคลิป · ใช้เวลาราว 4 ชม./สัปดาห์</span></div>
+      <div class="role main"><span class="who">น้องคอนเทนต์ 1 คน</span><b>ผลิตทุกชิ้น</b><ul><li>ถ่าย ตัดต่อ ทำรูป</li><li>ออกไซต์เก็บภาพ</li><li>ลงปฏิทิน รอหัวหน้าทีมยืนยัน</li></ul><span class="note">จุดที่ต้องระวังกำลังคนที่สุด</span></div>
+      <div class="role"><span class="who">CEO</span><b>ออกกล้องที่ไซต์</b><ul><li>1 วัน ทุก 2 สัปดาห์</li><li>เดินไซต์ + ตอบคำถามลูกค้า</li></ul><span class="note">เดือนละ 2 วัน</span></div>
+      <div class="role"><span class="who">โฟร์แมนแต่ละไซต์</span><b>ส่งรูปหน้างาน</b><ul><li>ส่งทุกสัปดาห์ตามรายการช็อต</li><li>ถ่ายจากจุดเดิมทุกครั้ง</li></ul><span class="note">ต้องขอความร่วมมือ</span></div>
+      <div class="role"><span class="who">AI ในเว็บ MARKETING</span><b>ช่วยงานซ้ำๆ</b><ul><li>AI Info ภาพและคลิป</li><li>ร่างแคปชั่น · ทำซับ</li></ul><span class="note">ทำตามคำสั่งรายชิ้น</span></div>
+    </div>
+
+    <h2 class="h2 mt">วันถ่าย CEO 1 วัน ได้อะไรกลับมา</h2>
+    <div class="grid g2 mt-s" style="align-items:start">
+      <div class="card">
+        <div class="run">
+          <div><span>09:30</span><p>เก็บรูปหน้างานและมุมเดิม ก่อน CEO มาถึง</p><em>รูปหน้างาน 1 ชุด</em></div>
+          <div class="on"><span>10:00</span><p><b>CEO เดินตรวจไซต์</b> ชี้จุดที่ทำดีและจุดที่ต้องแก้</p><em>คลิปสั้น 2 ตัว</em></div>
+          <div class="on"><span>11:00</span><p><b>CEO ตอบคำถามลูกค้า 4 ข้อ</b> ยืนพูดที่ไซต์</p><em>คลิปสั้น 4 ตัว</em></div>
+          <div class="on"><span>11:45</span><p><b>บอสกับทีม</b> มุกสั้นๆ 2 เรื่อง</p><em>คลิปเฮฮา 2 ตัว</em></div>
+          <div><span>13:00</span><p>โฟร์แมนอธิบายงาน 2 จุด</p><em>คลิปความรู้ 2 ตัว</em></div>
+          <div><span>14:00</span><p>เก็บภาพประกอบและ Stories</p><em>ใช้ทั้งสัปดาห์</em></div>
+        </div>
+        <p class="src">ตารางเวลาเป็นข้อเสนอ ปรับตามคิวของ CEO ได้ · CEO อยู่หน้ากล้องช่วง 10:00–12:00 ที่เหลือน้องเก็บงานต่อเอง</p>
+      </div>
+      <div>
+        <div class="card" style="background:var(--ink);color:#f4efe6;border-color:var(--ink)">
+          <p class="small" style="color:#a9a294">เป้าต่อวันถ่าย 1 วัน</p>
+          <div class="harvest"><div><b>10</b><span>คลิปสั้น</span></div><div><b>1</b><span>ชุดรูปหน้างาน</span></div></div>
+          <p class="small" style="color:#cfc9be;margin-top:14px">CEO 6 ตัว · ความรู้ 2 ตัว · เฮฮา 2 ตัว · พอใช้ 2 สัปดาห์พอดี (CEO ใช้ 4 ตัว เหลือ 2 ตัวเก็บสำรองไว้ใช้ตอนวันถ่ายเลื่อน)</p>
+        </div>
+        <div class="card mt-s">
+          <p class="h3">ก่อนวันถ่าย 2 วัน</p>
+          <p class="small muted" style="margin-top:4px">หัวหน้าทีมส่งคำถาม 4–5 ข้อที่คัดจากแชทลูกค้าให้ CEO ดูล่วงหน้า ไม่ต้องท่องบท ตอบตามประสบการณ์จริง</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="h2 mt">รอบ 2 สัปดาห์ของน้อง <span class="tiny muted" style="font-weight:400">ตัวอย่างการจัดวัน ปรับได้</span></h2>
+    <div class="cycle mt-s">
+      <div class="wk">สัปดาห์ที่ 1</div>
+      <div class="d"><b>จ.</b>วางหัวข้อ · ทำ AI Info</div>
+      <div class="d field"><b>อ.</b>วันถ่าย CEO ที่ไซต์<small>ทั้งวัน</small></div>
+      <div class="d"><b>พ.</b>ตัดคลิป CEO ตอบเอง</div>
+      <div class="d"><b>พฤ.</b>ตัดคลิปเดินไซต์ + ความรู้</div>
+      <div class="d"><b>ศ.</b>ตัดคลิปเฮฮา · ลงปฏิทินสัปดาห์หน้า</div>
+      <div class="wk">สัปดาห์ที่ 2</div>
+      <div class="d"><b>จ.</b>AI Info · Before/After</div>
+      <div class="d field"><b>อ.</b>ออกไซต์เก็บรูป<small>ครึ่งวัน</small></div>
+      <div class="d"><b>พ.</b>ตัดคลิปชุดสัปดาห์ที่ 2</div>
+      <div class="d"><b>พฤ.</b>งานค้าง · เก็บคลิปสำรอง</div>
+      <div class="d"><b>ศ.</b>สรุปตัวเลข · เตรียมรอบถัดไป</div>
+    </div>
+    <p class="tiny muted mt-s">ทุกวัน: Stories · เก็บรูปจากโฟร์แมน · ส่งงานเข้าตรวจ ราววันละ 1.5 ชม.</p>
+
+    <h2 class="h2 mt">ชั่วโมงงานของน้อง ต่อ 2 สัปดาห์ <span class="tiny muted" style="font-weight:400">ตัวเลขในแถบ = ชั่วโมง</span></h2>
+    <div class="grid g2 mt-s">
+      <div class="card">
+        <div class="row" style="justify-content:space-between"><p class="h3">เดือน ธ.ค. · 10 ชิ้น/สัปดาห์</p><span class="pill" style="background:var(--sun-soft)">แนะนำให้เริ่มแบบนี้</span></div>
+        <div class="cap mt-s"><span style="--f:8;--c:#c9b8ff">8</span><span style="--f:5;--c:#ffd27a">5</span><span style="--f:12;--c:#8fd0ff">12</span><span style="--f:21;--c:#8ee6bf">21</span><span style="--f:6;--c:#ffb3cf">6</span><span style="--f:28;--c:var(--paper-2)">เหลือ 28</span></div><div class="capkey"><span style="--c:#c9b8ff">วันถ่าย CEO</span><span style="--c:#ffd27a">ออกไซต์</span><span style="--c:#8fd0ff">งานประจำวัน</span><span style="--c:#8ee6bf">ผลิตชิ้นงาน</span><span style="--c:#ffb3cf">แก้งานตามที่ตรวจ</span></div>
+        <p class="small mt-s"><b>ใช้ราว 52 จาก 80 ชม.</b> เหลือเผื่อ 28 ชม.</p>
+        <p class="small muted">หน้างาน 3 · AI Info 2 · CEO 2 · ความรู้ 1 · B/A 1 · เฮฮา 1</p>
+      </div>
+      <div class="card">
+        <div class="row" style="justify-content:space-between"><p class="h3">ตั้งแต่ ม.ค. · 12 ชิ้น/สัปดาห์</p><span class="pill">ถ้าจับเวลาแล้วไหว</span></div>
+        <div class="cap mt-s"><span style="--f:8;--c:#c9b8ff">8</span><span style="--f:5;--c:#ffd27a">5</span><span style="--f:12;--c:#8fd0ff">12</span><span style="--f:28;--c:#8ee6bf">28</span><span style="--f:6;--c:#ffb3cf">6</span><span style="--f:21;--c:var(--paper-2)">เหลือ 21</span></div><div class="capkey"><span style="--c:#c9b8ff">วันถ่าย CEO</span><span style="--c:#ffd27a">ออกไซต์</span><span style="--c:#8fd0ff">งานประจำวัน</span><span style="--c:#8ee6bf">ผลิตชิ้นงาน</span><span style="--c:#ffb3cf">แก้งานตามที่ตรวจ</span></div>
+        <p class="small mt-s"><b>ใช้ราว 59 จาก 80 ชม.</b> เหลือเผื่อ 21 ชม.</p>
+        <p class="small muted">เพิ่มความรู้อีก 1 · เฮฮา B 1 และคลิปกึ่งโฆษณา 1 ตัวต่อ 2 สัปดาห์</p>
+      </div>
+    </div>
+    <p class="src">คิดจากวันทำงาน 10 วัน วันละ 8 ชม. · เวลาต่อชิ้นเป็นค่าประมาณจากแผนของทีมวันที่ 13 พ.ย. 2569 (รูปหน้างาน 40 นาที · คลิปคนพูด 1.5 ชม. · AI คลิป 45 นาที) ยังไม่ได้จับเวลาจริง จึงจะจับเวลา 2 สัปดาห์แรกก่อนตัดสินใจเพิ่มงาน</p>
+
+    <div class="grid g2 mt">
+      <div class="card">
+        <p class="h3">ถ้าไม่ทัน ตัดตามลำดับนี้</p>
+        <ol class="cut"><li>เฮฮา B และคลิปกึ่งโฆษณา (ของ ม.ค.)</li><li>ความรู้หน้างานตัวที่ 2 (ของ ม.ค.)</li><li>คลิปเฮฮา</li><li>CEO ตัวที่ 2 ของสัปดาห์</li></ol>
+        <p class="small muted">ที่ห้ามหลุด: รูปหน้างาน 3 ชุด และคลิป CEO สัปดาห์ละ 1 ตัว</p>
+      </div>
+      <div class="card">
+        <p class="h3">ภาระของหัวหน้าทีม</p>
+        <p class="small" style="margin-top:6px">ราว 4 ชม. ต่อสัปดาห์: ตรวจ 10 ชิ้น ชิ้นละราว 15 นาที ประชุมวันจันทร์ 30 นาที และเตรียมคำถามให้ CEO</p>
+        <p class="small muted" style="margin-top:6px">ตรวจวันละ 2 รอบ เวลา 11:30 และ 16:30 เพื่อไม่ให้งานของน้องค้าง · ตัวเลขเป็นค่าประมาณ</p>
+      </div>
+    </div>
+    <div class="next-row"><button class="nbtn" data-go="week">← 1 สัปดาห์</button><button class="nbtn pri" data-go="risk">ดูปัญหาที่จะเจอ →</button></div>
+  </div>
+</section>
+
+<!-- ================= RISK ================= -->
+<section class="view" id="v-risk" role="tabpanel">
+  <div class="wrap">
+    <span class="sticker">ปัญหาที่จะเจอ</span>
+    <h1 class="h-big mt-s">8 เรื่องที่รู้ล่วงหน้า<br>และ <span class="hl">วิธีรับมือ</span></h1>
+    <div class="risks mt">
+      <div class="rk"><span class="n">1</span><div><b>น้องคนเดียวทำทุกชิ้น ลาเมื่อไรงานหยุด</b><p>เก็บคลังสำรองไว้ 1 สัปดาห์ (AI Info กับคลิป CEO ที่ถ่ายเกิน) และมีลำดับตัดงานชัดเจน</p></div></div>
+      <div class="rk"><span class="n">2</span><div><b>เวลาที่ใช้จริงอาจมากกว่าที่ประมาณ</b><p>เริ่มที่ 10 ชิ้นต่อสัปดาห์ จับเวลาจริง 2 สัปดาห์แรก แล้วค่อยปรับจำนวน</p></div></div>
+      <div class="rk"><span class="n">3</span><div><b>วันถ่าย CEO เลื่อน เพราะงานด่วนหรือฝนตก</b><p>ล็อกวันถ่ายและวันสำรองไว้ในปฏิทินล่วงหน้า ถ้าฝนตกเปลี่ยนเป็นถ่ายตอบคำถามในออฟฟิศ</p></div></div>
+      <div class="rk"><span class="n">4</span><div><b>งานรอตรวจค้าง เพราะหัวหน้าทีมดูแลระบบด้วย</b><p>ตรวจวันละ 2 รอบ เวลาแน่นอน 11:30 และ 16:30 · ส่งรูปล่วงหน้า 1 วัน คลิป 2 วัน</p></div></div>
+      <div class="rk"><span class="n">5</span><div><b>รูปจากไซต์มาไม่ครบ หรือถ่ายคนละมุม ทำก่อน–หลังไม่ได้</b><p>ให้รายการช็อตประจำสัปดาห์กับโฟร์แมน กำหนดวันส่ง และทำเครื่องหมายจุดตั้งกล้อง ช่วงแรกใช้ผลงานที่เสร็จแล้วและมีรูปก่อนทำ</p></div></div>
+      <div class="rk"><span class="n">6</span><div><b>ลูกค้าไม่อนุญาตให้ถ่ายบ้าน</b><p>ขอความยินยอมตั้งแต่ตอนเซ็นสัญญา ไม่ถ่ายเลขที่บ้านหรือหน้าลูกค้า ไซต์ที่ไม่อนุญาตไม่ลง</p></div></div>
+      <div class="rk"><span class="n">7</span><div><b>ไม่มีคนอยากออกกล้องคลิปเฮฮา</b><p>เดือนแรกใช้ "บอสกับทีม" ที่ถ่ายในวันถ่าย CEO ก่อน คลิปชีวิตทีมเพิ่มเมื่อมีคนสมัครใจ หรือใช้มุมกล้องแบบ POV ที่ไม่เห็นหน้า</p></div></div>
+      <div class="rk"><span class="n">8</span><div><b>ผลลัพธ์ไม่มาเร็ว ช่องใหม่ต้องใช้เวลา</b><p>เดือนแรกวัดว่าลงครบตามแผนไหมและเก็บตัวเลขฐาน แล้วทบทวนกับผู้บริหารทุกเดือน</p></div></div>
+    </div>
+    <div class="card mt" style="background:var(--sun-soft);border-color:#f0dc9a">
+      <p class="h3">ถ้าตัดงานตามลำดับแล้วยังเกินกำลัง 2 สัปดาห์ติดกัน</p>
+      <p class="small" style="margin-top:4px">จะเสนอทางเลือกให้ผู้บริหาร: ลดเป้าจำนวนคลิป หรือจ้างฟรีแลนซ์ตัดต่อเป็นรายชิ้น (ราคาต้องยืนยัน)</p>
+    </div>
+    <div class="next-row"><button class="nbtn" data-go="team">← ทีม 2 คน</button><button class="nbtn pri" data-go="ask">ดูสิ่งที่ขออนุมัติ →</button></div>
+  </div>
+</section>
+
+<!-- ================= ASK ================= -->
+<section class="view" id="v-ask" role="tabpanel">
+  <div class="wrap">
+    <span class="sticker" style="--c:var(--pink)">ขอผู้บริหารเคาะ</span>
+    <h1 class="h-big mt-s">6 เรื่อง เพื่อ <span class="hl">เริ่มได้ ธ.ค.</span></h1>
+    <div class="asks six mt">
+      <div class="ask"><span class="no">1</span><b>เวลาของ CEO</b><p>ไปไซต์งานถ่ายคลิป 1 วัน ทุก 2 สัปดาห์ (เดือนละ 2 วัน) ล็อกวันและวันสำรองในปฏิทินล่วงหน้า</p><div class="tick"><span>ลอง 2 เดือนแล้วทบทวน</span></div></div>
+      <div class="ask"><span class="no">2</span><b>คนในทีมออกกล้อง</b><p>ให้โฟร์แมนอธิบายงานหน้ากล้องได้ และเปิดให้คนที่สมัครใจมาร่วมเล่นคลิปเฮฮา</p><div class="tick"><span>ไม่บังคับใคร</span></div></div>
+      <div class="ask"><span class="no">3</span><b>คลิปเฮฮาที่ไม่ขายของ</b><p>ให้ TikTok กับ YouTube มีคลิปบอสกับทีมสัปดาห์ละ 1 ตัว และเพิ่มคลิปชีวิตทีมเมื่อมีคนสมัครใจ</p><div class="tick"><span>ให้ช่องมีคนติดตามจริง</span></div></div>
+      <div class="ask"><span class="no">4</span><b>อุปกรณ์</b><p>ไมค์ไร้สาย 2 ตัว ขาตั้งหรือไม้กันสั่น ไฟ LED เล็ก</p><div class="tick"><span>ราคาต้องยืนยัน</span></div></div>
+      <div class="ask"><span class="no">5</span><b>งบบูสต์</b><p>บูสต์เฉพาะคลิปกึ่งโฆษณาที่ผลดีจริง เริ่ม ก.พ. 2570</p><div class="tick"><span>ตัวเลขต้องยืนยัน</span></div></div>
+      <div class="ask"><span class="no">6</span><b>ความร่วมมือจากทีมไซต์และทีมขาย</b><p>โฟร์แมนส่งรูปตามรายการช็อตทุกสัปดาห์ และขอความยินยอมถ่ายบ้านจากลูกค้าตั้งแต่ตอนเซ็นสัญญา</p><div class="tick"><span>ทีม Marketing มีคนผลิตคนเดียว</span></div></div>
+    </div>
+
+    <div class="north mt"><div><b class="h3">วัดผลจากอะไร</b><p>จำนวนลูกค้าตรงกลุ่มที่ทักเข้ามา (บ้านเดี่ยว กทม.–นนทบุรี กลุ่มหลักงบ 2 ล้านบาทขึ้นไป) นับจากระบบ Presale ทุกสัปดาห์ · ตอนนี้ระบบรู้ว่าลูกค้าทักมาทาง LINE หรือ Facebook แต่ยังไม่รู้ว่าเห็นคลิปไหน จึงจะเพิ่มคำถาม "รู้จักเราจากช่องไหน" ตอนรับเคส</p></div></div>
+
+    <h2 class="h2 mt">เป้าเดือนแรก <span class="tiny muted" style="font-weight:400">วัดจากสิ่งที่ทีมคุมได้ก่อน</span></h2>
+    <div class="goal mt-s">
+      <div class="card"><b>36 จาก 40 ชิ้น</b><span>ลงได้อย่างน้อย 9 ใน 10 ของแผน ธ.ค.</span></div>
+      <div class="card"><b>CEO 2 คลิป</b><span>ลงครบทุกสัปดาห์ ไม่ขาดช่วง</span></div>
+      <div class="card"><b>ตัวเลขฐานครบ</b><span>ยอดดู ผู้ติดตาม และยอดทักของทั้ง 4 ช่อง 4 สัปดาห์</span></div>
+    </div>
+    <p class="src">เป้าจำนวนลูกค้าที่ทักและผู้ติดตาม จะเสนอในรอบทบทวน ม.ค. หลังมีตัวเลขฐานแล้ว</p>
+
+    <h2 class="h2 mt">แผน 3 เดือน</h2>
+    <div class="phases mt-s">
+      <div class="phase"><span class="m">ธ.ค. 2569</span><b>เริ่ม</b><ul><li>ถ่าย CEO 2 รอบ</li><li>ลง 10 ชิ้นต่อสัปดาห์</li><li>จับเวลาจริง และเก็บตัวเลขฐาน</li></ul></div>
+      <div class="phase"><span class="m">ม.ค. 2570</span><b>จับจังหวะ</b><ul><li>ดูตัวเลข 4 สัปดาห์ แบบไหนไม่เวิร์กก็ตัดออก</li><li>เพิ่มเป็น 12 ชิ้น ถ้าจับเวลาแล้วไหว</li><li>ตั้งเป้าแต่ละช่อง</li></ul></div>
+      <div class="phase"><span class="m">ก.พ. 2570</span><b>ขยาย</b><ul><li>เพิ่มซีรีส์ที่คนชอบที่สุด</li><li>บูสต์คลิปที่ผลดีที่สุด ถ้าได้อนุมัติงบ</li><li>สรุปผล 3 เดือนให้ผู้บริหาร</li></ul></div>
+    </div>
+
+    <h2 class="h2 mt">กติกาที่ทุกชิ้นต้องผ่าน</h2>
+    <div class="rules mt-s">
+      <div>ผลงานและภาพก่อน–หลังใช้รูปไซต์จริงเท่านั้น</div>
+      <div>ภาพจาก AI ใช้ประกอบความรู้ได้ แต่ต้องบอกว่าเป็นภาพประกอบ</div>
+      <div>ไม่บอกราคาของแต่ละโครงการ ไม่บอกว่าสำรวจหน้างานฟรี</div>
+      <div>จะถ่ายลูกค้าหรือบ้านลูกค้า ต้องขอความยินยอมก่อน</div>
+      <div>ไม่ขายแรง ไม่ใช้คำว่า "ด่วน" "โปรแรง" ไม่พูดถึงคู่แข่ง</div>
+      <div>ทุกชิ้นตรวจและอนุมัติก่อนลง คนเป็นคนกดโพสต์เอง</div>
+    </div>
+    <div class="next-row"><button class="nbtn" data-go="risk">← ปัญหาที่จะเจอ</button><button class="nbtn" data-go="video">คู่มือทำคลิป (สำหรับทีม) →</button></div>
+  </div>
+</section>
 <section class="view" id="v-video" role="tabpanel">
   <div class="wrap">
-    <span class="sticker" style="--c:var(--mint)">วิธีทำคลิป</span>
+    <span class="sticker">คู่มือสำหรับทีม · ไม่ต้องอนุมัติ</span>
     <h1 class="h-big mt-s">ทุกคลิปใช้ <span class="hl">4 จังหวะ</span> เหมือนกัน</h1>
     <div class="steps mt">
       <div class="stp" style="--c:var(--sun)"><span class="no">1</span><span class="t">0–3 วินาที</span><b>Hook</b><p>เปิดด้วยภาพที่แรงที่สุด + ตัวหนังสือบรรทัดเดียว</p></div>
@@ -640,225 +860,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="row mt-s" style="gap:8px"><span class="pill" style="--c:#fff3c2">"บ้าน 30 ปี รีโนเวทได้ไหม"</span><span class="pill" style="--c:#dcefff">"ทุบสร้างใหม่ VS รีโนเวท"</span><span class="pill" style="--c:#d5f7e8">"3 เรื่องต้องรู้ก่อนสร้าง"</span><span class="pill" style="--c:#ffd9e8">"70 วัน บ้านเปลี่ยนไป"</span><span class="pill" style="--c:#ece6ff">"รีโนเวทบ้าน EP1"</span></div>
       <p class="src">มาจากโฟลเดอร์ Drive "Best Home Video Content" มี 107 ไฟล์ ตัดตัวซ้ำแล้วเหลือ 97 คลิป · ดูจากภาพ ไม่ได้ฟังเสียง · ทุกคลิปเป็นของแบรนด์อื่น ใช้ดูโครงคลิปเท่านั้น</p>
     </div>
-    <div class="next-row"><button class="nbtn" data-go="ceo">← CEO</button><button class="nbtn pri" data-go="week">ดู 1 สัปดาห์ →</button></div>
-  </div>
-</section>
-
-<!-- ================= WEEK ================= -->
-<section class="view" id="v-week" role="tabpanel">
-  <div class="wrap">
-    <span class="sticker" style="--c:var(--orange)">1 สัปดาห์</span>
-    <h1 class="h-big mt-s">ผลิต <span class="hl">11 ชิ้น</span> ลงครบ 4 ช่อง</h1>
-    <p class="sub">ทุกชิ้นเป็นรูปหรือคลิปสั้น ไม่มีคลิปยาว จัดใหม่ให้แต่ละช่องได้คอนเทนต์ที่ทำมาเพื่อช่องนั้น ส่วนเวลาลงตั้งไว้ก่อน แล้วปรับตามตัวเลขจริง · ตารางนี้คือแผนเต็ม เดือนแรกเริ่มที่ 9 ชิ้นก่อน ดูเหตุผลในแท็บ "ทีม 2 คน"</p>
-    <div class="week-wrap mt">
-      <table class="week">
-        <thead><tr><th class="c"></th><th>จ.</th><th>อ.</th><th>พ.</th><th>พฤ.</th><th>ศ.</th><th>ส.</th><th>อา.</th></tr></thead>
-        <tbody>
-          <tr><th class="c">FB</th>
-            <td><span class="pc" style="--c:#ffd27a">หน้างาน<small>12:00</small></span><span class="pc" style="--c:#8ee6bf">ความรู้<small>19:00</small></span></td>
-            <td><span class="pc" style="--c:#c9b8ff">AI ภาพ<small>12:00</small></span></td>
-            <td><span class="pc" style="--c:#ffd27a">หน้างาน</span><span class="pc" style="--c:var(--grape)">CEO<small>19:00</small></span></td>
-            <td><span class="pc" style="--c:#c9b8ff">AI คลิป<small>19:00</small></span></td>
-            <td><span class="pc" style="--c:#ffd27a">หน้างาน</span></td>
-            <td><span class="pc" style="--c:#8fd0ff">B/A<small>10:00</small></span></td>
-            <td><span class="pc" style="--c:#ffab6b">Ad<small>2 สัปดาห์ครั้ง</small></span></td></tr>
-          <tr><th class="c">IG</th>
-            <td><span class="pc" style="--c:#ffd27a">คารูเซล</span><span class="pc" style="--c:#8ee6bf">Reels</span></td>
-            <td><span class="pc" style="--c:#c9b8ff">AI ภาพ</span><span class="pc" style="--c:#ff9ec1">Reels</span></td>
-            <td><span class="pc" style="--c:var(--grape)">Reels</span></td>
-            <td><span class="pc" style="--c:#c9b8ff">AI คลิป</span></td>
-            <td><span class="pc" style="--c:#ffd27a">คารูเซล</span></td>
-            <td><span class="pc" style="--c:#8fd0ff">B/A</span></td>
-            <td class="off"><span class="tiny muted">Stories</span></td></tr>
-          <tr><th class="c">▶ YouTube</th>
-            <td><span class="pc" style="--c:#8ee6bf">Shorts</span></td>
-            <td><span class="pc" style="--c:#ff9ec1">Shorts A</span></td>
-            <td><span class="pc" style="--c:var(--grape)">Shorts</span></td>
-            <td><span class="pc" style="--c:#8ee6bf">Shorts</span></td>
-            <td><span class="pc" style="--c:#ffd0e2">Shorts B</span></td>
-            <td class="off"></td>
-            <td class="off"></td></tr>
-          <tr><th class="c">TikTok</th>
-            <td><span class="pc" style="--c:#8ee6bf">ความรู้</span></td>
-            <td><span class="pc" style="--c:#ff9ec1">เฮฮา A</span></td>
-            <td><span class="pc" style="--c:var(--grape)">CEO</span></td>
-            <td><span class="pc" style="--c:#8ee6bf">ความรู้</span></td>
-            <td><span class="pc" style="--c:#ffd0e2">เฮฮา B</span></td>
-            <td class="off"></td><td class="off"></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="grid g4 mt">
-      <div class="card" style="text-align:center"><span class="chip-ic" style="background:var(--fb);margin:0 auto"><svg><use href="#i-fb"/></svg></span><p class="h2">8–9</p><p class="small muted">โพสต์/สัปดาห์</p></div>
-      <div class="card" style="text-align:center"><span class="chip-ic" style="background:var(--ig);margin:0 auto"><svg><use href="#i-ig"/></svg></span><p class="h2">9</p><p class="small muted">โพสต์ + Stories</p></div>
-      <div class="card" style="text-align:center"><span class="chip-ic" style="background:var(--yt);margin:0 auto"><svg><use href="#i-yt"/></svg></span><p class="h2">5</p><p class="small muted">Shorts/สัปดาห์</p></div>
-      <div class="card" style="text-align:center"><span class="chip-ic" style="background:#111;margin:0 auto"><svg><use href="#i-tt"/></svg></span><p class="h2">5</p><p class="small muted">คลิป/สัปดาห์</p></div>
-    </div>
-    <p class="src">เวลาต่อชิ้นอ้างจากแผน 2 เดือนเดิม (13 พ.ย. 2569) · คลิปกึ่งโฆษณาลง 2 สัปดาห์ครั้ง ไม่นับใน 11 ชิ้น · ทุกชิ้นต้องตรวจและอนุมัติก่อนลง และคนเป็นคนกดโพสต์เอง</p>
-    <div class="next-row"><button class="nbtn" data-go="video">← วิธีทำคลิป</button><button class="nbtn pri" data-go="team">ดูทีม 2 คน →</button></div>
-  </div>
-</section>
-
-<!-- ================= TEAM ================= -->
-<section class="view" id="v-team" role="tabpanel">
-  <div class="wrap">
-    <span class="sticker">ทีมและกำลังคน</span>
-    <h1 class="h-big mt-s">ทีม 2 คน <span class="hl">ทำไหว</span><br>ถ้าเริ่มที่ 9 ชิ้นต่อสัปดาห์</h1>
-    <p class="sub">คนผลิตมีคนเดียว แผนจึงออกแบบให้วันถ่าย CEO 1 วัน ได้งานกลับมาใช้ 2 สัปดาห์ แล้วค่อยเพิ่มจำนวนเมื่อจับเวลาจริงแล้วว่าไหว</p>
-
-    <h2 class="h2 mt">ใครทำอะไร</h2>
-    <div class="roles mt-s">
-      <div class="role"><span class="who">หัวหน้าทีม Marketing</span><b>วางระบบ + ตรวจงาน</b><ul><li>ดูแลระบบหลังบ้านและปฏิทินโพสต์</li><li>ตรวจและอนุมัติทุกชิ้นก่อนลง</li><li>เตรียมคำถามให้ CEO · ดูตัวเลข</li></ul><span class="note">ไม่ได้ผลิตภาพหรือคลิป</span></div>
-      <div class="role main"><span class="who">น้องคอนเทนต์ 1 คน</span><b>ผลิตทุกชิ้น</b><ul><li>ถ่าย ตัดต่อ ทำรูป</li><li>ออกไซต์เก็บภาพ</li><li>ลงปฏิทิน รอหัวหน้าทีมยืนยัน</li></ul><span class="note">จุดที่ต้องระวังกำลังคนที่สุด</span></div>
-      <div class="role"><span class="who">CEO</span><b>ออกกล้องที่ไซต์</b><ul><li>1 วัน ทุก 2 สัปดาห์</li><li>เดินไซต์ + ตอบคำถามลูกค้า</li></ul><span class="note">เดือนละ 2 วัน</span></div>
-      <div class="role"><span class="who">โฟร์แมนแต่ละไซต์</span><b>ส่งรูปหน้างาน</b><ul><li>ส่งทุกสัปดาห์ตามรายการช็อต</li><li>ถ่ายจากจุดเดิมทุกครั้ง</li></ul><span class="note">ต้องขอความร่วมมือ</span></div>
-      <div class="role"><span class="who">AI ในเว็บ MARKETING</span><b>ช่วยงานซ้ำๆ</b><ul><li>AI Info ภาพและคลิป</li><li>ร่างแคปชั่น · ทำซับ</li></ul><span class="note">ทำตามคำสั่งรายชิ้น</span></div>
-    </div>
-
-    <h2 class="h2 mt">วันถ่าย CEO 1 วัน ได้อะไรกลับมา</h2>
-    <div class="grid g2 mt-s" style="align-items:start">
-      <div class="card">
-        <div class="run">
-          <div><span>09:30</span><p>เก็บรูปหน้างานและมุมเดิม ก่อน CEO มาถึง</p><em>รูปหน้างาน 1 ชุด</em></div>
-          <div class="on"><span>10:00</span><p><b>CEO เดินตรวจไซต์</b> ชี้จุดที่ทำดีและจุดที่ต้องแก้</p><em>คลิปสั้น 2 ตัว</em></div>
-          <div class="on"><span>11:00</span><p><b>CEO ตอบคำถามลูกค้า 4 ข้อ</b> ยืนพูดที่ไซต์</p><em>คลิปสั้น 4 ตัว</em></div>
-          <div class="on"><span>11:45</span><p><b>บอสกับทีม</b> มุกสั้นๆ 1 เรื่อง</p><em>คลิปเฮฮา 1 ตัว</em></div>
-          <div><span>13:00</span><p>โฟร์แมนอธิบายงาน 2 จุด</p><em>คลิปความรู้ 2 ตัว</em></div>
-          <div><span>14:00</span><p>เก็บภาพประกอบและ Stories</p><em>ใช้ทั้งสัปดาห์</em></div>
-        </div>
-        <p class="src">ตารางเวลาเป็นข้อเสนอ ปรับตามคิวของ CEO ได้ · CEO อยู่หน้ากล้องช่วง 10:00–12:00 ที่เหลือน้องเก็บงานต่อเอง</p>
-      </div>
-      <div>
-        <div class="card" style="background:var(--ink);color:#f4efe6;border-color:var(--ink)">
-          <p class="small" style="color:#a9a294">เป้าต่อวันถ่าย 1 วัน</p>
-          <div class="harvest"><div><b>9</b><span>คลิปสั้น</span></div><div><b>1</b><span>ชุดรูปหน้างาน</span></div></div>
-          <p class="small" style="color:#cfc9be;margin-top:14px">CEO 6 ตัว · ความรู้ 2 ตัว · เฮฮา 1 ตัว · 2 สัปดาห์ใช้คลิป CEO แค่ 2 ตัว อีก 4 ตัวเก็บเข้าคลังสำรอง ไว้ใช้ตอนวันถ่ายเลื่อน</p>
-        </div>
-        <div class="card mt-s">
-          <p class="h3">ก่อนวันถ่าย 2 วัน</p>
-          <p class="small muted" style="margin-top:4px">หัวหน้าทีมส่งคำถาม 4–5 ข้อที่คัดจากแชทลูกค้าให้ CEO ดูล่วงหน้า ไม่ต้องท่องบท ตอบตามประสบการณ์จริง</p>
-        </div>
-      </div>
-    </div>
-
-    <h2 class="h2 mt">รอบ 2 สัปดาห์ของน้อง <span class="tiny muted" style="font-weight:400">ตัวอย่างการจัดวัน ปรับได้</span></h2>
-    <div class="cycle mt-s">
-      <div class="wk">สัปดาห์ที่ 1</div>
-      <div class="d"><b>จ.</b>วางหัวข้อ · ทำ AI Info</div>
-      <div class="d field"><b>อ.</b>วันถ่าย CEO ที่ไซต์<small>ทั้งวัน</small></div>
-      <div class="d"><b>พ.</b>ตัดคลิป CEO + ความรู้</div>
-      <div class="d"><b>พฤ.</b>ตัดคลิปเดินไซต์ · เก็บเข้าคลัง</div>
-      <div class="d"><b>ศ.</b>คลิปเฮฮา · ลงปฏิทินสัปดาห์หน้า</div>
-      <div class="wk">สัปดาห์ที่ 2</div>
-      <div class="d"><b>จ.</b>AI Info · Before/After</div>
-      <div class="d field"><b>อ.</b>ออกไซต์เก็บรูป<small>ครึ่งวัน</small></div>
-      <div class="d"><b>พ.</b>ตัดคลิปความรู้หน้างาน</div>
-      <div class="d"><b>พฤ.</b>คลิปเฮฮา · งานค้าง</div>
-      <div class="d"><b>ศ.</b>สรุปตัวเลข · เตรียมรอบถัดไป</div>
-    </div>
-    <p class="tiny muted mt-s">ทุกวัน: Stories · เก็บรูปจากโฟร์แมน · ส่งงานเข้าตรวจ ราววันละ 1.5 ชม.</p>
-
-    <h2 class="h2 mt">ชั่วโมงงานของน้อง ต่อ 2 สัปดาห์ <span class="tiny muted" style="font-weight:400">ตัวเลขในแถบ = ชั่วโมง</span></h2>
-    <div class="grid g2 mt-s">
-      <div class="card">
-        <div class="row" style="justify-content:space-between"><p class="h3">เดือนแรก · 9 ชิ้น/สัปดาห์</p><span class="pill" style="background:var(--sun-soft)">แนะนำให้เริ่มแบบนี้</span></div>
-        <div class="cap mt-s"><span style="--f:8;--c:#c9b8ff">8</span><span style="--f:5;--c:#ffd27a">5</span><span style="--f:12;--c:#8fd0ff">12</span><span style="--f:18;--c:#8ee6bf">18</span><span style="--f:6;--c:#ffb3cf">6</span><span style="--f:31;--c:var(--paper-2)">เหลือ 31</span></div><div class="capkey"><span style="--c:#c9b8ff">วันถ่าย CEO</span><span style="--c:#ffd27a">ออกไซต์</span><span style="--c:#8fd0ff">งานประจำวัน</span><span style="--c:#8ee6bf">ผลิตชิ้นงาน</span><span style="--c:#ffb3cf">แก้งานตามที่ตรวจ</span></div>
-        <p class="small mt-s"><b>ใช้ราว 49 จาก 80 ชม.</b> เหลือเผื่อ 31 ชม.</p>
-        <p class="small muted">หน้างาน 3 · AI Info 2 · ความรู้ 1 · B/A 1 · CEO 1 · เฮฮา 1</p>
-      </div>
-      <div class="card">
-        <div class="row" style="justify-content:space-between"><p class="h3">แผนเต็ม · 11 ชิ้น/สัปดาห์</p><span class="pill">เริ่ม ม.ค. ถ้าเวลาจริงพอ</span></div>
-        <div class="cap mt-s"><span style="--f:8;--c:#c9b8ff">8</span><span style="--f:5;--c:#ffd27a">5</span><span style="--f:12;--c:#8fd0ff">12</span><span style="--f:25;--c:#8ee6bf">25</span><span style="--f:6;--c:#ffb3cf">6</span><span style="--f:24;--c:var(--paper-2)">เหลือ 24</span></div><div class="capkey"><span style="--c:#c9b8ff">วันถ่าย CEO</span><span style="--c:#ffd27a">ออกไซต์</span><span style="--c:#8fd0ff">งานประจำวัน</span><span style="--c:#8ee6bf">ผลิตชิ้นงาน</span><span style="--c:#ffb3cf">แก้งานตามที่ตรวจ</span></div>
-        <p class="small mt-s"><b>ใช้ราว 56 จาก 80 ชม.</b> เหลือเผื่อ 24 ชม.</p>
-        <p class="small muted">เพิ่มความรู้อีก 1 · เฮฮา B 1 และคลิปกึ่งโฆษณา 1 ตัวต่อ 2 สัปดาห์</p>
-      </div>
-    </div>
-    <p class="src">คิดจากวันทำงาน 10 วัน วันละ 8 ชม. · เวลาต่อชิ้นเป็นค่าประมาณจากแผนของทีมวันที่ 13 พ.ย. 2569 ยังไม่ได้จับเวลาจริง จึงจะจับเวลา 2 สัปดาห์แรกก่อนตัดสินใจเพิ่มงาน</p>
-
-    <div class="grid g2 mt">
-      <div class="card">
-        <p class="h3">ถ้าไม่ทัน ตัดตามลำดับนี้</p>
-        <ol class="cut"><li>เฮฮา B (ชีวิตทีมล้วน)</li><li>คลิปกึ่งโฆษณา</li><li>ความรู้หน้างานตัวที่ 2</li></ol>
-        <p class="small muted">ที่ห้ามหลุด: รูปหน้างาน 3 ชุด และคลิป CEO สัปดาห์ละ 1 ตัว</p>
-      </div>
-      <div class="card">
-        <p class="h3">เดือนแรก แต่ละช่องได้เท่าไร</p>
-        <div class="harvest lt"><div><b>8</b><span>Facebook</span></div><div><b>8</b><span>Instagram</span></div><div><b>4</b><span>YouTube Shorts</span></div><div><b>4</b><span>TikTok</span></div></div>
-        <p class="small muted" style="margin-top:10px">ต่อสัปดาห์ · YouTube กับ TikTok ได้ความรู้ 1 · CEO 1 · เฮฮา 1 · AI คลิป 1</p>
-      </div>
-    </div>
-    <div class="next-row"><button class="nbtn" data-go="week">← 1 สัปดาห์</button><button class="nbtn pri" data-go="risk">ดูปัญหาที่จะเจอ →</button></div>
-  </div>
-</section>
-
-<!-- ================= RISK ================= -->
-<section class="view" id="v-risk" role="tabpanel">
-  <div class="wrap">
-    <span class="sticker">ปัญหาที่จะเจอ</span>
-    <h1 class="h-big mt-s">8 เรื่องที่รู้ล่วงหน้า<br>และ <span class="hl">วิธีรับมือ</span></h1>
-    <div class="risks mt">
-      <div class="rk"><span class="n">1</span><div><b>น้องคนเดียวทำทุกชิ้น ลาเมื่อไรงานหยุด</b><p>เก็บคลังสำรองไว้ 1 สัปดาห์ (AI Info กับคลิป CEO ที่ถ่ายเกิน) และมีลำดับตัดงานชัดเจน</p></div></div>
-      <div class="rk"><span class="n">2</span><div><b>เวลาที่ใช้จริงอาจมากกว่าที่ประมาณ</b><p>เริ่มที่ 9 ชิ้นต่อสัปดาห์ จับเวลาจริง 2 สัปดาห์แรก แล้วค่อยปรับจำนวน</p></div></div>
-      <div class="rk"><span class="n">3</span><div><b>วันถ่าย CEO เลื่อน เพราะงานด่วนหรือฝนตก</b><p>ล็อกวันถ่ายและวันสำรองไว้ในปฏิทินล่วงหน้า ถ้าฝนตกเปลี่ยนเป็นถ่ายตอบคำถามในออฟฟิศ</p></div></div>
-      <div class="rk"><span class="n">4</span><div><b>งานรอตรวจค้าง เพราะหัวหน้าทีมดูแลระบบด้วย</b><p>ตรวจวันละ 2 รอบ เวลาแน่นอน 11:30 และ 16:30 · ส่งรูปล่วงหน้า 1 วัน คลิป 2 วัน</p></div></div>
-      <div class="rk"><span class="n">5</span><div><b>รูปจากไซต์มาไม่ครบ หรือถ่ายคนละมุม</b><p>ให้รายการช็อตประจำสัปดาห์กับโฟร์แมน กำหนดวันส่ง และทำเครื่องหมายจุดตั้งกล้อง</p></div></div>
-      <div class="rk"><span class="n">6</span><div><b>ลูกค้าไม่อนุญาตให้ถ่ายบ้าน</b><p>ขอความยินยอมตั้งแต่ตอนเซ็นสัญญา ไม่ถ่ายเลขที่บ้านหรือหน้าลูกค้า ไซต์ที่ไม่อนุญาตไม่ลง</p></div></div>
-      <div class="rk"><span class="n">7</span><div><b>ไม่มีคนอยากออกกล้องคลิปเฮฮา</b><p>เริ่มจากคนสมัครใจ 1–2 คน ใช้มุมกล้องแบบ POV ที่ไม่เห็นหน้าได้ ถ้าไม่มีจริงๆ ลดเฮฮา B</p></div></div>
-      <div class="rk"><span class="n">8</span><div><b>ผลลัพธ์ไม่มาเร็ว ช่องใหม่ต้องใช้เวลา</b><p>เดือนแรกวัดว่าลงครบตามแผนไหมและเก็บตัวเลขฐาน แล้วทบทวนกับผู้บริหารทุกเดือน</p></div></div>
-    </div>
-    <div class="card mt" style="background:var(--sun-soft);border-color:#f0dc9a">
-      <p class="h3">ถ้าตัดงานตามลำดับแล้วยังเกินกำลัง 2 สัปดาห์ติดกัน</p>
-      <p class="small" style="margin-top:4px">จะเสนอทางเลือกให้ผู้บริหาร: ลดเป้าจำนวนคลิป หรือจ้างฟรีแลนซ์ตัดต่อเป็นรายชิ้น (ราคาต้องยืนยัน)</p>
-    </div>
-    <div class="next-row"><button class="nbtn" data-go="team">← ทีม 2 คน</button><button class="nbtn pri" data-go="ask">ดูสิ่งที่ขออนุมัติ →</button></div>
-  </div>
-</section>
-
-<!-- ================= ASK ================= -->
-<section class="view" id="v-ask" role="tabpanel">
-  <div class="wrap">
-    <span class="sticker" style="--c:var(--pink)">ขอผู้บริหารเคาะ</span>
-    <h1 class="h-big mt-s">6 เรื่อง เพื่อ <span class="hl">เริ่มได้ ธ.ค.</span></h1>
-    <div class="asks six mt">
-      <div class="ask"><span class="no">1</span><b>เวลาของ CEO</b><p>ไปไซต์งานถ่ายคลิป 1 วัน ทุก 2 สัปดาห์ (เดือนละ 2 วัน) ล็อกวันและวันสำรองในปฏิทินล่วงหน้า</p><div class="tick"><span>ลอง 2 เดือนแล้วทบทวน</span></div></div>
-      <div class="ask"><span class="no">2</span><b>คนในทีมออกกล้อง</b><p>ใช้เวลางานถ่ายคลิปได้ และหาคนสมัครใจมาเป็นตัวละครประจำ</p><div class="tick"><span>ไม่บังคับใคร</span></div></div>
-      <div class="ask"><span class="no">3</span><b>คลิปที่ไม่ขายอะไรเลย</b><p>ให้ TikTok กับ YouTube มีคลิปชีวิตทีมล้วนได้ราว 30%</p><div class="tick"><span>ให้ช่องมีคนติดตามจริง</span></div></div>
-      <div class="ask"><span class="no">4</span><b>อุปกรณ์</b><p>ไมค์ไร้สาย 2 ตัว ขาตั้งหรือไม้กันสั่น ไฟ LED เล็ก</p><div class="tick"><span>ราคาต้องยืนยัน</span></div></div>
-      <div class="ask"><span class="no">5</span><b>งบบูสต์</b><p>บูสต์เฉพาะคลิปกึ่งโฆษณาที่ผลดีจริง เริ่ม ก.พ. 2570</p><div class="tick"><span>ตัวเลขต้องยืนยัน</span></div></div>
-      <div class="ask"><span class="no">6</span><b>ความร่วมมือจากทีมไซต์และทีมขาย</b><p>โฟร์แมนส่งรูปตามรายการช็อตทุกสัปดาห์ และขอความยินยอมถ่ายบ้านจากลูกค้าตั้งแต่ตอนเซ็นสัญญา</p><div class="tick"><span>ทีม Marketing มีคนผลิตคนเดียว</span></div></div>
-    </div>
-
-    <div class="north mt"><div><b class="h3">วัดผลจากอะไร</b><p>จำนวนลูกค้าตรงกลุ่มที่ทักเข้ามา (บ้านเดี่ยว กทม.–นนทบุรี กลุ่มหลักงบ 2 ล้านบาทขึ้นไป) นับจากระบบ Presale ทุกสัปดาห์ · ยอดวิวเป็นแค่ตัวเลขประกอบ · ยังไม่ตั้งเป้าตัวเลข จะเก็บข้อมูล 4 สัปดาห์แรกเป็นฐานก่อน</p></div></div>
-
-    <h2 class="h2 mt">แผน 3 เดือน</h2>
-    <div class="phases mt-s">
-      <div class="phase"><span class="m" style="--c:var(--sun)">ธ.ค. 2569</span><b>เริ่ม</b><ul><li>หาตัวละครประจำ 2–3 คน</li><li>ถ่าย CEO รอบแรก</li><li>เปิดซีรีส์ CEO ตอบเอง และเริ่มคลิปเฮฮา</li></ul></div>
-      <div class="phase"><span class="m" style="--c:var(--sky)">ม.ค. 2570</span><b>จับจังหวะ</b><ul><li>ขึ้นแผนเต็ม 11 ชิ้น ถ้าจับเวลาแล้วไหว</li><li>ดูตัวเลข 4 สัปดาห์ แบบไหนไม่เวิร์กก็ตัดออก</li><li>ตั้งเป้าแต่ละช่อง</li></ul></div>
-      <div class="phase"><span class="m" style="--c:var(--mint)">ก.พ. 2570</span><b>ขยาย</b><ul><li>เพิ่มซีรีส์ที่คนชอบที่สุด</li><li>บูสต์คลิปที่ผลดีที่สุด ถ้าได้อนุมัติงบ</li><li>สรุปผล 3 เดือนให้ผู้บริหาร</li></ul></div>
-    </div>
-
-    <h2 class="h2 mt">กติกาที่ทุกชิ้นต้องผ่าน</h2>
-    <div class="rules mt-s">
-      <div>ผลงานและภาพก่อน–หลังใช้รูปไซต์จริงเท่านั้น</div>
-      <div>ภาพจาก AI ใช้ประกอบความรู้ได้ แต่ต้องบอกว่าเป็นภาพประกอบ</div>
-      <div>ไม่บอกราคาของแต่ละโครงการ ไม่บอกว่าสำรวจหน้างานฟรี</div>
-      <div>จะถ่ายลูกค้าหรือบ้านลูกค้า ต้องขอความยินยอมก่อน</div>
-      <div>ไม่ขายแรง ไม่ใช้คำว่า "ด่วน" "โปรแรง" ไม่พูดถึงคู่แข่ง</div>
-      <div>ทุกชิ้นตรวจและอนุมัติก่อนลง คนเป็นคนกดโพสต์เอง</div>
-    </div>
-    <div class="next-row"><button class="nbtn" data-go="risk">← ปัญหาที่จะเจอ</button><button class="nbtn pri" data-go="home">กลับภาพรวม</button></div>
+    <div class="next-row"><button class="nbtn" data-go="ask">← ขออนุมัติ</button><button class="nbtn pri" data-go="home">กลับภาพรวม</button></div>
   </div>
 </section>
 </main>
 
-<footer><div class="wrap"><span>ที่มา: รูปและคลิปจากเพจ Facebook best home กับช่อง YouTube best home · ฟุตเทจจาก Drive ไซต์ลาดพร้าว 80 (10 พ.ย. 2569 และ 9 ธ.ค. 2568) · TikTok @gracezy.siblingth · โฟลเดอร์ ref 97 คลิป · ดูข้อมูลวันที่ 24 พ.ย. 2569</span><a href="../">← Marketing Workspace</a></div></footer>
+<footer><div class="wrap"><span>ที่มา: รูปและคลิปจากเพจ Facebook best home กับช่อง YouTube best home · ฟุตเทจจาก Drive ไซต์ลาดพร้าว 80 (10 พ.ย. 2569 และ 9 ธ.ค. 2568) · จำนวนผู้ติดตามจากหน้าโปรไฟล์ของแต่ละช่อง · TikTok @gracezy.siblingth · โฟลเดอร์ ref 97 คลิป · ดูข้อมูลวันที่ 24 พ.ย. 2569</span><a href="../">← Marketing Workspace</a></div></footer>
 
 <script>
 (() => {
-  const order = ['home','facebook','instagram','youtube','tiktok','ceo','video','week','team','risk','ask'];
+  const order = ['home','facebook','instagram','tiktok','ceo','week','team','risk','ask','video'];
   const tabs = [...document.querySelectorAll('.tab')];
   let cur = '';
   const show = (id, push) => {
+    if (id === 'youtube') id = 'tiktok';
     if (!order.includes(id)) id = 'home';
     cur = id;
     document.querySelectorAll('.view').forEach(v => v.classList.toggle('on', v.id === 'v-' + id));
