@@ -300,6 +300,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .goal .card span{font-size:13.5px;color:var(--ink-2)}
 @media (max-width:720px){.base{grid-template-columns:1fr 1fr}.goal{grid-template-columns:1fr}}
 
+/* ---------- round 8: refs + weekly workload ---------- */
+.refch{display:grid;grid-template-columns:1fr 340px;gap:26px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.refch + .refch{margin-top:16px}
+.refch .num{font-size:12.5px;color:var(--muted);letter-spacing:.1em}
+.refch h3{font-size:24px;line-height:1.3;margin-top:2px}
+.refch h3 a{font-size:14px;font-weight:400;color:var(--muted);margin-left:8px}
+.refch .lab{font-size:12.5px;color:var(--muted);margin-top:16px;display:block}
+.refch .types{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.refch .types span{font-size:14px;font-weight:700;border-radius:99px;padding:3px 13px;background:var(--paper)}
+.refch .char{font-size:16px;line-height:1.6;margin-top:4px}
+.refch .use{margin-top:16px;background:var(--sun-soft);border-radius:14px;padding:12px 14px;font-size:14.5px;line-height:1.6}
+.refch .use b{display:block;font-size:12.5px;font-weight:400;color:#7a5c00}
+.refch .pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mx.left td{text-align:left}
+.mx.left td:first-child,.mx.left th:first-child{white-space:nowrap}
+.mx td b.n{font-size:22px}
+.mx tr.sum th,.mx tr.sum td{background:var(--ink);color:#fff}
+.mx tr.sum td b.n{color:var(--sun)}
+.work{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:stretch}
+.work .card{padding:20px 22px}
+.work .big{font-size:52px;font-weight:700;line-height:1;letter-spacing:-.03em}
+.work .big small{font-size:17px;font-weight:700;letter-spacing:0;margin-left:6px}
+.work ul{margin:10px 0 0;padding-left:18px;font-size:14.5px;line-height:1.75;color:var(--ink-2)}
+.work .op{display:grid;place-items:center;font-size:30px;font-weight:700;color:var(--muted)}
+.work .card.tot{background:var(--ink);color:#fff;border-color:var(--ink)}
+.work .card.tot .big{color:var(--sun)}
+.work .card.tot p{color:#cfc9be;font-size:14.5px;margin-top:10px;line-height:1.6}
+@media (max-width:1050px){.refch{grid-template-columns:1fr}.refch .pair{max-width:340px}.work{grid-template-columns:1fr}.work .op{display:none}}
+
 /* ---------- responsive ---------- */
 @media (max-width:1050px){
   .chan-cards,.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -345,6 +374,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <button class="tab" role="tab" data-go="facebook" style="--c:var(--fb)"><span class="ic"><svg><use href="#i-fb"/></svg></span>Facebook</button>
       <button class="tab" role="tab" data-go="instagram" style="--c:var(--ig)"><span class="ic"><svg><use href="#i-ig"/></svg></span>Instagram</button>
       <button class="tab" role="tab" data-go="tiktok" style="--c:var(--tt)"><span class="ic"><svg><use href="#i-tt"/></svg></span>TikTok + YouTube Shorts</button>
+      <button class="tab" role="tab" data-go="refs">ช่องต้นแบบ</button>
       <button class="tab" role="tab" data-go="ceo">CEO</button>
       <button class="tab" role="tab" data-go="week">1 สัปดาห์</button>
       <button class="tab" role="tab" data-go="team">ทีม 2 คน</button>
@@ -377,7 +407,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <p class="h3">สรุปสำหรับผู้บริหาร</p>
         <ol>
           <li><b>ทีมมี 2 คน</b> หัวหน้าทีมวางระบบและตรวจงาน น้อง 1 คนผลิตทุกชิ้น</li>
-          <li><b>เริ่ม ธ.ค. ที่ 10 ชิ้นต่อสัปดาห์</b> ทุกชิ้นเป็นรูปหรือคลิปสั้น ไม่มีคลิปยาว</li>
+          <li><b>น้องทำสัปดาห์ละ 10 ชิ้น</b> รูป 5 ชุด + คลิปสั้น 5 ตัว ลงได้ 28 โพสต์ (TikTok และ YouTube ช่องละ 5 คลิป)</li>
           <li><b>CEO เป็นแกนหลัก</b> ไปไซต์ถ่ายคลิป 1 วันทุก 2 สัปดาห์ ลงสัปดาห์ละ 2 คลิป</li>
           <li><b>วัดผลจากลูกค้าตรงกลุ่มที่ทักเข้ามา</b> เก็บตัวเลข 4 สัปดาห์แรกเป็นฐานก่อนตั้งเป้า</li>
           <li><b>ขอผู้บริหารเคาะ 6 เรื่อง</b> เพื่อเริ่มได้ใน ธ.ค.</li>
@@ -575,7 +605,89 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="ex"><div class="media" style="aspect-ratio:16/9"><button class="play" data-embed="yt" data-id="voLo1gf5kAg"><img src="https://i.ytimg.com/vi/voLo1gf5kAg/hqdefault.jpg" alt="" loading="lazy"><span class="btn">▶</span></button></div><div class="tx"><b>MY best home EP.02</b><p>บ้านเดี่ยวสายไหม พื้นทรุด</p></div></div>
       <div class="ex"><div class="media" style="aspect-ratio:16/9"><button class="play" data-embed="yt" data-id="wQVpseqMGLo"><img src="https://i.ytimg.com/vi/wQVpseqMGLo/hqdefault.jpg" alt="" loading="lazy"><span class="btn">▶</span></button></div><div class="tx"><b>MY best home EP.01</b><p>ส่งมอบงานต่อเติมครัว</p></div></div>
     </div>
-    <div class="next-row"><button class="nbtn" data-go="instagram">← Instagram</button><button class="nbtn pri" data-go="ceo">ดู CEO →</button></div>
+    <div class="next-row"><button class="nbtn" data-go="instagram">← Instagram</button><button class="nbtn pri" data-go="refs">ดูช่องต้นแบบ →</button></div>
+  </div>
+</section>
+
+<!-- ================= REFS ================= -->
+<section class="view" id="v-refs" role="tabpanel">
+  <div class="wrap">
+    <span class="sticker">ช่องต้นแบบที่ทีมเลือก</span>
+    <h1 class="h-big mt-s">5 ช่อง ที่ <span class="hl">เจ้าของออกหน้าเอง</span></h1>
+    <p class="sub">ทั้ง 5 ช่องเป็นแบรนด์ไทยบน TikTok ที่ให้เจ้าของหรือคนในบริษัทเป็นคนเล่าเอง คลิปยาว 20 วินาทีถึง 2 นาที ถ่ายง่าย ไม่จัดฉาก</p>
+
+    <div class="refch">
+      <div>
+        <span class="num">ช่องที่ 1 · ร้านชาบูหมาล่า</span>
+        <h3>Hotpot Man <a href="https://www.tiktok.com/@hotpotman26" target="_blank" rel="noopener">@hotpotman26 ↗</a></h3>
+        <span class="lab">คลิปของเขาเป็นแนว</span>
+        <div class="types"><span>สินค้า</span><span>Brand story</span><span>This or That</span><span>Tier list</span></div>
+        <span class="lab">คาแรกเตอร์</span><p class="char">สองคนนั่งคุยกันที่โต๊ะ ฝั่งชายพูดตรงๆ จริงจัง ฝั่งหญิงมีอารมณ์ขัน</p>
+        <div class="use"><b>best home เอามาใช้</b>ให้ CEO คู่กับคนในทีม 1 คน คนหนึ่งจริงจัง คนหนึ่งฮา แล้วใช้รูปแบบ "เลือก A หรือ B" กับ "จัดอันดับ" กับวัสดุและแบบบ้าน</div>
+      </div>
+      <div class="pair"><div class="tt-ref"><button class="play" data-embed="tt" data-id="7586974649242701076" aria-label="เล่นคลิป Tier list จัดอันดับสินค้า"></button><span class="btn">▶</span><div class="ph-tt"><b>Tier list จัดอันดับสินค้า</b><small>1:49 นาที · กดเพื่อเล่น</small></div></div><div class="tt-ref"><button class="play" data-embed="tt" data-id="7597738083060026645" aria-label="เล่นคลิป This or That เลือกอย่างใดอย่างหนึ่ง"></button><span class="btn">▶</span><div class="ph-tt"><b>This or That เลือกอย่างใดอย่างหนึ่ง</b><small>2:04 นาที · กดเพื่อเล่น</small></div></div></div>
+    </div>
+    <div class="refch">
+      <div>
+        <span class="num">ช่องที่ 2 · ร้านเนื้อ</span>
+        <h3>คำโตๆ (ของแทร่) <a href="https://www.tiktok.com/@cometotoe" target="_blank" rel="noopener">@cometotoe ↗</a></h3>
+        <span class="lab">คลิปของเขาเป็นแนว</span>
+        <div class="types"><span>รีวิวสินค้า</span><span>CEO / Brand story</span><span>เกล็ดความรู้สั้น</span></div>
+        <span class="lab">คาแรกเตอร์</span><p class="char">พูดตรงๆ ไม่อ้อม คอนเทนต์แบบเรียลๆ มีความฮาที่ขัดกับบุคลิกของเจ้าของ</p>
+        <div class="use"><b>best home เอามาใช้</b>ต้นแบบของ "CEO ตอบเอง": พูดกับกล้องตรงๆ คลิปละ 1 เรื่อง ถือมือถือถ่ายเองได้ ไม่ต้องมีฉาก</div>
+      </div>
+      <div class="pair"><div class="tt-ref"><button class="play" data-embed="tt" data-id="7612868659731549441" aria-label="เล่นคลิป เกล็ดความรู้สั้น"></button><span class="btn">▶</span><div class="ph-tt"><b>เกล็ดความรู้สั้น</b><small>28 วินาที · กดเพื่อเล่น</small></div></div><div class="tt-ref"><button class="play" data-embed="tt" data-id="7610370793582759185" aria-label="เล่นคลิป CEO เล่าเรื่องตัวเอง"></button><span class="btn">▶</span><div class="ph-tt"><b>CEO เล่าเรื่องตัวเอง</b><small>1:34 นาที · กดเพื่อเล่น</small></div></div></div>
+    </div>
+    <div class="refch">
+      <div>
+        <span class="num">ช่องที่ 3 · ข้าวสาร</span>
+        <h3>ข้าวตราสิงห์โตทอง <a href="https://www.tiktok.com/@singtothongrice" target="_blank" rel="noopener">@singtothongrice ↗</a></h3>
+        <span class="lab">คลิปของเขาเป็นแนว</span>
+        <div class="types"><span>CEO / Brand story</span><span>สินค้า</span><span>ชีวิตคนในบริษัท</span></div>
+        
+        <div class="use"><b>best home เอามาใช้</b>เล่าที่มาของบริษัทเป็นตอนสั้นๆ และทำคลิปชีวิตคนในไซต์ เช่น "3 คนที่ทุกไซต์งานต้องมี"</div>
+      </div>
+      <div class="pair"><div class="tt-ref"><button class="play" data-embed="tt" data-id="7416986960159460624" aria-label="เล่นคลิป Brand story เล่าเป็นตอน"></button><span class="btn">▶</span><div class="ph-tt"><b>Brand story เล่าเป็นตอน</b><small>37 วินาที · กดเพื่อเล่น</small></div></div><div class="tt-ref"><button class="play" data-embed="tt" data-id="7702785308168932629" aria-label="เล่นคลิป ชีวิตคนในที่ทำงาน"></button><span class="btn">▶</span><div class="ph-tt"><b>ชีวิตคนในที่ทำงาน</b><small>20 วินาที · กดเพื่อเล่น</small></div></div></div>
+    </div>
+    <div class="refch">
+      <div>
+        <span class="num">ช่องที่ 4 · ซอสปรุงรส</span>
+        <h3>เด็กสมบูรณ์ <a href="https://www.tiktok.com/@deksomboon_official1" target="_blank" rel="noopener">@deksomboon_official1 ↗</a></h3>
+        <span class="lab">คลิปของเขาเป็นแนว</span>
+        <div class="types"><span>CEO / Brand story</span><span>สินค้า</span></div>
+        <span class="lab">คาแรกเตอร์</span><p class="char">เจ้าของลงมาทำเอง ใช้สินค้าของตัวเองให้ดู ทดสอบสินค้าให้เห็น ดูเข้าถึงง่าย</p>
+        <div class="use"><b>best home เอามาใช้</b>ต้นแบบของ "เดินไซต์กับ CEO": CEO ลงมือตรวจและทดสอบงานจริงให้ดูหน้ากล้อง</div>
+      </div>
+      <div class="pair"><div class="tt-ref"><button class="play" data-embed="tt" data-id="7546545654609317136" aria-label="เล่นคลิป เจ้าของโชว์สินค้าเอง"></button><span class="btn">▶</span><div class="ph-tt"><b>เจ้าของโชว์สินค้าเอง</b><small>58 วินาที · กดเพื่อเล่น</small></div></div><div class="tt-ref"><button class="play" data-embed="tt" data-id="7413685603432238354" aria-label="เล่นคลิป เจ้าของเล่าเรื่องในออฟฟิศ"></button><span class="btn">▶</span><div class="ph-tt"><b>เจ้าของเล่าเรื่องในออฟฟิศ</b><small>1:51 นาที · กดเพื่อเล่น</small></div></div></div>
+    </div>
+    <div class="refch">
+      <div>
+        <span class="num">ช่องที่ 5 · เจ้าของธุรกิจ</span>
+        <h3>บอสเบส <a href="https://www.tiktok.com/@bass__inmeesub" target="_blank" rel="noopener">@bass__inmeesub ↗</a></h3>
+        <span class="lab">คลิปของเขาเป็นแนว</span>
+        <div class="types"><span>CEO / Brand story</span><span>POV สั้นๆ</span></div>
+        <span class="lab">คาแรกเตอร์</span><p class="char">เล่าเรื่องสนุกๆ แบบสั้นๆ ไม่ใช่นั่งเล่าเรื่องยาว</p>
+        <div class="use"><b>best home เอามาใช้</b>คลิป POV 15–30 วินาที จากมุมมองเจ้าของบริษัทรับเหมา ใช้กับคลิปเฮฮา "บอสกับทีม"</div>
+      </div>
+      <div class="pair"><div class="tt-ref"><button class="play" data-embed="tt" data-id="7385858853776264449" aria-label="เล่นคลิป POV สั้น"></button><span class="btn">▶</span><div class="ph-tt"><b>POV สั้น</b><small>19 วินาที · กดเพื่อเล่น</small></div></div><div class="tt-ref"><button class="play" data-embed="tt" data-id="7712047162774883636" aria-label="เล่นคลิป POV กับสินค้า"></button><span class="btn">▶</span><div class="ph-tt"><b>POV กับสินค้า</b><small>54 วินาที · กดเพื่อเล่น</small></div></div></div>
+    </div>
+
+    <h2 class="h2 mt">สรุป: 6 แนวที่หยิบมาใช้กับ best home</h2>
+    <div class="mx-wrap mt-s">
+      <table class="mx left">
+        <thead><tr><th style="text-align:left">แนวคลิป</th><th style="text-align:left">ต้นแบบ</th><th style="text-align:left">best home ทำเป็น</th><th style="text-align:left">นับเป็นคลิป</th></tr></thead>
+        <tbody>
+          <tr><th class="r">เจ้าของพูดตรงๆ กับกล้อง</th><td>คำโตๆ · เด็กสมบูรณ์</td><td>CEO ตอบคำถามลูกค้า คลิปละ 1 ข้อ</td><td><span class="some">CEO</span></td></tr>
+          <tr><th class="r">เจ้าของลงมือทำให้ดู</th><td>เด็กสมบูรณ์</td><td>CEO เดินไซต์ ตรวจและทดสอบงานจริง</td><td><span class="some">CEO</span></td></tr>
+          <tr><th class="r">Brand story เล่าเป็นตอน</th><td>สิงห์โตทอง · Hotpot Man</td><td>ที่มาของ best home ตอนละ 30–60 วินาที</td><td><span class="some">CEO</span></td></tr>
+          <tr><th class="r">This or That · Tier list</th><td>Hotpot Man</td><td>วัสดุ A หรือ B · จัดอันดับวัสดุปูพื้น</td><td><span class="some">ความรู้</span></td></tr>
+          <tr><th class="r">เกล็ดความรู้สั้น</th><td>คำโตๆ</td><td>โฟร์แมนอธิบายงาน 1 จุด ไม่เกิน 1 นาที</td><td><span class="some">ความรู้</span></td></tr>
+          <tr><th class="r">POV · ชีวิตในที่ทำงาน</th><td>บอสเบส · สิงห์โตทอง</td><td>บอสกับทีม · 3 คนที่ทุกไซต์ต้องมี</td><td><span class="some">เฮฮา</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">ที่มา: รายการช่องและการแบ่งแนวคลิปจากไฟล์ Canva ของทีม ดูวันที่ 27 พ.ย. 2569 · ทุกช่องเป็นของแบรนด์อื่น ใช้ดูแนวทางเท่านั้น ไม่ลอกบทหรือมุก</p>
+    <div class="next-row"><button class="nbtn" data-go="tiktok">← TikTok + Shorts</button><button class="nbtn pri" data-go="ceo">ดู CEO →</button></div>
   </div>
 </section>
 
@@ -619,7 +731,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
     <h2 class="h2 mt">กติกาสั้นๆ</h2>
     <div class="rules mt-s"><div>พูดแต่เรื่องที่รู้จริง ไม่บอกราคาของแต่ละโครงการ</div><div>ไม่ถนัดเล่นมุกก็ไม่ต้องเล่น ให้ทีมเป็นคนเล่นแทน</div><div>ไม่พูดถึงคู่แข่ง พูดว่า "ลูกค้าควรระวังอะไร" แทน</div></div>
-    <div class="next-row"><button class="nbtn" data-go="tiktok">← TikTok + Shorts</button><button class="nbtn pri" data-go="week">ดู 1 สัปดาห์ →</button></div>
+    <div class="next-row"><button class="nbtn" data-go="refs">← ช่องต้นแบบ</button><button class="nbtn pri" data-go="week">ดู 1 สัปดาห์ →</button></div>
   </div>
 </section>
 
@@ -628,9 +740,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="view" id="v-week" role="tabpanel">
   <div class="wrap">
     <span class="sticker">1 สัปดาห์ · เดือน ธ.ค.</span>
-    <h1 class="h-big mt-s">ผลิต <span class="hl">10 ชิ้น</span> ลงครบ 4 ช่อง</h1>
-    <p class="sub">ทุกชิ้นเป็นรูปหรือคลิปสั้น คลิป 1 ไฟล์ลงได้ทุกช่อง เวลาลงเป็นค่าตั้งต้น จะปรับตามตัวเลขจริง</p>
-    <div class="week-wrap mt">
+    <h1 class="h-big mt-s">รูป 5 ชุด + คลิป 5 ตัว = <span class="hl">10 ชิ้น</span></h1>
+    <p class="sub">TikTok กับ YouTube ได้ช่องละ 5 คลิปต่อสัปดาห์ Facebook กับ Instagram ได้ช่องละ 9 โพสต์ โดยน้องผลิตแค่ 10 ชิ้น</p>
+        <h2 class="h2 mt">น้องต้องทำอะไรบ้างใน 1 สัปดาห์</h2>
+    <div class="work mt-s">
+      <div class="card"><span class="big">5<small>ชุดรูป</small></span>
+        <ul><li>อัปเดตหน้างาน 3 ชุด (ชุดละ 4–6 รูป จากโฟร์แมน)</li><li>AI Info 1 ชุด (AI ทำภาพ น้องเขียนบท)</li><li>Before/After 1 ชุด</li></ul></div>
+      <div class="op">+</div>
+      <div class="card"><span class="big">5<small>คลิปสั้น</small></span>
+        <ul><li>CEO 2 คลิป (ตอบเอง 1 · เดินไซต์ 1)</li><li>ความรู้หน้างาน 1 คลิป</li><li>เฮฮา 1 คลิป</li><li>AI คลิป 1 คลิป (กดสร้างในเว็บ)</li></ul></div>
+      <div class="op">=</div>
+      <div class="card tot"><span class="big">10<small>ชิ้น</small></span><p>ลงได้รวม <b style="color:#fff">28 โพสต์</b> ใน 4 ช่อง เพราะ 1 ชิ้นลงได้หลายช่อง น้องตัดต่อเอง 4 คลิป อีก 1 คลิปให้ AI ทำ</p></div>
+    </div>
+
+    <h2 class="h2 mt">แต่ละช่องได้กี่รูป กี่วิดีโอ</h2>
+    <div class="mx-wrap mt-s">
+      <table class="mx">
+        <thead><tr><th style="text-align:left">ช่องทาง</th><th>รูป</th><th>วิดีโอ</th><th>รวมต่อสัปดาห์</th><th style="text-align:left">หมายเหตุ</th></tr></thead>
+        <tbody>
+          <tr><th class="r"><span class="chip-ic" style="background:var(--fb);display:inline-grid;vertical-align:middle;margin-right:8px"><svg><use href="#i-fb"/></svg></span>Facebook</th><td><b class="n">5</b></td><td><b class="n">4</b></td><td><b class="n">9</b></td><td style="text-align:left" class="small muted">ลงทุกชิ้น ยกเว้นคลิปเฮฮา</td></tr>
+          <tr><th class="r"><span class="chip-ic" style="background:var(--ig);display:inline-grid;vertical-align:middle;margin-right:8px"><svg><use href="#i-ig"/></svg></span>Instagram</th><td><b class="n">4</b></td><td><b class="n">5</b></td><td><b class="n">9</b></td><td style="text-align:left" class="small muted">และ Stories ทุกวันทำงาน</td></tr>
+          <tr><th class="r"><span class="chip-ic" style="background:#111;display:inline-grid;vertical-align:middle;margin-right:8px"><svg><use href="#i-tt"/></svg></span>TikTok</th><td class="no">—</td><td><b class="n">5</b></td><td><b class="n">5</b></td><td style="text-align:left" class="small muted">คลิปสั้นทั้ง 5 ตัว</td></tr>
+          <tr><th class="r"><span class="chip-ic" style="background:var(--yt);display:inline-grid;vertical-align:middle;margin-right:8px"><svg><use href="#i-yt"/></svg></span>YouTube Shorts</th><td class="no">—</td><td><b class="n">5</b></td><td><b class="n">5</b></td><td style="text-align:left" class="small muted">ไฟล์เดียวกับ TikTok</td></tr>
+          <tr class="sum"><th class="r">น้องผลิตจริง</th><td><b class="n">5</b></td><td><b class="n">5</b></td><td><b class="n">10 ชิ้น</b></td><td style="text-align:left" class="small">ลงรวม 28 โพสต์</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="h2 mt">ลงวันไหน</h2>
+    <div class="week-wrap mt-s">
       <table class="week">
         <thead><tr><th class="c" style="width:124px"></th><th>จ.</th><th>อ.</th><th>พ.</th><th>พฤ.</th><th>ศ.</th><th>ส.</th><th>อา.</th></tr></thead>
         <tbody>
@@ -641,14 +779,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </table>
     </div>
     <p class="tiny muted mt-s">Instagram Stories ลงทุกวันทำงาน จากรูปที่โฟร์แมนส่งมา</p>
-    <div class="grid g4 mt">
-      <div class="card" style="text-align:center"><span class="chip-ic" style="margin:0 auto;background:var(--fb)"><svg><use href="#i-fb"/></svg></span><p class="h2">9</p><p class="small muted">โพสต์/สัปดาห์</p></div>
-      <div class="card" style="text-align:center"><span class="chip-ic" style="margin:0 auto;background:var(--ig)"><svg><use href="#i-ig"/></svg></span><p class="h2">9</p><p class="small muted">โพสต์ + Stories</p></div>
-      <div class="card" style="text-align:center"><span class="chip-ic" style="margin:0 auto;background:#111"><svg><use href="#i-tt"/></svg></span><p class="h2">5</p><p class="small muted">คลิป/สัปดาห์</p></div>
-      <div class="card" style="text-align:center"><span class="chip-ic" style="margin:0 auto;background:var(--yt)"><svg><use href="#i-yt"/></svg></span><p class="h2">5</p><p class="small muted">Shorts/สัปดาห์</p></div>
-    </div>
     <div class="grid g2 mt">
-      <div class="card"><p class="h3">10 ชิ้นมีอะไรบ้าง</p><p class="small" style="margin-top:6px">หน้างาน 3 · AI Info 2 (ภาพ 1 คลิป 1) · CEO 2 · ความรู้หน้างาน 1 · Before/After 1 · เฮฮา 1</p></div>
+      <div class="card"><p class="h3">เวลาลง</p><p class="small" style="margin-top:6px">รูป 12:00 · คลิป 19:00 · เสาร์ 10:00 เป็นค่าตั้งต้น ยังไม่มีข้อมูลว่าเวลาไหนดีที่สุด จะปรับตามตัวเลขจริง</p></div>
       <div class="card later"><p class="h3">ตั้งแต่ ม.ค. ถ้าจับเวลาแล้วไหว เพิ่มเป็น 12 ชิ้น</p><p class="small" style="margin-top:6px">ความรู้หน้างานอีก 1 · เฮฮา B 1 (เมื่อมีคนสมัครใจ) · คลิปกึ่งโฆษณา 2 สัปดาห์ครั้ง</p></div>
     </div>
     <p class="src">ทุกชิ้นต้องตรวจและอนุมัติก่อนลง และคนเป็นคนกดโพสต์เอง</p>
@@ -841,11 +973,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </section>
 </main>
 
-<footer><div class="wrap"><span>ที่มา: รูปและคลิปจากเพจ Facebook best home กับช่อง YouTube best home · ฟุตเทจจาก Drive ไซต์ลาดพร้าว 80 (10 พ.ย. 2569 และ 9 ธ.ค. 2568) · จำนวนผู้ติดตามจากหน้าโปรไฟล์ของแต่ละช่อง · TikTok @gracezy.siblingth · โฟลเดอร์ ref 97 คลิป · ดูข้อมูลวันที่ 24 พ.ย. 2569</span><a href="../">← Marketing Workspace</a></div></footer>
+<footer><div class="wrap"><span>ที่มา: รูปและคลิปจากเพจ Facebook best home กับช่อง YouTube best home · ฟุตเทจจาก Drive ไซต์ลาดพร้าว 80 (10 พ.ย. 2569 และ 9 ธ.ค. 2568) · จำนวนผู้ติดตามจากหน้าโปรไฟล์ของแต่ละช่อง · TikTok @gracezy.siblingth และช่องต้นแบบ 5 ช่องจากไฟล์ Canva ของทีม · โฟลเดอร์ ref 97 คลิป · ดูข้อมูลวันที่ 24 พ.ย. 2569</span><a href="../">← Marketing Workspace</a></div></footer>
 
 <script>
 (() => {
-  const order = ['home','facebook','instagram','tiktok','ceo','week','team','ask','video'];
+  const order = ['home','facebook','instagram','tiktok','refs','ceo','week','team','ask','video'];
   const tabs = [...document.querySelectorAll('.tab')];
   let cur = '';
   const show = (id, push) => {
